@@ -1,0 +1,6 @@
+
+
+@include font-face ("ProximaNova", "../fonts/ProximaNova-Regular", $file-formats: woff2);
+@include font-face ("ProximaNova", "../fonts/ProximaNova-Bold", bold, $file-formats: woff2);
+@include font-face ("ProximaNova", "../fonts/ProximaNova-Light", 300, $file-formats: woff2);
+@include font-face ("ProximaNova", "../fonts/ProximaNova-Black", 900, $file-formats: woff2);
