@@ -1,8 +1,22 @@
 .top-line {
-
-	
+  background-color: #f6f6f6;
+	.row{
+    align-items: center;
+    > *{
+      padding-top: rem(6);
+      padding-bottom: rem(6);
+    }
+  }
 // 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+  .container{
+    max-width: 1200px;
+  }
+}
+
+&__link{
+  
+}
 
 @include media-breakpoint-up(lg) {}
 
@@ -36,4 +50,29 @@
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+}
+
+.lang{
+  position: relative;
+  &__dropdown{
+    display: none;
+  }
+  &__item{
+    img{
+      margin-right: rem(10);
+    }
+  }
+  &__title{
+    padding-right: rem(18);
+    position: relative;
+    padding-top: rem(2);
+    &::before{
+      content: '';
+      position: absolute;
+      right: 0;
+      @include triangle(12px, $secondary, down);
+      // @include a-cent(y);
+      top: rem(12);
+    }
+  }
 }
