@@ -60,7 +60,7 @@ function 	eventHandler() {
 			}
 		});
 		// конец добавил
-		if (window.matchMedia("(min-width: 992px)").matches) {
+		if (window.matchMedia("(min-width: 1200px)").matches) {
 
 			btnToggle.removeClass("on");
 			// $("body").removeClass("fixed");
@@ -94,6 +94,7 @@ function 	eventHandler() {
 	const defaultSlide = { 
 		speed: 600,
 		infinite: true,
+		loop: true,
 		arrows: true,
 		mobileFirst: true,
 		prevArrow: arrr2,
@@ -110,11 +111,13 @@ function 	eventHandler() {
 			breakpoint: 1200,
 			settings: {
 				slidesToShow: 4,
+					arrows: false,
 			}
 		}, {
 			breakpoint: 992,
 			settings: {
 				slidesToShow: 3,
+					arrows: false,
 			}
 
 		}, {
@@ -128,89 +131,56 @@ function 	eventHandler() {
 		}],
 		
 	});
-	// $('.s-gal__slider\
-	// ,.slider-for2 ')
-	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {
-	// 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-	// 	});
-	// slider
-	// const swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
-
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-
-	// });
-	// modal window
 
 
+	$('.s-catalog__slider--js').slick({
+		...defaultSlide,
+		
+		slidesToShow: 2,
+		dots: true,
+		arrows: false,
+		responsive: [
+			{
+			breakpoint: 1440,
+			settings: {
+				slidesToShow: 6,
+				arrows: false,
+				dots: false,
+			}
+		}, 
+			{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 4,
+				arrows: false,
+				dots: false,
+			}
+		}, 
+
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 3,
+				arrows: false,
+			
+			}
+
+		}, {
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 2,
+				arrows: false,
+			}
 
 
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-
-
-
-
-	// $(".wow-wrap").each(function () {
-	// const wowAnim = $(this).find(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
-
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-
-	//    const wow = new WOW({ mobile: false });
-	//         wow.init();
-
-	// });
-	// });
-
-	// form
-	$("form").submit(function () { //Change
-		const th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			// $.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-			}, 4000);
-		});
-		return false;
+		}],
+		
 	});
+	 
+	 
+	$(".top-nav__btn-search--js").click(function(){
+		$(".search-block").slideToggle();
+	})
 	};
 	// /form
 	if (document.readyState !== 'loading') {

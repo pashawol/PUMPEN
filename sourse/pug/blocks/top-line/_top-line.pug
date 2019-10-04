@@ -3,7 +3,7 @@ mixin top-line()
 	+b.top-line.block-with-lazy
 		.container
 			.row
-				.col-auto
+				.col-auto.d-none.d-md-block
 					+b.lang
 						+e.title
 							+e.item
@@ -14,21 +14,20 @@ mixin top-line()
 								+e.item
 									img.res-i(src="img/@2x/DE.png", alt="")
 									| DE
-				.col
-				.col-auto
-					+e.link(href="#") Mein Konto
+				.col.d-none.d-md-block
+				.col-auto.d-none.d-md-block
+					+e.link--text(href="#") Mein Konto
 				
-				.col-auto
-					+e.link(href="#") Registrieren
+				.col-auto.d-none.d-md-block
+					+e.link--text(href="#") Registrieren
 				
-				.col-auto
+				.col-auto.d-none.d-md-block
 					+e.link(href="#")
 						img.res-i(src="img/@2x/basket.png", alt="")
-				.col-auto
-					+b.search-block
+				.col-md-auto
+					+b.search-block.d-md-block
 						form
 							input(type="text")
 							button(type="button")
 				
-
 	// end .top-line

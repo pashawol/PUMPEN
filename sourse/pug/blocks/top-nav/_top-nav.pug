@@ -1,8 +1,7 @@
 
 mixin mob-mnu()
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
-	+b.menu-mobile--js.d-lg-none
+
+	+b.menu-mobile--js.d-xl-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
@@ -14,6 +13,24 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
-					
+			.row
+				.col-xl-auto.col
+					+e.logo(href="#")
+						img.res-i(src="img/@2x/logo.png", alt="")
+				.pos-s.col.d-none.d-xl-block
+					+mnu()
+				.col-auto.d-md-none
+					+e.btn-search--js(type="button")
+				
+				.col-auto.d-md-none
+					+e.basket(href="#")
+						img.res-i(src="img/@2x/basket-gray.png", alt="")
+				.col-auto.d-none.d-md-block
+					+e.tel(href="#tel:+497471-9331970")
+						+e.tel-label Service-Hotline
+						+e.tel-number +49 7471 - 9331970
+				.col-auto.d-xl-none
+					+b.toggle-menu-mobile--js
+						span
+
 	// end top-nav

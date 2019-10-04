@@ -2,6 +2,23 @@ mixin header-block()
 	// start header-block
 	+b.header-block#header-block
 		.container
-			h1 header-block
 			.row
+				+e.col.col-xxl-8.col-lg-6
+					+e.content
+						+pic("Rechteck_6")
+						h1  PUMPEN & ERSATZTEIle
+						+e.sub-title schneller und einfacher Service für Unternehmen
+						+e.btn(href="#") MEHR ERFAHREN
+				+e.col-right.col-xxl-4.col-lg-6
+					+form-wrap
+						+e.title-head 
+							span schnelle Ersatzteilsuche
+						+input('P/N','text','PRoduktnummer ')
+						+e.devider 
+							span order
+						+select("PUMPENBAUART",'Produktbezeichnung','Produktbezeichnung')
+						+select("familie",'Produktbezeichnung','Produktbezeichnung')
+						+select("Unterfamile",'Produktbezeichnung','Produktbezeichnung')
+						+select("TYP",'Produktbezeichnung','Produktbezeichnung') 
+						+e.btn.btn.btn-outline-white(type="submit") MEINE PUMPE FINDEN
 	// end header-block

@@ -1,9 +1,10 @@
-mixin s-page-title()
+mixin s-page-title(t="Registrieren", t2="Registrierung", t3="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore")
 	// start s-page-title
 	+b.SECTION.s-page-title.section#s-page-title&attributes(attributes)
 		.container
-			+e.art Registrieren
-			+e.H1.title Registrierung
-			+e.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			+e.art=t 
+			+e.H1.title= t2 
+			+e.subtitle= t3 
 			
 	// end s-page-title
+
