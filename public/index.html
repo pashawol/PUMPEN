@@ -27,30 +27,138 @@
 <script>!function(e,n,A){function o(e,n){return typeof e===n}function t(){var e,n,A,t,a,i,l;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(A=0;A<n.options.aliases.length;A++)e.push(n.options.aliases[A].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],l=i.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),s.push((t?"":"no-")+l.join("-"))}}function a(e){var n=u.className,A=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+A+"no-js(\\s|$)");n=n.replace(o,"$1"+A+"js$2")}Modernizr._config.enableClasses&&(n+=" "+A+e.join(" "+A),c?u.className.baseVal=n:u.className=n)}function i(e,n){if("object"==typeof e)for(var A in e)f(e,A)&&i(A,e[A]);else{e=e.toLowerCase();var o=e.split("."),t=Modernizr[o[0]];if(2==o.length&&(t=t[o[1]]),"undefined"!=typeof t)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),a([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var s=[],r=[],l={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var A=this;setTimeout(function(){n(A[e])},0)},addTest:function(e,n,A){r.push({name:e,fn:n,options:A})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr;var f,u=n.documentElement,c="svg"===u.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;f=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,A){return e.call(n,A)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var A=this._l[e];setTimeout(function(){var e,o;for(e=0;e<A.length;e++)(o=A[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=i}),Modernizr.addAsyncTest(function(){function e(e,n,A){function o(n){var o=n&&"load"===n.type?1==t.width:!1,a="webp"===e;i(e,a&&o?new Boolean(o):o),A&&A(n)}var t=new Image;t.onerror=o,t.onload=o,t.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],A=n.shift();e(A.name,A.uri,function(A){if(A&&"load"===A.type)for(var o=0;o<n.length;o++)e(n[o].name,n[o].uri)})}),t(),a(s),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);</script>
 <!--[if lt IE 11]><p class="browsehappy">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
-			<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-			</div>
-			<div class="menu-mobile menu-mobile--js d-lg-none">
+			<div class="menu-mobile menu-mobile--js d-xl-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
 				<div class="menu-mobile__inner">
 					<ul class="menu-mobile__nav">
-						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Продукция </a>
+						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Lorem ipsum </a>
+							<div class="sub-menu">
+								<div class="container">
+									<ul class="sub-menu__nav">
+										<li class="sub-menu__item">
+											<div class="sub-menu__title">PUMPENtyp
+											</div>
+											<ul>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+											</ul>
+										</li>
+										<li class="sub-menu__item">
+											<div class="sub-menu__title">Anwendungsbereche
+											</div>
+											<ul>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+											</ul>
+										</li>
+										<li class="sub-menu__item">
+											<div class="sub-menu__title">Ersatzteile
+											</div>
+											<ul>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+											</ul>
+										</li>
+										<li class="sub-menu__item">
+											<div class="sub-menu__title">Zubehör
+											</div>
+											<ul>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+												<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</li>
-						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Услуги  </a>
+						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Lorem ipsum </a>
 						</li>
-						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Подбор септика   </a>
+						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Lorem ipsum </a>
 						</li>
-						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Акции </a>
+						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Lorem ipsum </a>
 						</li>
-						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> О компании  </a>
-						</li>
-						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Доставка и оплата </a>
-						</li>
-						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Клиентам  </a>
-						</li>
-						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Наши работы   </a>
-						</li>
-						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Контакты </a>
+						<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Lorem ipsum </a>
 						</li>
 					</ul>
 					<div class="text-right"></div>
@@ -63,7 +171,7 @@
 				<div class="top-line block-with-lazy">
 					<div class="container">
 						<div class="row">
-							<div class="col-auto">
+							<div class="col-auto d-none d-md-block">
 								<div class="lang">
 									<div class="lang__title">
 										<div class="lang__item"><img class="res-i" src="img/@2x/DE.png" alt=""/>DE
@@ -79,15 +187,15 @@
 									</div>
 								</div>
 							</div>
-							<div class="col"></div>
-							<div class="col-auto"><a class="top-line__link" href="#">Mein Konto</a>
+							<div class="col d-none d-md-block"></div>
+							<div class="col-auto d-none d-md-block"><a class="top-line__link top-line__link--text" href="#">Mein Konto</a>
 							</div>
-							<div class="col-auto"><a class="top-line__link" href="#">Registrieren</a>
+							<div class="col-auto d-none d-md-block"><a class="top-line__link top-line__link--text" href="#">Registrieren</a>
 							</div>
-							<div class="col-auto"><a class="top-line__link" href="#"><img class="res-i" src="img/@2x/basket.png" alt=""/></a>
+							<div class="col-auto d-none d-md-block"><a class="top-line__link" href="#"><img class="res-i" src="img/@2x/basket.png" alt=""/></a>
 							</div>
-							<div class="col-auto">
-								<div class="search-block">
+							<div class="col-md-auto">
+								<div class="search-block d-md-block">
 									<form>
 										<input type="text"/>
 										<button type="button"></button>
@@ -101,26 +209,154 @@
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
 					<div class="container">
-						<ul class="top-nav__nav">
-							<li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-							</li>
-							<li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-							</li>
-							<li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-							</li>
-							<li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-							</li>
-							<li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-							</li>
-							<li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-							</li>
-							<li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-							</li>
-							<li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-							</li>
-							<li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-							</li>
-						</ul>
+						<div class="row">
+							<div class="col-xl-auto col"><a class="top-nav__logo" href="#"><img class="res-i" src="img/@2x/logo.png" alt=""/></a>
+							</div>
+							<div class="pos-s col d-none d-xl-block">
+								<ul class="top-nav__nav">
+									<li class="top-nav__item"><a class="top-nav__link" href="#">Lorem ipsum </a>
+										<div class="sub-menu">
+											<div class="container">
+												<ul class="sub-menu__nav">
+													<li class="sub-menu__item">
+														<div class="sub-menu__title">PUMPENtyp
+														</div>
+														<ul>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+														</ul>
+													</li>
+													<li class="sub-menu__item">
+														<div class="sub-menu__title">Anwendungsbereche
+														</div>
+														<ul>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+														</ul>
+													</li>
+													<li class="sub-menu__item">
+														<div class="sub-menu__title">Ersatzteile
+														</div>
+														<ul>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+														</ul>
+													</li>
+													<li class="sub-menu__item">
+														<div class="sub-menu__title">Zubehör
+														</div>
+														<ul>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+															<li><a class="sub-menu__link" href="#">Lorem ipsum dolor sit e  </a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="top-nav__item"><a class="top-nav__link" href="#">Lorem ipsum </a>
+									</li>
+									<li class="top-nav__item"><a class="top-nav__link" href="#">Lorem ipsum </a>
+									</li>
+									<li class="top-nav__item"><a class="top-nav__link" href="#">Lorem ipsum </a>
+									</li>
+									<li class="top-nav__item"><a class="top-nav__link" href="#">Lorem ipsum </a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-auto d-md-none">
+								<button class="top-nav__btn-search top-nav__btn-search--js" type="button">
+								</button>
+							</div>
+							<div class="col-auto d-md-none"><a class="top-nav__basket" href="#"><img class="res-i" src="img/@2x/basket-gray.png" alt=""/></a>
+							</div>
+							<div class="col-auto d-none d-md-block"><a class="top-nav__tel" href="#tel:+497471-9331970"><span class="top-nav__tel-label">Service-Hotline</span><span class="top-nav__tel-number">+49 7471 - 9331970</span></a>
+							</div>
+							<div class="col-auto d-xl-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- end top-nav-->
@@ -129,21 +365,538 @@
 			<!-- start header-block-->
 			<div class="header-block" id="header-block">
 				<div class="container">
-					<h1>header-block</h1>
-					<div class="row"></div>
+					<div class="row">
+						<div class="header-block__col col-xxl-8 col-lg-6">
+							<div class="header-block__content">
+								<!-- picture-->
+								<picture class="lazy"> 
+									<source srcset="#" data-srcset="img/@2x/webp/Rechteck_6.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="#" data-srcset="img/@1x/webp/Rechteck_6.webp" type="image/webp"/>
+									<source srcset="#" data-srcset="img/@2x/Rechteck_6.jpg" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="#" data-srcset="img/@1x/Rechteck_6.jpg" type="image/jpg"/><img src="#" data-src="img/@2x/Rechteck_6.jpg" alt=""/>
+								</picture>
+								<!-- /picture-->
+								<h1> PUMPEN & ERSATZTEIle</h1>
+								<div class="header-block__sub-title">schneller und einfacher Service für Unternehmen
+								</div><a class="header-block__btn" href="#">MEHR ERFAHREN</a>
+							</div>
+						</div>
+						<div class="header-block__col-right col-xxl-4 col-lg-6">
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__title-head"> <span>schnelle Ersatzteilsuche</span>
+									</div>
+									<div class="form-wrap__input-wrap">
+										<label><span class="form-wrap__title">PRoduktnummer </span><input class="form-wrap__input" type="text" placeholder="P/N" name="text"/>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__devider"> <span>order</span>
+									</div>
+									<div class="form-wrap__input-wrap">
+										<label><span class="form-wrap__title">PUMPENBAUART</span>
+											<select class="form-wrap__input">
+												<option>Produktbezeichnung</option>
+												<option>Produktbezeichnung</option>
+											</select>
+										</label>
+									</div>
+									<div class="form-wrap__input-wrap">
+										<label><span class="form-wrap__title">familie</span>
+											<select class="form-wrap__input">
+												<option>Produktbezeichnung</option>
+												<option>Produktbezeichnung</option>
+											</select>
+										</label>
+									</div>
+									<div class="form-wrap__input-wrap">
+										<label><span class="form-wrap__title">Unterfamile</span>
+											<select class="form-wrap__input">
+												<option>Produktbezeichnung</option>
+												<option>Produktbezeichnung</option>
+											</select>
+										</label>
+									</div>
+									<div class="form-wrap__input-wrap">
+										<label><span class="form-wrap__title">TYP</span>
+											<select class="form-wrap__input">
+												<option>Produktbezeichnung</option>
+												<option>Produktbezeichnung</option>
+											</select>
+										</label>
+									</div>
+									<button class="form-wrap__btn btn btn-outline-white" type="submit">MEINE PUMPE FINDEN
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- end header-block-->
 			<!-- start s-catalog-->
-			<section class="s-catalog section" id="s-catalog">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>s-catalog</h2>
+			<section class="s-catalog section bg-light pb-0" id="s-catalog">
+				<div class="s-catalog__slider-wrap container">
+					<div class="section-title">
+						<h2> BEST SELLER</h2>
 					</div>
-					<div class="row"></div>
+					<div class="s-catalog__slider s-catalog__slider--js">
+						<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+							<div class="prod-item__caption">
+								<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+								</div>
+								<div class="row">
+									<div class="prod-item__price col-sm-auto">1,99 €
+									</div>
+									<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+									</div>
+								</div>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+								</label>
+								<div class="star-block">
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+								<!-- picture-->
+								<picture class="lazy"> 
+									<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+									<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+								</picture>
+								<!-- /picture--></a>
+							</div>
+						</div>
+						<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+							<div class="prod-item__caption">
+								<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+								</div>
+								<div class="row">
+									<div class="prod-item__price col-sm-auto">1,99 €
+									</div>
+									<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+									</div>
+								</div>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+								</label>
+								<div class="star-block">
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+								<!-- picture-->
+								<picture class="lazy"> 
+									<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+									<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+								</picture>
+								<!-- /picture--></a>
+							</div>
+						</div>
+						<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+							<div class="prod-item__caption">
+								<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+								</div>
+								<div class="row">
+									<div class="prod-item__price col-sm-auto">1,99 €
+									</div>
+									<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+									</div>
+								</div>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+								</label>
+								<div class="star-block">
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+								<!-- picture-->
+								<picture class="lazy"> 
+									<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+									<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+								</picture>
+								<!-- /picture--></a>
+							</div>
+						</div>
+						<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+							<div class="prod-item__caption">
+								<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+								</div>
+								<div class="row">
+									<div class="prod-item__price col-sm-auto">1,99 €
+									</div>
+									<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+									</div>
+								</div>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+								</label>
+								<div class="star-block">
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+								<!-- picture-->
+								<picture class="lazy"> 
+									<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+									<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+								</picture>
+								<!-- /picture--></a>
+							</div>
+						</div>
+						<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+							<div class="prod-item__caption">
+								<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+								</div>
+								<div class="row">
+									<div class="prod-item__price col-sm-auto">1,99 €
+									</div>
+									<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+									</div>
+								</div>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+								</label>
+								<div class="star-block">
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+								<!-- picture-->
+								<picture class="lazy"> 
+									<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+									<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+								</picture>
+								<!-- /picture--></a>
+							</div>
+						</div>
+						<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+							<div class="prod-item__caption">
+								<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+								</div>
+								<div class="row">
+									<div class="prod-item__price col-sm-auto">1,99 €
+									</div>
+									<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+									</div>
+								</div>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+								</label>
+								<div class="star-block">
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+								<!-- picture-->
+								<picture class="lazy"> 
+									<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+									<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+								</picture>
+								<!-- /picture--></a>
+							</div>
+						</div>
+						<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+							<div class="prod-item__caption">
+								<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+								</div>
+								<div class="row">
+									<div class="prod-item__price col-sm-auto">1,99 €
+									</div>
+									<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+									</div>
+								</div>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+								</label>
+								<div class="star-block">
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+								<!-- picture-->
+								<picture class="lazy"> 
+									<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+									<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+								</picture>
+								<!-- /picture--></a>
+							</div>
+						</div>
+						<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+							<div class="prod-item__caption">
+								<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+								</div>
+								<div class="row">
+									<div class="prod-item__price col-sm-auto">1,99 €
+									</div>
+									<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+									</div>
+								</div>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+								</label>
+								<div class="star-block">
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item text-warning">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="star-block__item">
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+								<!-- picture-->
+								<picture class="lazy"> 
+									<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+									<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+								</picture>
+								<!-- /picture--></a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end s-catalog-->
+			<!-- start s-icons-block-->
+			<section class="s-icons-block">
+				<div class="container">
+					<div class="row">
+								<div class="s-icons-block__col col-lg-3 col-6">
+									<!-- picture-->
+									<picture class="lazy"> 
+										<source srcset="#" data-srcset="img/@2x/webp/icon-1.webp" type="image/webp"/>
+										<!-- /webp images  --><img src="#" data-src="img/@2x/icon-1.png" alt=""/>
+									</picture>
+									<!-- /picture-->
+									<div class="s-icons-block__text">TOP- PREISE
+									</div>
+								</div>
+								<div class="s-icons-block__col col-lg-3 col-6">
+									<!-- picture-->
+									<picture class="lazy"> 
+										<source srcset="#" data-srcset="img/@2x/webp/icon-2.webp" type="image/webp"/>
+										<!-- /webp images  --><img src="#" data-src="img/@2x/icon-2.png" alt=""/>
+									</picture>
+									<!-- /picture-->
+									<div class="s-icons-block__text">Versandkosten sparen
+									</div>
+								</div>
+								<div class="s-icons-block__col col-lg-3 col-6">
+									<!-- picture-->
+									<picture class="lazy"> 
+										<source srcset="#" data-srcset="img/@2x/webp/icon-3.webp" type="image/webp"/>
+										<!-- /webp images  --><img src="#" data-src="img/@2x/icon-3.png" alt=""/>
+									</picture>
+									<!-- /picture-->
+									<div class="s-icons-block__text">riesen auswahl
+									</div>
+								</div>
+								<div class="s-icons-block__col col-lg-3 col-6">
+									<!-- picture-->
+									<picture class="lazy"> 
+										<source srcset="#" data-srcset="img/@2x/webp/icon-4.webp" type="image/webp"/>
+										<!-- /webp images  --><img src="#" data-src="img/@2x/icon-4.png" alt=""/>
+									</picture>
+									<!-- /picture-->
+									<div class="s-icons-block__text">schnelle  lieferung
+									</div>
+								</div>
+					</div>
+				</div>
+			</section>
+			<!-- end s-icons-block-->
+			<!-- start s-page-title-->
+			<section class="s-page-title section" id="s-page-title">
+				<div class="container">
+					<div class="s-page-title__art">Home &gt;  Pumpen &gt; Nassläufer-Umwälzpumpe &gt; MAGNA &gt; MAGNA3 D
+					</div>
+					<h1 class="s-page-title__title">PUMPEN &amp; ERSATZTEILE
+					</h1>
+					<div class="s-page-title__subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
+					</div>
+				</div>
+			</section>
+			<!-- end s-page-title-->
 			<div class="container">
 				<!-- start s-catalog-head-->
 				<section class="s-catalog-head section" id="s-catalog-head">
@@ -170,12 +923,405 @@
 					</div>
 					<div class="col-lg-8">
 						<!-- start s-catalog-->
-						<section class="s-catalog section" id="s-catalog">
-							<div class="container">
-								<div class="section-title text-center">
-									<h2>s-catalog</h2>
+						<section class="s-catalog section bg-light pb-0" id="s-catalog">
+							<div class="s-catalog__slider-wrap container">
+								<div class="section-title">
+									<h2> BEST SELLER</h2>
 								</div>
-								<div class="row"></div>
+								<div class="s-catalog__slider s-catalog__slider--js">
+									<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+										<div class="prod-item__caption">
+											<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+											</div>
+											<div class="row">
+												<div class="prod-item__price col-sm-auto">1,99 €
+												</div>
+												<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+												</div>
+											</div>
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+											</label>
+											<div class="star-block">
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+											<!-- picture-->
+											<picture class="lazy"> 
+												<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+												<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+									</div>
+									<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+										<div class="prod-item__caption">
+											<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+											</div>
+											<div class="row">
+												<div class="prod-item__price col-sm-auto">1,99 €
+												</div>
+												<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+												</div>
+											</div>
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+											</label>
+											<div class="star-block">
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+											<!-- picture-->
+											<picture class="lazy"> 
+												<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+												<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+									</div>
+									<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+										<div class="prod-item__caption">
+											<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+											</div>
+											<div class="row">
+												<div class="prod-item__price col-sm-auto">1,99 €
+												</div>
+												<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+												</div>
+											</div>
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+											</label>
+											<div class="star-block">
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+											<!-- picture-->
+											<picture class="lazy"> 
+												<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+												<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+									</div>
+									<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+										<div class="prod-item__caption">
+											<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+											</div>
+											<div class="row">
+												<div class="prod-item__price col-sm-auto">1,99 €
+												</div>
+												<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+												</div>
+											</div>
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+											</label>
+											<div class="star-block">
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+											<!-- picture-->
+											<picture class="lazy"> 
+												<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+												<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+									</div>
+									<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+										<div class="prod-item__caption">
+											<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+											</div>
+											<div class="row">
+												<div class="prod-item__price col-sm-auto">1,99 €
+												</div>
+												<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+												</div>
+											</div>
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+											</label>
+											<div class="star-block">
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+											<!-- picture-->
+											<picture class="lazy"> 
+												<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+												<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+									</div>
+									<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+										<div class="prod-item__caption">
+											<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+											</div>
+											<div class="row">
+												<div class="prod-item__price col-sm-auto">1,99 €
+												</div>
+												<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+												</div>
+											</div>
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+											</label>
+											<div class="star-block">
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+											<!-- picture-->
+											<picture class="lazy"> 
+												<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+												<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+									</div>
+									<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+										<div class="prod-item__caption">
+											<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+											</div>
+											<div class="row">
+												<div class="prod-item__price col-sm-auto">1,99 €
+												</div>
+												<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+												</div>
+											</div>
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+											</label>
+											<div class="star-block">
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+											<!-- picture-->
+											<picture class="lazy"> 
+												<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+												<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+									</div>
+									<div class="prod-item"><a class="prod-item__img-wrap" href="#"><img class="res-i" src="#" data-lazy="img/@2x/prod.jpg" alt=""/></a>
+										<div class="prod-item__caption">
+											<div class="prod-item__title"><a href="#">Lorem ipsum dolor</a>
+											</div>
+											<div class="row">
+												<div class="prod-item__price col-sm-auto">1,99 €
+												</div>
+												<div class="prod-item__col-auto col-sm-auto text-gray2">inkl. 19% MwSt
+												</div>
+											</div>
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Produkt vergleichen </span>
+											</label>
+											<div class="star-block">
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item text-warning">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+												<div class="star-block__item">
+													<svg class="icon icon-star ">
+														<use xlink:href="img/svg/sprite.svg#star"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="prod-item__foot"><a class="prod-item__btn prod-item__btn--more" href="#">Details ansehen</a><a class="prod-item__btn prod-item__btn--add" href="#">
+											<!-- picture-->
+											<picture class="lazy"> 
+												<source srcset="#" data-srcset="img/@2x/webp/basket--white.webp" type="image/webp"/>
+												<!-- /webp images  --><img src="#" data-src="img/@2x/basket--white.png" alt=""/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</section>
 						<!-- end s-catalog-->
