@@ -190,7 +190,7 @@
 							<div class="col d-none d-md-block"></div>
 							<div class="col-auto d-none d-md-block"><a class="top-line__link top-line__link--text" href="#">Mein Konto</a>
 							</div>
-							<div class="col-auto d-none d-md-block"><a class="top-line__link top-line__link--text" href="#">Registrieren</a>
+							<div class="col-auto d-none d-md-block"><a class="top-line__link top-line__link--text link-modal" href="#reg">Registrieren</a>
 							</div>
 							<div class="col-auto d-none d-md-block"><a class="top-line__link" href="#"><img class="res-i" src="img/@2x/basket.png" alt=""/></a>
 							</div>
@@ -550,26 +550,35 @@
 			</footer>
 		</div>
 		<div class="d-none">
-			<div class="form-wrap modal-win modal-form" id="modal-call">
-				<form>
-					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
+			<div class="  modal-win modal-form" id="reg">
+				<div class="container">
+					<div class="row">
+						<div class="col-modal col-lg-6">
+							<div class="form-wrap">
+								<form>
+									<div class="text-center">
+										<div class="modal-title">ANMELDEN </div>
+									</div>
+									<div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="email" placeholder="E-Mail Adresse" name="email" required="required"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap"><input class="form-wrap__input" type="password" placeholder="Passwort" name="password" required="required"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="pt-2 pb-3 pl-3"><a class="text-gray2" href="#">Passwort vergessen?</a></div>
+									<button class="form-wrap__btn btn-modal" type="submit">anmelden
+									</button>
+								</form>
+							</div>
 						</div>
-						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
+						<div class="col-modal col-lg-6 d-flex flex-column order-lg-first">
+							<div class="modal-title">Neuer kunde?</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p><a class="btn btn-modal" href="#">anmelden</a>
+						</div>
 					</div>
-					<div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" placeholder="Ваше Имя" name="text" required="required"/>
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap"><input class="form-wrap__input" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
-					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-						</label>
-					</div>
-				</form>
+				</div>
 			</div>
-			<!-- #modal-call-->
+			<!-- #reg-->
 		</div>
 		<!-- modal-->
 		<script src="js/lazy.js"></script>

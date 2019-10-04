@@ -140,27 +140,36 @@
 }
 
 .sub-menu{
-	position: absolute;
-	top: 100%;
-	@include a-cent(x);
-	max-width: rem(1460);
-	width: 100%;
-	background-color: $light;
+	@include media-breakpoint-up(xl) {
+
+		position: absolute;
+		top: 100%;
+		@include a-cent(x);
+		max-width: rem(1460);
+		width: 100%;
+		padding-bottom: rem(50);
+		background-color: $light;
+		padding-top: rem(50);
+	}
+	// padding-top: rem(20);
 	text-align: left;
-	padding-top: rem(50);
-	padding-bottom: rem(50);
 	display: none;
 	ul{
 		list-style-type: none;
 	}
 	&__title{
-		@extend .h2;
+		// @extend .h2;
+		font-size: $h2-font-size;
 		font-weight: bold;
 		line-height: 1;
 		text-transform: uppercase;
+		padding-bottom: 0.5rem;
 	}
 	a{
-		font-size: $h2-font-size;
+		@include media-breakpoint-up(xl) {
+
+			font-size: $h2-font-size;
+		}
 		font-weight: normal;
 		@extend .text-body;
 	}
@@ -174,7 +183,7 @@
 
 	}
 	&__item{
-		@extend .col-lg-3;
+		@extend .col-xl-3;
 	}
 }
 // мобильное меню
@@ -253,7 +262,7 @@ $h: em(2);
 	top: 0;
 	// left: 0;
 	right: 0;
-	transform: translate(100%, 0);
+	transform: translate(120%, 0);
 	@include mt(.6);
 	will-change: transform;
 
@@ -308,7 +317,8 @@ $h: em(2);
 	li {
 		display: block;
 		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
+		border-top: 1px solid #fff;
+		position: relative;
 
 		a {
 			// font-size: 16px;
@@ -317,5 +327,22 @@ $h: em(2);
 			display: block;
  
 		}
+
+	}
+	.toggle-l{
+		position: absolute;
+		right: 0;
+		top: -1px;
+		border: 1px solid #fff;
+		width: rem(43);
+		height: rem(43);
+		cursor: pointer;
+		background-image: url(../img/svg/bot.svg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 20px;
+	}
+	.sub-menu__item{
+		padding-top: rem(10);
 	}
 }

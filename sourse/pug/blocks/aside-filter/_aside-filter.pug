@@ -1,9 +1,70 @@
 mixin aside-filter()
 	// start aside-filter
-	+b.SECTION.aside-filter.section#aside-filter&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 aside-filter
+	+b.SECTION.aside-filter.section.d-none.d-lg-block
+		+e.inner
+			mixin main-item(t)
+				+e.group.accordion
+					+e.group-title.accordion__toggle= t
+					+e.group-block.accordion__block
+						block
+			
+			mixin item(t)
+				+e.group-sm.accordion
+					+e.group-sm-title.strong.accordion__toggle= t
+					+e.group-sm-block.accordion__block
+						+item-sm("> Comfort")
+
+						+item-sm("> Alpha")
+						+item-sm("> Magna")
+						+item-sm("> UP, UPS Serie 100")
+						+item-sm("> UPS Serie 200") 
+			mixin item-sm(t)
+				+e.group-sm.accordion
+					+e.group-sm-title.strong.accordion__toggle= t
+					+e.group-sm-block.accordion__block
+						+b.LABEL.custom-input-text
+							+e.INPUT.input(type="checkbox")
+							+e.SPAN.lab Magna3 D
+						
+						+b.LABEL.custom-input-text
+							+e.INPUT.input(type="checkbox")
+							+e.SPAN.lab Magna3 N
+						
+						+b.LABEL.custom-input-text
+							+e.INPUT.input(type="checkbox")
+							+e.SPAN.lab Magna3, Magna3 D
+			
+			+main-item("PumpenBauART")
+				+item("Nassläufer-Umwälzpumpe")
+				+item("Normpumpe")
+				+item("Einstufige Blockpumpe")
+				+item("Mehrstufige Kreiselpumpe")
+				+item("Eintauchpumpe für  werkzeugmaschinen ")
+				+item("Verkapselt")
+				+item("Tauchmotorenpumpe")
+			+main-item("PumpenFamilie")
+				+in-c
+					+e.SPAN.text Comfort
 				
-			.row
+				+in-c
+					+e.SPAN.text Alpha
+				
+				+in-c
+					+e.SPAN.text Magna
+				
+				+in-c
+					+e.SPAN.text UP, UPS, USP Servie 100
+				
+				+in-c
+					+e.SPAN.text UPS Serie 200
+				
+			+main-item("Unterfamilie")
+				+in-c
+					+e.SPAN.text Magna3 D
+				
+				+in-c
+					+e.SPAN.text Magna3 N
+				
+				+in-c
+					+e.SPAN.text Magna3, Magna3 D
 	// end aside-filter
