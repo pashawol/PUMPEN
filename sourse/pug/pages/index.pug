@@ -2,12 +2,15 @@ extends layout/main.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'Main page'
 	title= title
 
 
 include ../blocks/s-content/_s-content.pug
 include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/aside-filter/_aside-filter.pug
+include ../blocks/s-catalog-head/_s-catalog-head.pug
 
 block pagecontent
  
@@ -16,6 +19,14 @@ block pagecontent
 		+top-line()
 		+top-nav()
 	+header-block()
+	+s-catalog
+	.container
+		+s-catalog-head
+		.row
+			.col-lg-4
+				+aside-filter
+			.col-lg-8
+				+s-catalog
 	+s-form()
 	+s-contact()
 	+footer()

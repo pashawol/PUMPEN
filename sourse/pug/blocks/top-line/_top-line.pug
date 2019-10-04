@@ -2,5 +2,33 @@ mixin top-line()
 	// start .top-line
 	+b.top-line.block-with-lazy
 		.container
-			.row top-line
+			.row
+				.col-auto
+					+b.lang
+						+e.title
+							+e.item
+								img.res-i(src="img/@2x/DE.png", alt="")
+								| DE
+						+e.dropdown
+							- for (var x = 0; x < 3; x++)
+								+e.item
+									img.res-i(src="img/@2x/DE.png", alt="")
+									| DE
+				.col
+				.col-auto
+					+e.link(href="#") Mein Konto
+				
+				.col-auto
+					+e.link(href="#") Registrieren
+				
+				.col-auto
+					+e.link(href="#")
+						img.res-i(src="img/@2x/basket.png", alt="")
+				.col-auto
+					+b.search-block
+						form
+							input(type="text")
+							button(type="button")
+				
+
 	// end .top-line
