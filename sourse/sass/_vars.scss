@@ -1,6 +1,6 @@
 
 
-$em-base: 16px;
+$em-base: 14px;
 $small: rem(14);
 $url: '../img/';
 $path2: '@2x/';
@@ -46,7 +46,9 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         #f6f6f6 !default;
+$gray:         #e4e4e4 !default;
+$gray2:         #b3b3b3 !default;
 $dark:          $gray-800 !default;
 
 $theme-colors: () !default;
@@ -59,7 +61,9 @@ $theme-colors: map-merge(
     // "info":       $info,
     // "warning":    $warning,
     "danger":     $danger,
-    // "light":      $light,
+    "gray":     $gray,
+    "gray2":     $gray2,
+    "light":      $light,
     // "dark":       $dark
   ),
   $theme-colors
@@ -123,11 +127,11 @@ $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$line-height-base:            1.29 !default;
 
 // title 
 $h1-font-size:                rem(30) !default;
-$h2-font-size:                $font-size-base * 2 !default;
+$h2-font-size:                rem(18) !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
