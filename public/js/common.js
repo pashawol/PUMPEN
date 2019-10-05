@@ -82,31 +82,25 @@ function eventHandler() {
     infinite: true,
     arrows: true,
     mobileFirst: true,
-    prevArrow: arrr2,
-    nextArrow: arrl2,
+    // prevArrow: arrr2,
+    // nextArrow: arrl2,
     // autoplay: true,
     autoplaySpeed: 6000,
     lazyLoad: 'ondemand'
   };
-  $('.s-gal__slider--js').slick(_objectSpread({}, defaultSlide, {
-    slidesToShow: 1,
-    responsive: [{
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 4
-      }
-    }, {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 3
-      }
-    }, {
-      breakpoint: 576,
-      settings: {
-        slidesToShow: 2,
-        arrows: true
-      }
-    }]
+  $('.footer__slider--js').slick(_objectSpread({}, defaultSlide, {
+    fade: true,
+    prevArrow: $('.footer__slider-prev'),
+    nextArrow: $('.footer__slider-next'),
+    asNavFor: '.footer__slider-date--js',
+    slidesToShow: 1
+  }));
+  $('.footer__slider-date--js').slick(_objectSpread({}, defaultSlide, {
+    fade: true,
+    prevArrow: $('.footer__slider-prev'),
+    nextArrow: $('.footer__slider-next'),
+    asNavFor: '.footer__slider--js',
+    slidesToShow: 1
   })); // $('.s-gal__slider\
   // ,.slider-for2 ')
   // 	.on('lazyLoaded', function (event, slick, image, imageSource) {
