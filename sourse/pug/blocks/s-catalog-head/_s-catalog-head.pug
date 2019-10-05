@@ -2,8 +2,17 @@ mixin s-catalog-head()
 	// start s-catalog-head
 	+b.SECTION.s-catalog-head.section#s-catalog-head&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-catalog-head
-				
-			.row
+			+e.btn-wrap
+				+e.btn.active(type="button") Ersatzteile
+				+e.btn(type="button") Pumpen
+				+e.btn(type="button") zubehör
+			.d-md-none
+				+e.input-wrap
+					+e.SELECT.input.form-control
+
+							option()  Ersatzteile
+							option() Pumpen
+							option() zubehör
+						 
 	// end s-catalog-head
+
