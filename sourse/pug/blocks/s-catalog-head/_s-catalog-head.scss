@@ -1,6 +1,46 @@
 .s-catalog-head {
-		 
-	@include media-breakpoint-up(xl) {}
+		 padding-top: rem(40);
+		 padding-bottom: rem(28);
+	&__btn-wrap{
+		@include media-breakpoint-up(md) {
+
+			display: flex;
+		}
+		display: none;
+		margin-right: -2px;
+		margin-left: -2px;
+	}
+	&__btn{
+		@extend .btn;
+		border: 1px solid #e7e7e7;
+		background-color: $light;
+		text-align: center;
+		display: block;
+		width: calc(100% / 3 - 4px);
+		font-weight: bold;
+		margin-left: 2px;
+		margin-right: 2px;
+		// @extend h2;
+		&:hover,
+		&.active{
+			color: #ffffff;
+			background-color: $primary;
+			border-color: $primary;
+		}
+	}
+	&__input{
+		background-color: $primary !important;
+		color: #ffffff !important;
+		text-transform: uppercase;
+		@extend .h2;
+		font-weight: bold;
+	}
+	@include media-breakpoint-up(xxl) {
+		.container{
+
+			max-width: (1180px + 20px);
+		}
+	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}

@@ -146,6 +146,10 @@ function eventHandler() {
 	$(".top-nav__btn-search--js").click(function () {
 		$(".search-block").slideToggle();
 	});
+	$(".accordion__toggle").click(function () {
+		$(this).parents().toggleClass("active");
+		$(this).toggleClass("active").next().slideToggle();
+	});
 }
 
 ; // /form
@@ -161,42 +165,6 @@ var JSCCommon = {
 	// функции для запуска lazy
 	// /LazyFunction
 	modalCall: function modalCall() {
-		// $('.popup-with-move-anim').magnificPopup({
-		// 	type: 'inline',
-		// 	fixedContentPos: true,
-		// 	fixedBgPos: true,
-		// 	overflowY: 'auto',
-		// 	closeBtnInside: true,
-		// 	preloader: false,
-		// 	midClick: true,
-		// 	removalDelay: 300,
-		// 	mainClass: 'my-mfp-zoom-in',
-		// 	tClose: 'Закрыть (Esc)',
-		// }); 
-		// // / modal window 
-		// // modal галерея
-		// $(".gal").each(function () {
-		// 	$(this).find("a").magnificPopup({
-		// 		type: 'image',
-		// 		closeOnContentClick: false,
-		// 		closeBtnInside: false,
-		// 		mainClass: 'mfp-with-zoom mfp-img-mobile',
-		// 		tClose: 'Закрыть (Esc)',
-		// 		image: {
-		// 			verticalFit: true,
-		// 			// titleSrc: function(item) {
-		// 			//   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-		// 			// }
-		// 		},
-		// 		gallery: {
-		// 			enabled: true,
-		// 			tPrev: 'Назад (Кнопка влева)', // title for left button
-		// 			tNext: 'Вперед (Кнопка вправа)', // title for right button
-		// 			tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
-		// 		}
-		// 	});
-		// })
-		// // /modal галерея
 		$(".link-modal").fancybox({
 			arrows: false,
 			infobar: false,
@@ -229,6 +197,13 @@ var JSCCommon = {
 				menu.removeClass("active");
 				$("body, html").removeClass("fixed");
 			}
+		});
+		$(".sub-menu").each(function () {
+			$(this).after('<div class="toggle-l"></div>');
+		});
+		$(document).on('click', '.toggle-l', function () {
+			$(this).prev().slideToggle();
+			return false;
 		});
 	},
 	// /mobileMenu

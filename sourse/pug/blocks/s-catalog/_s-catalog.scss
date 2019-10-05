@@ -1,5 +1,9 @@
 .s-catalog {
+	padding-top: rem(40);
+	&--slider{
+		padding-top: rem(48);
 
+	}
 	.section-title{
 		padding-left: 20px;
 		border-bottom: 2px solid #333333;
@@ -16,6 +20,16 @@
 		&__slider-wrap{
 			max-width: 1790px;
 		}
+	}
+
+	&__btn{
+		margin-left: auto;
+		margin-right: auto;
+		width: rem(188px);
+		display: block;
+		@extend .btn;
+		@extend .btn-outline-primary;
+		margin-top: rem(40);
 	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

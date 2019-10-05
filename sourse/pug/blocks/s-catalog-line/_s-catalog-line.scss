@@ -1,39 +1,14 @@
-.s-page-title {
-	padding: rem(39) 0 rem(22);
-	background-color: $secondary;
-	color: #ffffff;
-	text-transform: uppercase;
-
+.s-catalog-line {
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 1px solid #333333;
+	padding-bottom: rem(10);
 	.container{
-		@include media-breakpoint-up(xl){
-			max-width: rem(1160);
-		}
+		text-align: right;
 	}
-
-	&__art{
-		font-size: rem(10);
-		margin-bottom: rem(23);
-		@include media-breakpoint-up(md){
-			font-size: rem(12);
-			margin-bottom: rem(2);
-		}
-	}
-	
-	&__title{
-		font-weight: 900;
-		margin-bottom: rem(12);
-		font-size: rem(23);
-		@include media-breakpoint-up(md){
-			font-size: $h1-font-size;
-		}
-	}
-
-	&__subtitle{
-		font-size: rem(12);
-		letter-spacing: 0.4px;
-		@include media-breakpoint-up(md){
-			font-size: rem(14);
-		}
+	&__btn{
+		background: none;
+		border: none;
 	}
 		 
 	@include media-breakpoint-up(xl) {}
