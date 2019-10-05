@@ -1,0 +1,74 @@
+mixin s-product()
+	// start s-product
+	+b.SECTION.s-product.section#s-product&attributes(attributes)
+		+e.top-wrap
+			+e.img-wrapper
+				+e.IMG.img-prod(src='img/poduct.jpg' alt='')
+				+e.img-btn-wrap
+					+e.img-btn.btn.btn-primary +
+					+e.img-btn.btn.btn-primary -
+					+e.A.img-btn.btn.btn-primary(href='img/poduct.jpg' data-fancybox="gallery")
+						+icon('full')
+			+e.main-wrap
+				+e.SELECT.main-sel
+					option(value='-') (6) EINLEGE KEIL
+					option(value='0') (6) EINLEGE KEIL
+					option(value='1') (6) EINLEGE KEIL
+				+e.main-prod
+					+e.main-title (6) EINLEGE KEIL
+					+e.main-art Ersatz-Nr.: 00000000000
+					+e.SELECT.main-add-sel
+						option(value='-') Anzahl
+						option(value='0') Anzahl
+						option(value='1') Anzahl
+				+e.main-links-wrap
+					+e.A.main-link(href='#')
+						+e.IMG.main-link-img(src='img/comp.png' alt='')
+						|vergleichen
+					+e.A.main-link(href='#')
+						+e.IMG.main-link-img(src='img/add.png' alt='')
+						|Merken
+				+e.main-price-wrap
+					+e.main-price 1370,90 €
+					+e.main-price-add--sm inkl. MwSt.
+					+e.main-price-add 
+						strong Kostenlose Lieferung 
+						| ab 50 €
+					+e.main-price-add Lieferzeit: Lieferbar in 7 Tagen
+					+e.main-price-add Bestellnummer: 97924829
+					+e.main-btn.btn.btn-primary In den Warenkorb
+		+b.other-prod
+			+e.TABLE.table
+				thead
+					tr
+						th ARTIKELNAME
+						th Artikelnummer
+						th Preis
+						th Anzahl
+				tbody
+					mixin table-i
+						tr
+							td
+								+e.title Lorem ipsum dolor
+								+e.subtitle Ersatz-Nr.: 00000000000
+							td
+								+e.art 01234567891011
+							td
+								+e.price 1000,00 €
+							td
+								+e.SELECT.sel
+									option(value='-') Anzahl
+									option(value='0') Anzahl
+									option(value='1') Anzahl
+								+e.A.btn.btn.btn-primary(href='#') In den Warenkorb
+								
+					+table-i
+					+table-i
+					+table-i
+					+table-i
+					+table-i
+		+pugin()(class='prod-pug')
+		+b.bot-btn
+			+e.A.btn.btn.btn-primary(href='#') Einzelteilekit
+			+e.A.btn.btn.btn-gray(href='#') Einzelteilekit
+	// end s-product
