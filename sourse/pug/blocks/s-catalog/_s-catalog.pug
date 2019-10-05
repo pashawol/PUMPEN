@@ -1,0 +1,48 @@
+mixin stars()
+	+b.star-block
+		+e.item.text-warning
+			+icon('star')
+		
+		+e.item.text-warning
+			+icon('star')
+		
+		+e.item.text-warning
+			+icon('star')
+		
+		+e.item
+			+icon('star')
+		
+		+e.item
+			+icon('star')
+		
+mixin prod(sl)
+	+b.prod-item&attributes(attributes)
+		+e.img-wrap(href="#")
+			if sl
+				img.res-i(src="#" data-lazy="img/@2x/prod.jpg", alt="")
+			else
+				+pic("prod",'','lazy',0)
+		+e.caption
+			+e.title
+				a(href="#") Lorem ipsum dolor
+			.row
+				+e.price.col-sm-auto 1,99 €
+				+e.col-auto.col-sm-auto.text-gray2 inkl. 19% MwSt
+			+in-c
+				+e.SPAN.text Produkt vergleichen 
+			+stars()
+		+e.foot
+			+e.btn--more(href="#") Details ansehen
+			+e.btn--add(href="#")
+				+pic("basket--white.png",'','lazy',0)
+				//- img.res-i(src="img/@2x/", alt="")
+mixin s-catalog()
+	// start s-catalog
+	+b.SECTION.s-catalog.section.bg-light.pb-0#s-catalog&attributes(attributes)
+		+e.slider-wrap.container
+			.section-title
+				h2  BEST SELLER
+			+e.slider--js
+				- for (var x = 0; x < 8; x++)
+					+prod('sl')
+	// end s-catalog

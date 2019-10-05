@@ -1,33 +1,106 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
+ 
 	top: 100%;
 	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
+	z-index: 20; 
+	@include mt; 
 	top: 0;
 	left: 0;
 	width: 100%;
+	background-color: #ffffff;
+	.row{
+		align-items: center;
+	}
 
 	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
+		// width: 100vw;
+		// bottom: auto;
+		// margin-top: 0;
+		// background-color: #fff;
 	}
 
 	&__nav {
 		text-align: center;
 		list-style-type: none;
+		display: flex;
+		justify-content: center;
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0;
 	}
 
 	&__item {
-		display: inline-block;
+		 
 		list-style-type: none;
+		&:hover{
+			.sub-menu{
+				display: block;
+			}
+		}
+	}
+	&__link{
+		font-weight: 700;
+		line-height: 1.2;
+		text-transform: uppercase;
+		color: $body-color ;
+		padding: rem(50) rem(12) rem(36);
+		display: block;
+		text-align: center;
+		text-decoration: none !important;
+		
+	}
+	&__item:hover &__link{
+		color: #6e6e6e;
+		background-color: $light;
+	}
+	&__tel{
+		// display: block;
+		margin-top: rem(10);
+		padding-left: rem(45);
+		display: inline-block;
+		margin-bottom: rem(20);
+		position: relative;
+		text-decoration: none !important;
+		&::before{
+			content: url("../img/@2x/tel.png");
+			position: absolute;
+			left: 0;
+			@include a-cent(y);
+			margin-top: rem(10);
+		}
+		&-label{
+			display: block;
+			color: $gray2 	!important;
+		}
+		&-number{ 
+			display: block;
+			font-weight: bold;
+		}
 	}
 
+	&__logo{
+		display: inline-block;
+		margin-top: rem(20);
+		margin-bottom: rem(20);
+	}
+
+	&__btn-search{
+		@include bg("search.png");
+    background-color: #ffffff;
+    background-position: center center;
+    background-repeat: no-repeat;
+		width: rem(35); 
+		border: none;
+		margin-left: -1px;
+		width: 22px;
+		height: 21px;
+		padding: 0;
+	}
+	&__basket{
+		display: inline-block;
+		margin-bottom: rem(10);
+	}
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -63,8 +136,47 @@
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+	position: relative;
 }
 
+.sub-menu{
+	position: absolute;
+	top: 100%;
+	@include a-cent(x);
+	max-width: rem(1460);
+	width: 100%;
+	background-color: $light;
+	text-align: left;
+	padding-top: rem(50);
+	padding-bottom: rem(50);
+	display: none;
+	ul{
+		list-style-type: none;
+	}
+	&__title{
+		@extend .h2;
+		font-weight: bold;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+	a{
+		font-size: $h2-font-size;
+		font-weight: normal;
+		@extend .text-body;
+	}
+	&__nav{
+		// columns: 4;
+		// vertical-align: top;
+		// display: flex;
+		@extend .row;
+		align-items: flex-start !important;
+
+
+	}
+	&__item{
+		@extend .col-lg-3;
+	}
+}
 // мобильное меню
 
 // мобильное меню
@@ -73,13 +185,15 @@ $h: em(2);
 .toggle-menu-mobile {
 	display: block;
 	height: $h* 14;
-	margin-top: 15px;
+	// margin-top: 15px;
 	margin-left: 0;
-	position: fixed;
+	// position: fixed;
+	position: relative;
 	z-index: 999 !important;
 	right: 0;
 	padding: 3px;
 	border-radius: 5px;
+	margin-bottom: rem(10);
 	top: $h;
 
 
@@ -106,7 +220,7 @@ $h: em(2);
 		// width: 32px;
 		font-size: 32px;
 		width: 1em;
-		height: $h;
+		height: 2px;
 		background-color: $primary;
 		transition: all 0.3s;
 		backface-visibility: hidden;

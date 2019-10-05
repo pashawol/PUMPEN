@@ -1,0 +1,14 @@
+mixin s-icons-block()
+	// start s-icons-block
+	+b.SECTION.s-icons-block
+		.container
+			.row
+				mixin item(i,t)
+					+e.col.col-lg-3.col-6
+						+pic(`icon-${i}.png`,'','lazy',0)
+						+e.text= t
+				+item("1",'TOP- PREISE')
+				+item("2",'Versandkosten sparen')
+				+item("3",'riesen auswahl')
+				+item("4",'schnelle  lieferung')
+	// end s-icons-block

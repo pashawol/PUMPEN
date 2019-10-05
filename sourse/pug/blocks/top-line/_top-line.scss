@@ -1,8 +1,38 @@
 .top-line {
+  background-color: #f6f6f6;
+	.row{
+    align-items: center;
+    > *{
+      @include media-breakpoint-up(md) {
 
-	
+        padding-top: rem(6);
+        padding-bottom: rem(6);
+      }
+    }
+  }
 // 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+  .container{
+    max-width: 1200px;
+  }
+}
+
+&__link{
+  @extend .text-secondary;
+  font-weight: bold;
+  &--text{
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      @include a-cent(y);
+      width: 1px;
+      height: 15px;
+      background-color: #333333;
+      right: rem(-10);
+    }
+  }
+}
 
 @include media-breakpoint-up(lg) {}
 
@@ -33,7 +63,63 @@
 
 @include media-breakpoint-down(md) {}
 
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-down(sm) {
+  order: 1;
+}
 
 @include media-breakpoint-down(xs) {}
+}
+
+.lang{
+  position: relative;
+  &__dropdown{
+    display: none;
+  }
+  &__item{
+    img{
+      margin-right: rem(10);
+    }
+  }
+  &__title{
+    padding-right: rem(18);
+    position: relative;
+    padding-top: rem(2);
+    &::before{
+      content: '';
+      position: absolute;
+      right: 0;
+      @include triangle(12px, $secondary, down);
+      // @include a-cent(y);
+      top: rem(8);
+    }
+  }
+}
+
+.search-block{
+  display: none;
+  @include media-breakpoint-up(md) {
+
+    width: rem(275);
+    padding: 0;
+  }
+  padding: rem(6) 0;
+  form{
+    display: flex;
+  }
+  input{
+    flex-grow: 1;
+    // @extend .form-wrap__input;
+    border: 1px solid #d1d1d1;
+    padding-top: .375rem;
+    padding-bottom: .375rem;
+  }
+  button{
+    @include bg("search.png");
+    background-color: #ffffff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: rem(35);
+    border: 1px solid #d1d1d1;
+    margin-left: -1px;
+  }
 }

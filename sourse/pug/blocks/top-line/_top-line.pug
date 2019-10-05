@@ -2,5 +2,32 @@ mixin top-line()
 	// start .top-line
 	+b.top-line.block-with-lazy
 		.container
-			.row top-line
+			.row
+				.col-auto.d-none.d-md-block
+					+b.lang
+						+e.title
+							+e.item
+								img.res-i(src="img/@2x/DE.png", alt="")
+								| DE
+						+e.dropdown
+							- for (var x = 0; x < 3; x++)
+								+e.item
+									img.res-i(src="img/@2x/DE.png", alt="")
+									| DE
+				.col.d-none.d-md-block
+				.col-auto.d-none.d-md-block
+					+e.link--text(href="#") Mein Konto
+				
+				.col-auto.d-none.d-md-block
+					+e.link--text(href="#") Registrieren
+				
+				.col-auto.d-none.d-md-block
+					+e.link(href="#")
+						img.res-i(src="img/@2x/basket.png", alt="")
+				.col-md-auto
+					+b.search-block.d-md-block
+						form
+							input(type="text")
+							button(type="button")
+				
 	// end .top-line
