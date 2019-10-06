@@ -19,6 +19,9 @@
 				border: 2px solid #b6b6b6;
 			}
 		}
+		&:first-child{
+			margin-bottom: rem(20);
+		}
 		&-title{
 			@extend .h2;
 			font-weight: bold;
