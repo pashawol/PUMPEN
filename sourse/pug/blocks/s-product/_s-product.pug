@@ -56,11 +56,12 @@ mixin s-product()
 							td
 								+e.price 1000,00 €
 							td
-								+e.SELECT.sel
-									option(value='-') Anzahl
-									option(value='0') Anzahl
-									option(value='1') Anzahl
-								+e.A.btn.btn.btn-primary(href='#') In den Warenkorb
+								+e.sel-wrap.d-flex
+									+e.SELECT.sel
+										option(value='-') Anzahl
+										option(value='0') Anzahl
+										option(value='1') Anzahl
+									+e.A.btn.btn.btn-primary(href='#') In den Warenkorb
 								
 					+table-i
 					+table-i
@@ -68,7 +69,13 @@ mixin s-product()
 					+table-i
 					+table-i
 		+pugin()(class='prod-pug')
-		+b.bot-btn
+		+b.bot-btn.d-none.d-md-block
 			+e.A.btn.btn.btn-primary(href='#') Einzelteilekit
 			+e.A.btn.btn.btn-gray(href='#') Einzelteilekit
+		.d-md-none
+			.s-catalog-head__input-wrap
+				select.s-catalog-head__input.form-control
+
+						option() Einzelteilekit
+						option() Einzelteilekit
 	// end s-product

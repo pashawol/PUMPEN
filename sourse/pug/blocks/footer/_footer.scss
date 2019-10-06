@@ -13,17 +13,21 @@
 
   &__main-col {
     @include media-breakpoint-up(md){
-      padding: rem(40) 0 rem(50);
+      padding-top: rem(40);
+      padding-bottom: rem(50);
     }
+    margin-bottom: rem(30);
     &:nth-child(odd){
-      position: relative;
-      &::after{
-        content: '';
-        @include a-cent(y);
-        right: 0;
-        height: 82%;
-        width: rem(1);
-        background-color: #333333;
+      @include media-breakpoint-up(lg){
+        position: relative;
+        &::after{
+          content: '';
+          @include a-cent(y);
+          right: 0;
+          height: 82%;
+          width: rem(1);
+          background-color: #333333;
+        }
       }
     }
     // :nth-child(even){
@@ -87,11 +91,21 @@
   &__list-link {
     color: $body-color;
   }
+  .star-block{
+    margin-top: rem(10);
+    @include media-breakpoint-up(md){
+      margin-top: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
 
   &__rew {
     &-title {
+      position: relative;
       font-weight: 700;
-      margin-bottom: rem(20);
+      margin-bottom: rem(10);
     }
 
     &-text {
@@ -213,6 +227,7 @@
       left: 0;
     }
     &-work-time{
+      max-width: rem(175);
       display: flex;
       justify-content: space-between;
       span{
