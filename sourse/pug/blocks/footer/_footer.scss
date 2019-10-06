@@ -1,5 +1,8 @@
 .footer {
-  padding: rem(70) 0;
+  padding: rem(30) 0;
+  @include media-breakpoint-up(md){
+    padding: rem(70) 0;
+  }
   background-color: $light;
 
   .container {
@@ -9,7 +12,9 @@
   }
 
   &__main-col {
-    padding: rem(40) 0 rem(50);
+    @include media-breakpoint-up(md){
+      padding: rem(40) 0 rem(50);
+    }
     &:nth-child(odd){
       position: relative;
       &::after{
@@ -27,6 +32,9 @@
   }
 
   &__col-title {
+    @include media-breakpoint-down(sm){
+      text-align: center;
+    }
     margin-bottom: rem(45);
     font-size: rem(18);
     font-weight: 700;
@@ -181,7 +189,10 @@
   }
 
   &__img-wrapper{
-    margin-bottom: rem(50);
+    @include media-breakpoint-up(md){
+      margin-bottom: rem(50);
+    }
+    margin-bottom: rem(25);
   }
   &__img{
     margin-right: rem(20);
@@ -257,4 +268,9 @@
 .bottom-line{
   background-color: $secondary;
   padding: rem(40) 0 rem(55);
+  text-align: center;
+  &__text{
+    margin-top: rem(15);
+    color: #ffffff;
+  }
 }

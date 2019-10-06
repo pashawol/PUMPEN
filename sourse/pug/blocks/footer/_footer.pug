@@ -5,16 +5,16 @@ mixin footer()
 				+e.main-col.col-lg-6
 					+e.col-title Aktuelle Kundenbewertungen
 					.row
-						+e.in-col.col
+						+e.in-col.col-sm-6
 							+e.rew-title Lorem ipsum
 							+e.rew-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit
 							+e.rew-date Datum
-						+e.in-col.col
+						+e.in-col.col-sm-6
 							+e.rew-title Lorem ipsum
 							+e.rew-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit
 							+e.rew-date Datum
 
-				+e.main-col.col-lg-6
+				+e.main-col.col-lg-6.d-none.d-sm-block
 					+e.col-title Aktuelle Support-Anfragen
 					+e.slider-wrapper
 						+e.slider--js
@@ -33,7 +33,7 @@ mixin footer()
 								+e.slider-next.btn
 								+e.A.btn.btn.btn-primary(href='#') Support Antwort anzeigen
 
-				+e.main-col.col-lg-6
+				+e.main-col.col-xl-6
 					.row.list-row
 						+e.in-col.col
 							+e.UL.list
@@ -64,7 +64,7 @@ mixin footer()
 									+e.A.list-link(href='#') Anwendung
 								+e.LI.list-item
 									+e.A.list-link(href='#') Ersatzteile
-						+e.in-col.col
+						+e.in-col.col.d-none.d-sm-block
 							+e.UL.list
 								+e.LI.list-item
 									+e.A.list-link(href='#') Zahlung
@@ -93,9 +93,9 @@ mixin footer()
 									+e.A.list-link(href='#') Anwendung
 								+e.LI.list-item
 									+e.A.list-link(href='#') Ersatzteile
-				+e.main-col.col-lg-6
+				+e.main-col.col-xl-6
 					.row
-						+e.in-col.col
+						+e.in-col.col-sm-6
 							+e.col-title--sm Zahlungsmöglichkeiten
 							+e.img-wrapper
 								+e.IMG.img(src='img/paypal.png' alt='')
@@ -108,7 +108,7 @@ mixin footer()
 								+e.IMG.img(src='img/dpd.png' alt='')
 								+e.IMG.img(src='img/dhl.png' alt='')
 								+e.IMG.img(src='img/gsl.png' alt='')
-						+e.in-col.col
+						+e.in-col.col-sm-6
 							+e.col-title--sm Kontatieren Sie uns
 							+e.add
 								+e.IMG.add-icon(src='img/mail.png' alt='')
@@ -130,7 +130,8 @@ mixin footer()
 
 	+b.bottom-line
 		.container
-			+e.IMG.logo(src='' alt='')
-			+e.text
+			+e.logo(href="#")
+				img.res-i(src="img/@2x/logo-f.png", alt="")
+			+e.text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
 								
 								
