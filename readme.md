@@ -1,9 +1,9 @@
 
 Main page
-<br>https://elvizlir.github.io/PUMPEN/public/index.html
+1. https://elvizlir.github.io/PUMPEN/public/index.html
 
 Form page
-<br>https://elvizlir.github.io/PUMPEN/public/01-form-page.html
+2. https://elvizlir.github.io/PUMPEN/public/01-form-page.html
 
 Product page
-<br>https://elvizlir.github.io/PUMPEN/public/02-prod.html
+3. https://elvizlir.github.io/PUMPEN/public/02-prod.html
