@@ -10,6 +10,15 @@
 		&.active{
 			background-color: $light;
 		}
+		&:not(:first-child){
+			border: 2px solid #fff;
+			border-bottom: 1px solid $light;
+			&.active{
+				margin-top: rem(-2);
+				background-color: #fff;
+				border: 2px solid #b6b6b6;
+			}
+		}
 		&-title{
 			@extend .h2;
 			font-weight: bold;

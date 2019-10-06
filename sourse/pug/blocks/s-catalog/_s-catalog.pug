@@ -21,7 +21,7 @@ mixin prod(sl)
 				//- img.res-i(src="img/@2x/", alt="")
 mixin s-catalog()
 	// start s-catalog
-	+b.SECTION.s-catalog--slider.section.bg-light.pb-0&attributes(attributes)
+	+b.s-catalog--slider.section.bg-light.pb-0&attributes(attributes)
 		+e.slider-wrap.container
 			.section-title
 				h2  BEST SELLER
@@ -32,7 +32,7 @@ mixin s-catalog()
 
 mixin s-catalog-block
 	// start s-catalog
-	+b.SECTION.s-catalog.section&attributes(attributes) 
+	+b.s-catalog.section&attributes(attributes) 
 		block
 		.row
 			- for (var x = 0; x < 6; x++)
