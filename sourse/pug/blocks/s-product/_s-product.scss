@@ -9,6 +9,7 @@
 
 	&__img{
 		&-wrapper{
+			text-align: center;
 			border: 4px solid $light;
 			padding: rem(10) rem(20) rem(10) 0;
 			position: relative;
@@ -16,7 +17,6 @@
 		&-prod{
 			max-width: 100%;
 			height: auto;
-			max-width: rem(580);
 		}
 		&-btn-wrap{
 			display: flex;
