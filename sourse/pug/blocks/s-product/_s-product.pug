@@ -2,41 +2,64 @@ mixin s-product()
 	// start s-product
 	+b.s-product.section#s-product&attributes(attributes)
 		+e.top-wrap
-			+e.img-wrapper
-				+e.IMG.img-prod(src='img/poduct.jpg' alt='')
-				+e.img-btn-wrap
-					+e.img-btn.btn.btn-primary +
-					+e.img-btn.btn.btn-primary -
-					+e.A.img-btn.btn.btn-primary(href='img/poduct.jpg' data-fancybox="gallery")
-						+icon('full')
-			+e.main-wrap
-				+e.SELECT.main-sel
-					option(value='-') (6) EINLEGE KEIL
-					option(value='0') (6) EINLEGE KEIL
-					option(value='1') (6) EINLEGE KEIL
-				+e.main-prod
-					+e.main-title (6) EINLEGE KEIL
-					+e.main-art Ersatz-Nr.: 00000000000
-					+e.SELECT.main-add-sel
-						option(value='-') Anzahl
-						option(value='0') Anzahl
-						option(value='1') Anzahl
-				+e.main-links-wrap
-					+e.A.main-link(href='#')
-						+e.IMG.main-link-img(src='img/comp.png' alt='')
-						|vergleichen
-					+e.A.main-link(href='#')
-						+e.IMG.main-link-img(src='img/add.png' alt='')
-						|Merken
-				+e.main-price-wrap
-					+e.main-price 1370,90 €
-					+e.main-price-add--sm inkl. MwSt.
-					+e.main-price-add 
-						strong Kostenlose Lieferung 
-						| ab 50 €
-					+e.main-price-add Lieferzeit: Lieferbar in 7 Tagen
-					+e.main-price-add Bestellnummer: 97924829
-					+e.main-btn.btn.btn-primary In den Warenkorb
+			.row
+				.col-lg-8
+					+e.img-wrapper
+						+e.IMG.img-prod(src='img/@2x/Ersatzteile.png' alt='')
+						- for (var x = 0; x < 5; x++)
+							+e.mark.dropdown
+								.dropdown-toggle(data-toggle="dropdown"   aria-haspopup="true" aria-expanded="false")
+								+b.dropdown-menu
+									+e.body
+										.h2 Wellendichtring 14 x 24 x 05 (MV3178)
+										+e.price Preis: 4,14 €*
+										+e.row.row
+											.col-6
+												+e.SELECT.select.form-control
+													option(value='-') Anzahl
+													option(value='0') Anzahl
+													option(value='1') Anzahl
+											.col-6
+												+e.btn.btn.btn-outline-primary(type="button") zum artikel
+									+e.foot
+										+e.btn--more.btn.btn-primary(href="#") In den Warenkorb
+										+e.btn--add.btn.btn-primary(href="#") 
+											img(src="img/@2x/basket--white.png", alt="")
+
+						+e.img-btn-wrap
+							+e.img-btn.btn.btn-primary +
+							+e.img-btn.btn.btn-primary -
+							+e.img-btn.btn.btn-primary(href='img/@2x/Ersatzteile.png' data-fancybox="gallery")
+								+icon('full')
+				.col
+					+e.main-wrap
+						+e.SELECT.main-sel
+							option(value='-') (6) EINLEGE KEIL
+							option(value='0') (6) EINLEGE KEIL
+							option(value='1') (6) EINLEGE KEIL
+						+e.main-prod
+							+e.main-title (6) EINLEGE KEIL
+							+e.main-art Ersatz-Nr.: 00000000000
+							+e.SELECT.main-add-sel
+								option(value='-') Anzahl
+								option(value='0') Anzahl
+								option(value='1') Anzahl
+						+e.main-links-wrap
+							+e.A.main-link(href='#')
+								+e.IMG.main-link-img(src='img/comp.png' alt='')
+								|vergleichen
+							+e.A.main-link(href='#')
+								+e.IMG.main-link-img(src='img/add.png' alt='')
+								|Merken
+						+e.main-price-wrap
+							+e.main-price 1370,90 €
+							+e.main-price-add--sm inkl. MwSt.
+							+e.main-price-add 
+								strong Kostenlose Lieferung 
+								| ab 50 €
+							+e.main-price-add Lieferzeit: Lieferbar in 7 Tagen
+							+e.main-price-add Bestellnummer: 97924829
+							+e.main-btn.btn.btn-primary In den Warenkorb
 		+b.other-prod
 			+e.TABLE.table
 				thead

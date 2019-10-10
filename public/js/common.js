@@ -142,6 +142,9 @@ function eventHandler() {
 		$(this).parents().toggleClass("active");
 		$(this).toggleClass("active").next().slideToggle();
 	});
+	$('.dropdown-menu').click(function (e) {
+		e.stopPropagation();
+	});
 }
 
 ; // /form
