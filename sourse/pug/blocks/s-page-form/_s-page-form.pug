@@ -1,6 +1,6 @@
 mixin s-page-form()
 	// start s-page-form
-	+b.SECTION.s-page-form.section#s-page-form&attributes(attributes)
+	+b.s-page-form.section#s-page-form&attributes(attributes)
 		.container
 			+form-wrap
 				.row
@@ -28,25 +28,24 @@ mixin s-page-form()
 									+e.col.col-12
 										+input('','text','Nachname *','nachname')
 									+e.col.col-12
-										label
-											+e.SPAN.title Geburtstag 
-												span ( Tag, Monat, Jahr )
-											.row
-												+e.select-col.col-sm-4
-													+e.SELECT.input.c-select
-														option(value='-') -
-														option(value='0') 2
-														option(value='1') 3
-												+e.select-col.col-sm-4
-													+e.SELECT.input.c-select
-														option(value='-') -
-														option(value='0') 2
-														option(value='1') 3
-												+e.select-col.col-sm-4
-													+e.SELECT.input.c-select
-														option(value='-') -
-														option(value='0') 2
-														option(value='1') 3
+										+e.SPAN.title Geburtstag 
+											span ( Tag, Monat, Jahr )
+										.row
+											+e.select-col.col-sm-4
+												+e.SELECT.input.c-select
+													option(value='-') -
+													option(value='0') 2
+													option(value='1') 3
+											+e.select-col.col-sm-4
+												+e.SELECT.input.c-select
+													option(value='-') -
+													option(value='0') 2
+													option(value='1') 3
+											+e.select-col.col-sm-4
+												+e.SELECT.input.c-select
+													option(value='-') -
+													option(value='0') 2
+													option(value='1') 3
 									+e.col.col-12
 										+input('','text',' ','tel')
 											+e.SPAN.title Telefon 
@@ -58,11 +57,11 @@ mixin s-page-form()
 									+e.col.col-12
 										+input('','text','Firma','firma')
 									+e.col.col-12
-										+input('','text','Straße, Hausnummer*','')
+										+input('','text','Straße, Hausnummer*')
 									+e.col.col-sm-5
-										+input('','text','PLZ*','')
+										+input('','text','PLZ*','PLZ')
 									+e.col.col-sm-7
-										+input('','text','Ort*','')
+										+input('','text','Ort*','Ort')
 									+e.col.col-12
 										label
 											+e.SPAN.title Land*
@@ -74,9 +73,7 @@ mixin s-page-form()
 										+polite-1
 									+e.col.col-12
 										+polite-2
-							.col-12
-								.row
-									.col-lg-6.text-center.offset-lg-6
-										+e.btn.btn.btn-primary(type="submit") anmelden
+							.col-lg-6.text-center.offset-lg-6
+								+e.btn.btn.btn-primary anmelden
 
 	// end s-page-form

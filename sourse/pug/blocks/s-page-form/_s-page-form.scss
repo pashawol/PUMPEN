@@ -8,6 +8,8 @@
 	.form-wrap{
 		&__title{
 			display: block;
+			font-weight: 700;
+			text-transform: uppercase;
 			margin-bottom: rem(5);
 			span{
 				font-weight: 400;
@@ -32,7 +34,7 @@
 		}
 		&__btn{
 			margin-top: rem(20);
-			max-width: rem(240);
+			max-width: 240px;
 		}
 		&__select-col{
 			margin-bottom: rem(20);
@@ -51,7 +53,7 @@
 			position: absolute;
 			bottom: rem(-20);
 			@include a-cent(x);
-			background-color: #5C5C5C;
+			background-color: #333333;
 		}
 		@include media-breakpoint-up(lg){
 			margin-bottom: 0;
@@ -64,7 +66,6 @@
 				@include a-cent(y);
 				right: 0;
 				left: 100%;
-				background-color: #5C5C5C;
 			}
 		}
 	}

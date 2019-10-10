@@ -1,4 +1,139 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.main-row.row
+				+e.main-col.col-lg-6
+					+e.col-title Aktuelle Kundenbewertungen
+					.row
+						+e.in-col.col-sm-6
+							+e.rew-title Lorem ipsum
+								+stars
+							+e.rew-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+							+e.rew-date Datum
+						+e.in-col.col-sm-6
+							+e.rew-title Lorem ipsum
+								+stars
+							+e.rew-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+							+e.rew-date Datum
+
+				+e.main-col.col-lg-6.d-none.d-sm-block
+					+e.col-title Aktuelle Support-Anfragen
+					+e.slider-wrapper
+						+e.slider--js
+							+e.slide
+								+e.slide-title Lorem ipsum
+								+e.slide-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+							+e.slide
+								+e.slide-title Lorem ip
+								+e.slide-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+						+e.slider-date--js
+							+e.slide-date Datum
+							+e.slide-date Da
+						+e.col-btn-wrap
+							+e.slider-btn-wrapper
+								+e.slider-prev.btn
+								+e.slider-next.btn
+								+e.A.btn.btn.btn-primary(href='#') Support Antwort anzeigen
+
+				+e.main-col.col-xl-6
+					.row.list-row
+						+e.in-col.col
+							+e.UL.list
+								+e.LI.list-item
+									+e.A.list-link(href='#') Zahlung
+								+e.LI.list-item
+									+e.A.list-link(href='#') Versand
+								+e.LI.list-item
+									+e.A.list-link(href='#') Satenschutzerklärung
+								+e.LI.list-item
+									+e.A.list-link(href='#') Austauschartikel
+								+e.LI.list-item
+									+e.A.list-link(href='#') FAQ
+								+e.LI.list-item
+									+e.A.list-link(href='#') Über uns
+								+e.LI.list-item
+									+e.A.list-link(href='#') Impressum
+								+e.LI.list-item
+									+e.A.list-link(href='#') Widerruf
+								+e.LI.list-item
+									+e.A.list-link(href='#') Kontakt
+							+e.UL.list
+								+e.LI.list-item
+									+e.A.list-link(href='#') Katalog
+								+e.LI.list-item
+									+e.A.list-link(href='#') Pumpenbauart
+								+e.LI.list-item
+									+e.A.list-link(href='#') Anwendung
+								+e.LI.list-item
+									+e.A.list-link(href='#') Ersatzteile
+						+e.in-col.col.d-none.d-sm-block
+							+e.UL.list
+								+e.LI.list-item
+									+e.A.list-link(href='#') Zahlung
+								+e.LI.list-item
+									+e.A.list-link(href='#') Versand
+								+e.LI.list-item
+									+e.A.list-link(href='#') Satenschutzerklärung
+								+e.LI.list-item
+									+e.A.list-link(href='#') Austauschartikel
+								+e.LI.list-item
+									+e.A.list-link(href='#') FAQ
+								+e.LI.list-item
+									+e.A.list-link(href='#') Über uns
+								+e.LI.list-item
+									+e.A.list-link(href='#') Impressum
+								+e.LI.list-item
+									+e.A.list-link(href='#') Widerruf
+								+e.LI.list-item
+									+e.A.list-link(href='#') Kontakt
+							+e.UL.list
+								+e.LI.list-item
+									+e.A.list-link(href='#') Katalog
+								+e.LI.list-item
+									+e.A.list-link(href='#') Pumpenbauart
+								+e.LI.list-item
+									+e.A.list-link(href='#') Anwendung
+								+e.LI.list-item
+									+e.A.list-link(href='#') Ersatzteile
+				+e.main-col.col-xl-6
+					.row
+						+e.in-col.col-sm-6
+							+e.col-title--sm Zahlungsmöglichkeiten
+							+e.img-wrapper
+								+e.IMG.img(src='img/paypal.png' alt='')
+								+e.IMG.img(src='img/visa.png' alt='')
+								+e.IMG.img(src='img/maes.png' alt='')
+								+e.IMG.img(src='img/vor.png' alt='')
+								+e.IMG.img(src='img/sof.png' alt='')
+							+e.col-title--sm Lieferung
+							+e.img-wrapper
+								+e.IMG.img(src='img/dpd.png' alt='')
+								+e.IMG.img(src='img/dhl.png' alt='')
+								+e.IMG.img(src='img/gsl.png' alt='')
+						+e.in-col.col-sm-6
+							+e.col-title--sm Kontatieren Sie uns
+							+e.add
+								+e.IMG.add-icon(src='img/mail.png' alt='')
+								+e.text E-Mail Support:
+								+e.A.add-link(href='mailto:info@grundfos-pumpen.de') info@grundfos-pumpen.de
+							+e.add
+								+e.IMG.add-icon(src='img/time.png' alt='')
+								+e.text Öffnungszeiten:
+								+e.add-work-time
+									span MO–FR
+									span 08:00–22:00
+								+e.add-work-time
+									span SA–SO
+									span 08:00 – 16:00
+							+e.add
+								+e.IMG.add-icon(src='img/favorite.png' alt='')
+								+e.text Bewertungen und Erfahrungen
+	
+
+	+b.bottom-line
+		.container
+			+e.logo(href="#")
+				img.res-i(src="img/@2x/logo-f.png", alt="")
+			+e.text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+								
+								
