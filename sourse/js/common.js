@@ -174,7 +174,10 @@ $(".accordion__toggle").click(function(){
 	$(this).parents().toggleClass("active")
 	$(this).toggleClass("active").next().slideToggle();
 })
-
+ 
+$('.dropdown-menu').click(function(e) {
+	e.stopPropagation();
+});
 	};
 	// /form
 	if (document.readyState !== 'loading') {

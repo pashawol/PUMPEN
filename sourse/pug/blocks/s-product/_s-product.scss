@@ -2,7 +2,7 @@
 
 	&__top-wrap{
 		@include media-breakpoint-up(xl){
-			display: flex;
+			// display: flex;
 		}
 		margin-bottom: rem(60);
 	}
@@ -13,6 +13,7 @@
 			border: 4px solid $light;
 			padding: rem(10) rem(20) rem(10) 0;
 			position: relative;
+			height: 100%;
 		}
 		&-prod{
 			max-width: 100%;
@@ -103,7 +104,88 @@
 			cursor: pointer;
 		}
 	}
-		 
+	.dropdown-menu{
+		// position: absolute;
+	}
+	.dropdown-toggle{
+		cursor: pointer;
+		background-color: rgba($color: #5fa8dc, $alpha: .6);
+		width: 20px;
+		height: 20px;
+	}
+	.dropdown-menu{
+		@include media-breakpoint-down(xs) {
+
+			.btn-outline-primary{
+				font-size: 14px;
+				height: 100%;
+				width: 100%;
+			}
+		}
+		@include media-breakpoint-up(sm) {
+
+			width: 341px;
+		}
+		width: 300px;
+		border: 2px solid $primary;
+		padding-bottom: 0;
+		&__btn{
+			// @extend .btn;
+		}
+		&__body{
+			padding: rem(20);
+		}
+		&__foot{
+			display: flex;
+		}
+		&__btn--more{
+			flex-grow: 1;
+		}
+		&__row{
+			@include roww(3);
+		}
+		&__price{
+			color: #5fa8dc;
+			@include rfs(rem(22));
+			font-weight: bold;
+			margin-bottom: rem(60);
+		}
+	}
+	&__img-wrapper{
+		position: relative;
+	}
+	&__mark{
+		.dropdown-toggle{
+			&::after{
+				display: none;
+			}
+		}
+		position: absolute;
+		&:nth-child(2){
+			left: 12%;
+    top: 20%;
+		}
+		
+		&:nth-child(3){
+			left: 22%;
+			top: 16%;
+		}
+		&:nth-child(4){
+			left: 32%;
+			top: 25%;
+		}
+		&:nth-child(5){
+			left: 42%;
+			top: 45%;
+		}
+		
+		&:nth-child(6){
+			left: 65%;
+    top: 54%;
+		}
+
+
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
