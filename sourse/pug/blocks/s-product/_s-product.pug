@@ -8,7 +8,7 @@ mixin s-product()
 						+e.IMG.img-prod(src='img/@2x/Ersatzteile.png' alt='')
 						- for (var x = 0; x < 5; x++)
 							+e.mark.dropdown
-								.dropdown-toggle(data-toggle="dropdown"   aria-haspopup="true" aria-expanded="false")
+								.dropdown-toggle(role="button" data-toggle="dropdown"   aria-haspopup="true" aria-expanded="false")
 								+b.dropdown-menu
 									+e.body
 										.h2 Wellendichtring 14 x 24 x 05 (MV3178)

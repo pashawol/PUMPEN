@@ -41,6 +41,7 @@
 				text-align: right;
 			}
 			&:first-of-type{
+				vertical-align: top;
 				@include media-breakpoint-up(md){
 					width: rem(100);
 				}

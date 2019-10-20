@@ -1,6 +1,6 @@
 mixin s-basket()
 	// start s-basket
-	+b.SECTION.s-basket.section#s-basket&attributes(attributes)
+	+b.s-basket.section#s-basket&attributes(attributes)
 		.container
 			+e.TABLE.table
 				thead
@@ -13,7 +13,7 @@ mixin s-basket()
 				tbody
 					mixin basket-i
 						tr
-							td(valign='top')
+							td
 								+e.img-wrap
 									+pic("basket-i",'','lazy',0)
 							td
@@ -86,7 +86,7 @@ mixin s-basket()
 
 mixin s-basket-final()
 	// start s-basket
-	+b.SECTION.s-basket.s-basket-final.section#s-basket&attributes(attributes)
+	+b.s-basket.s-basket-final.section#s-basket&attributes(attributes)
 		.container
 			+e.check-block
 				+polite-final()
@@ -101,7 +101,7 @@ mixin s-basket-final()
 				tbody
 					mixin basket-i
 						tr
-							td(valign='top')
+							td
 								+e.img-wrap
 									+pic("basket-i",'','lazy',0)
 							td
