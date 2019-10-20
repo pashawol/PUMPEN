@@ -2,8 +2,30 @@ mixin s-catalog-line()
 	// start s-catalog-line
 	+b.s-catalog-line
 		.container
-			+e.btn(type="button")
+			+e.img-btn(type="button")
 				img.res-i(src="img/@2x/type-1.png", alt="")
-			+e.btn(type="button")
+			+e.img-btn(type="button")
 				img.res-i(src="img/@2x/type-2.png", alt="")
+	// end s-catalog-line
+
+
+mixin s-catalog-line-builder()
+	// start s-catalog-line
+	+b.s-catalog-line--builder
+		+e.main-wrapper
+			+e.btn-wrap
+				+e.btn.active(type="button") Ersatzteile
+				+e.btn(type="button") Pumpen
+				+e.btn(type="button") zubehör
+			+e.view-wrap.d-none.d-md-block
+				+e.img-btn(type="button")
+					img.res-i(src="img/@2x/type-1.png", alt="")
+				+e.img-btn(type="button")
+					img.res-i(src="img/@2x/type-2.png", alt="")
+		+e.input-wrap
+			+e.SELECT.input.form-control
+
+					option()  Ersatzteile
+					option() Pumpen
+					option() zubehör
 	// end s-catalog-line

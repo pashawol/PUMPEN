@@ -16,3 +16,20 @@ mixin s-catalog-head()
 						 
 	// end s-catalog-head
 
+
+mixin s-catalog-head-builder()
+	// start s-catalog-head
+	+b.s-catalog-head--builder.section#s-catalog-head&attributes(attributes)
+		.container
+			+e.btn-wrap
+				+e.btn.active(type="button") NEUKAUF
+				+e.btn(type="button") Ersatzteile
+			.d-md-none
+				+e.input-wrap
+					+e.SELECT.input.form-control
+
+							option()  NEUKAUF
+							option() Ersatzteile
+						 
+	// end s-catalog-head
+

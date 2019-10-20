@@ -1,0 +1,155 @@
+mixin s-basket()
+	// start s-basket
+	+b.SECTION.s-basket.section#s-basket&attributes(attributes)
+		.container
+			+e.TABLE.table
+				thead
+					tr
+						th 
+						th Artikel
+						th Preis
+						th Anzahl
+						th Zwischensumme
+				tbody
+					mixin basket-i
+						tr
+							td(valign='top')
+								+e.img-wrap
+									+pic("basket-i",'','lazy',0)
+							td
+								+e.mobile-wrap
+									+e.descr
+										+e.title Lorem ipsum dolor sit amet 
+										+e.art Artikelnummer: 1.645-500.0
+										+e.A.link(href='#') Lieferbar in 2-4 Tagen
+									+e.A.mobile-delete(href='#')
+										+e.IMG.delete(src='img/@2x/delete-i.png' alt='')
+								+e.m-block
+									+e.m-title Anzahl
+									+e.SELECT.select.form-control
+										option(value='1') 1
+										option(value='1') 1
+										option(value='1') 1
+								+e.m-block
+									+e.m-title Preis
+									+e.m-price 1000,00 €
+								+e.m-block
+									+e.m-title Summe
+									+e.m-sum 1000,00 €
+							td
+								+e.price 1000,00 €
+							td
+								+e.count-wrap
+									+e.SELECT.select.form-control
+										option(value='1') 1
+										option(value='1') 1
+										option(value='1') 1
+									+e.A.delete-wrap(href='#')
+										+e.IMG.delete(src='img/@2x/delete-i.png' alt='')
+							td
+								+e.final-price 1000,00 €
+					+basket-i
+					+basket-i
+					+basket-i
+					+basket-i
+					+basket-i
+		+b.basket-total
+			.container
+				.row
+					.col-lg
+						+e.col-title SIE BESITZEN EINEN RABATTCODE?
+						+form-wrap
+							+input('RABATTcode')
+							+e.btn--white(type='submit') einlösen
+					.col-lg
+						+e.col-title--right Zusammenfassung
+						+e.total-wrap
+							+e.text Warenwert
+							+e.price 5000,00 €
+						+e.total-wrap--line
+							+e.text Versandkosten
+							+e.price 0,00 €
+						+e.total-wrap
+							+e.text SUMME
+							+e.price--large 5950,00 €
+						+e.total-wrap
+							+e.text--sm MwSt. (19%)
+							+e.price--sm 950,00 €
+		.container
+			+e.bottom-btn-wrap
+				+e.white-btn-wrap
+					+e.A.btn--white(href='#') weiter einkaufen
+					+e.A.btn--white(href='#') Warenkorb aktualisieren
+				+e.btn.btn.btn-primary(type='submit') zur kasse gehen
+	// end s-baske1
+
+
+mixin s-basket-final()
+	// start s-basket
+	+b.SECTION.s-basket.s-basket-final.section#s-basket&attributes(attributes)
+		.container
+			+e.check-block
+				+polite-final()
+			+e.TABLE.table
+				thead
+					tr
+						th 
+						th Artikel
+						th Preis
+						th Anzahl
+						th Zwischensumme
+				tbody
+					mixin basket-i
+						tr
+							td(valign='top')
+								+e.img-wrap
+									+pic("basket-i",'','lazy',0)
+							td
+								+e.mobile-wrap
+									+e.descr
+										+e.title Lorem ipsum dolor sit amet 
+										+e.art Artikelnummer: 1.645-500.0
+										+e.A.link(href='#') Lieferbar in 2-4 Tagen
+								+e.m-block
+									+e.m-title Anzahl
+									+e.m-price 1
+								+e.m-block
+									+e.m-title Preis
+									+e.m-price 1000,00 €
+								+e.m-block
+									+e.m-title Summe
+									+e.m-sum 1000,00 €
+							td
+								+e.price 1000,00 €
+							td
+								+e.count-wrap 1
+							td
+								+e.final-price 1000,00 €
+					+basket-i
+					+basket-i
+					+basket-i
+					+basket-i
+					+basket-i
+		+b.basket-total
+			.container
+				.row
+					.col-lg
+					.col-lg
+						+e.col-title--right Zusammenfassung
+						+e.total-wrap
+							+e.text Warenwert
+							+e.price 5000,00 €
+						+e.total-wrap--line
+							+e.text Versandkosten
+							+e.price 0,00 €
+						+e.total-wrap
+							+e.text--large SUMME
+							+e.price--large 5950,00 €
+						+e.total-wrap
+							+e.text--sm MwSt. (19%)
+							+e.price--sm 950,00 €
+		.container
+			+e.bottom-btn-wrap
+				+e.btn.btn.btn-primary.order-sm-last(type='submit') kostenpflichtig Bestellen
+				+e.btn--white.btn.btn-primary(href='#') Zurück
+	// end s-baske1

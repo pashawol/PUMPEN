@@ -1,0 +1,38 @@
+extends layout/main.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Main page'
+	title= title
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/aside-filter/_aside-filter.pug
+include ../blocks/s-catalog-head/_s-catalog-head.pug
+include ../blocks/s-icons-block/_s-icons-block.pug
+include ../blocks/s-page-title/_s-page-title.pug
+include ../blocks/s-product-builder/_s-product-builder.pug
+include ../blocks/s-catalog-line/_s-catalog-line.pug
+include ../blocks/s-prod-descr/_s-prod-descr.pug
+include ../blocks/s-gall/_s-gall.pug
+include ../blocks/s-docs/_s-docs.pug
+
+block pagecontent
+ 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+s-page-title("Home >  Pumpen > Ersatzteile > PumpenBAUART > Nassläufer-Umwälzpumpe > MAGNA > MAGNA3 D  > Magna3 D 32-40 - 97924829",  "MAGNA3 D 32-40 - 97924829",  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet ")
+	+s-catalog-head-builder
+	+s-product-builder
+	+s-prod-descr()
+	+s-gall()
+	+s-docs()
+	.container
+		+s-catalog-line-builder
+		+s-catalog-builder(class='catalog-builder')
+	+footer()
+

@@ -150,7 +150,6 @@
 		&--more{
 			display: flex;
 			align-items: center;
-			align-items: center;
 			font-size: 10px !important;
 			justify-content: center;
 								@include media-breakpoint-up(sm) {
@@ -182,5 +181,12 @@
 	.icon{
 		font-size: rem(16px);
 		margin-right: rem(2);
+	}
+}
+
+.catalog-builder{
+	padding-top: 0;
+	.prod-item__img-wrap{
+		@include block(255,201);
 	}
 }

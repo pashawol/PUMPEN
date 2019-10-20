@@ -1,0 +1,44 @@
+mixin s-faq()
+	// start s-faq
+	+b.SECTION.s-faq.section#s-faq&attributes(attributes)
+		.container
+			mixin main-faq(i , t)
+				+e.main-head.acc-head
+					+icon('arrow-down')
+					+e.IMG.img.res-i(src=`img/@2x/faq${i}.png` alt='')
+					+e.main-title=t
+				.acc-body
+					block
+			mixin in-faq
+				+e.in-item
+					+e.in-head.acc-head
+						+icon('arrow-down')
+						+e.in-title Lorem ipsum dolor sit amet,
+					.acc-body
+						+e.in-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+			
+			+main-faq('1','Allgemeine Fragen')
+				+in-faq
+				+in-faq
+				+in-faq
+				+in-faq
+				+in-faq
+			+main-faq('2','Bestellung und lieferung')
+				+in-faq
+				+in-faq
+				+in-faq
+				+in-faq
+				+in-faq
+			+main-faq('3','Rücksendung und Reklamation')
+				+in-faq
+				+in-faq
+				+in-faq
+				+in-faq
+				+in-faq
+			+main-faq('4','Unser service hilft dir gerne weiter')
+				+in-faq
+				+in-faq
+				+in-faq
+				+in-faq
+				+in-faq
+	// end s-faq

@@ -1,0 +1,63 @@
+mixin payment()
+	// start payment
+	+b.SECTION.payment.section#payment&attributes(attributes)
+		.container
+			+form-wrap
+				+e.top-row.row
+					.col-lg-6
+						+in-c('radio','','pay')
+							+e.radio-wrap 
+								+e.title-wrap
+									+e.radio-title Paypal
+									+e.radio-add mehr Informationen
+								+e.IMG.radio-img.res-i(src='img/@2x/radio1.png' alt='#')
+						+in-c('radio','','pay')
+							+e.radio-wrap 
+								+e.title-wrap
+									+e.radio-title Kreditkarte 
+									+e.radio-add mehr Informationen
+								+e.IMG.radio-img.res-i(src='img/@2x/radio2.png' alt='#')
+						+in-c('radio','','pay')
+							+e.radio-wrap 
+								+e.title-wrap
+									+e.radio-title MasterCard
+									+e.radio-add mehr Informationen
+								+e.IMG.radio-img.res-i(src='img/@2x/radio3.png' alt='#')
+						+in-c('radio','','pay')
+							+e.radio-wrap 
+								+e.title-wrap
+									+e.radio-title SofortÜberweisung
+									+e.radio-add mehr Informationen
+								+e.IMG.radio-img.res-i(src='img/@2x/radio4.png' alt='#')
+						+in-c('radio','','pay')
+							+e.radio-wrap 
+								+e.title-wrap
+									+e.radio-title Vorkasse
+									+e.radio-add mehr Informationen
+								+e.IMG.radio-img.res-i(src='img/@2x/radio5.png' alt='#')
+				.row
+					.col-lg-6
+						+e.bottom-row.row
+							.col-auto
+								+e.H2.col-title Rechnungsadresse
+								+e.UL.list-info
+									+e.LI.info-item Vor und Nachname
+									+e.LI.info-item Straße
+									+e.LI.info-item Stadt
+									+e.LI.info-item Land
+									+e.LI.info-item Telefon
+									+e.LI.info-item E-Mail
+							.col-auto
+								+e.H2.col-title Versandadresse
+								+e.UL.list-info
+									+e.LI.info-item Vor und Nachname
+									+e.LI.info-item Straße
+									+e.LI.info-item Stadt
+									+e.LI.info-item Land
+									+e.LI.info-item Telefon
+									+e.LI.info-item E-Mail
+					+e.btn-col.col-lg-6
+						+e.A.btn--white.btn.btn-primary(href='#') Zurück
+						+e.A.btn.btn.btn-primary(href='#') weiter
+						
+	// end payment

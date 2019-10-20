@@ -1,0 +1,29 @@
+extends layout/main.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'title'
+	title= title
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-page-form/_s-page-form.pug
+include ../blocks/s-page-title/_s-page-title.pug
+include ../blocks/bottom-line/_bottom-line.pug
+include ../blocks/payment/_payment.pug
+include ../blocks/basket-line/_basket-line.pug
+include ../blocks/order-stage/_order-stage.pug
+
+block pagecontent
+ 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+basket-line
+	+order-stage('payment')
+	+s-page-title("Home > Warenkorb > Bestellen > Persönliche Informationen",  "Persönliche Informationen",  "Name und Rechnungsadresse")
+	+payment
+	+footer()
+

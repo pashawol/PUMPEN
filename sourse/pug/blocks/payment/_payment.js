@@ -1,0 +1,5 @@
+JSCCommonpayment();
+	payment() {
+
+	}
+	

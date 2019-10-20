@@ -1,0 +1,5 @@
+JSCCommonconfirm();
+	confirm() {
+
+	}
+	

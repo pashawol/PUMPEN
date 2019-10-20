@@ -1,0 +1,19 @@
+mixin basket-line()
+	// start basket-line
+	+b.SECTION.basket-line.section#basket-line&attributes(attributes)
+		.container
+			.row
+				+e.col.col-auto
+					+e.block
+						img.res-i(src="img/@2x/basket-white.png", alt="")
+						h2 Ihr Warenkorb
+				+e.col.col.d-none.d-md-block
+				+e.col.col.col-md-auto
+					+e.block
+						+e.title Artikel
+						+e.number 1
+				+e.col.col-auto
+					+e.block
+						+e.title SUMME
+						+e.number 5000,00 €
+	// end basket-line

@@ -1,0 +1,27 @@
+mixin s-order()
+	// start s-order
+	+b.SECTION.s-order.section#s-order&attributes(attributes)
+		.container
+			+e.H2.title Ihre Vorteile
+			.row
+				.col-6.col-lg-3
+					+e.item
+						+e.img-wrap
+							img.res-i(src='img/@2x/order1.png' alt='')
+						+e.text Sicher bezahlen mit Paypal, Kreditkarte, Lastschrift, Sofort oder kauf auf Rechnung
+				.col-6.col-lg-3
+					+e.item
+						+e.img-wrap
+							img.res-i(src='img/@2x/order2.png' alt='')
+						+e.text Schnelle und kostenlose Lieferung ab 50€ Warenwert
+				.col-6.col-lg-3
+					+e.item
+						+e.img-wrap
+							img.res-i(src='img/@2x/order3.png' alt='')
+						+e.text Verlässliche und schnelle Hilfe bei Fragen zu unseren Produkten
+				.col-6.col-lg-3
+					+e.item
+						+e.img-wrap
+							img.res-i(src='img/@2x/order4.png' alt='')
+						+e.text Sicher Kommunikation dank SSL Verschlüsselung
+	// end s-order

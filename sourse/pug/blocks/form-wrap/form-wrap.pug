@@ -76,3 +76,25 @@ mixin polite-2()
 	+e.polite
 		+in-c()()
 			+e.text * Mit Setzen des Häkchens im nebenstehenden Kontrollkästchen erklärst Du dich einverstanden, dass die von Dir angegebenen Daten elektronisch erhoben und gespeichert werden. Deine Daten werden dabei nur streng zweckgebunden zur Bearbeitung und Beantwortung Deiner Anfrage genutzt. Diese Einwilligung kannst Du jederzeit durch Nachricht an uns widerrufen. Im Falle des Widerrufs werden Deine Daten umgehend gelöscht. Weitere Informationen bitte der Datenschutzerklärung entnehmen. * 
+
+
+mixin polite-order()
+	+e.polite
+		+in-c()()
+			+e.text Abweichende Lieferadresse
+
+
+mixin polite-final()
+	.form-wrap__polite
+		+in-c()()
+			+e.text Ich habe die 
+				a(href='#') AGB 
+				| gelesen und erkläre mit dem Absenden der Bestellung mein Einverständnis.
+	.form-wrap__polite
+		+in-c()()
+			+e.text Ich habe die 
+				a(href='#') Datenschutzbestimmungen 
+				| der Grundfos-Pumpen GmbH zur Kenntnis genommen.
+	.form-wrap__polite
+		+in-c()()
+			+e.text Ich bin damit einverstanden, dass meine E-Mailadresse und Telefonnummer ausschließlich zur Zustellbenachrichtigung an unsere Logistikpartner weitergeleitet werden.

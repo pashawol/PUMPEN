@@ -1,0 +1,34 @@
+extends layout/main.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Main page'
+	title= title
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/aside-menu/_aside-menu.pug
+include ../blocks/s-catalog-head/_s-catalog-head.pug
+include ../blocks/s-icons-block/_s-icons-block.pug
+include ../blocks/s-page-title/_s-page-title.pug
+include ../blocks/s-settings/_s-settings.pug
+include ../blocks/s-catalog-line/_s-catalog-line.pug
+
+block pagecontent
+ 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+s-page-title("Home >  Mein Konto",  "Profilverwaltung",  "Willkommen, Vorname Nachname  - Änderung von allgemeinen Daten und Verwaltung von Adressen")
+	.container
+		.row
+			.col-lg-3
+				+aside-menu
+			.col-lg-9
+				+s-settings
+				
+	+footer()
+
