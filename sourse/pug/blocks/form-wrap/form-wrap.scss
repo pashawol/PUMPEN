@@ -108,8 +108,8 @@
 		left: 0;
 		display: inline-block;
 		top: rem(3); 
-		width: rem(15px);
-		height: rem(15px);
+		width: rem(16px);
+		height: rem(16px);
 		border: 1px solid #b6b6b6;
 		background-color: #fff;
 		@include mt;
@@ -147,11 +147,10 @@
 		&::before{
 			content: '';
 			background-color: #fff;
-			width: rem(5);
-			height: rem(5);
-			position: absolute;
-			top: rem(4);
-			left: rem(5);
+			width: rem(6);
+			height: rem(6);
+			// position: absolute;
+			@include a-cent;
 			border-radius: 50%;
 		}
 	}
