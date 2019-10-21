@@ -41,8 +41,11 @@
       max-width: 50% !important;
       flex: 0 0 50% !important;
     }
+    @include media-breakpoint-up(lg){
+      margin-bottom: rem(40);
+    }
     &:not(:last-child){
-      @include media-breakpoint-down(lg){
+      @include media-breakpoint-down(md){
         margin-bottom: rem(40);
       }
     }
@@ -130,7 +133,13 @@
       height: 100%;
     }
     &--img{
-      padding-right: rem(10);
+      @include media-breakpoint-down(xs){
+        padding: 0 rem(55);
+        text-align: center;
+      }
+      @include media-breakpoint-up(sm){
+        padding-right: rem(10);
+      }
     }
     &--rew,
     &--list,
