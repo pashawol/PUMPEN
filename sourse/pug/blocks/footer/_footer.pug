@@ -1,22 +1,23 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			+e.main-row.row
-				+e.main-col.col-lg-6
+			+e.main-row
+				+e.main-col--line
 					+e.col-title Aktuelle Kundenbewertungen
-					.row
-						+e.in-col.col-sm-6
+					+e.in-row--rew
+						+e.in-col--rew
 							+e.rew-title Lorem ipsum
 								+stars
 							+e.rew-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit
 							+e.rew-date Datum
-						+e.in-col.col-sm-6
+						+e.in-col--rew
 							+e.rew-title Lorem ipsum
 								+stars
 							+e.rew-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit
 							+e.rew-date Datum
 
-				+e.main-col.col-lg-6.d-none.d-sm-block
+
+				+e.main-col.d-none.d-lg-block
 					+e.col-title Aktuelle Support-Anfragen
 					+e.slider-wrapper
 						+e.slider--js
@@ -35,9 +36,9 @@ mixin footer()
 								+e.slider-next.btn
 								+e.A.btn.btn.btn-primary(href='#') Support Antwort anzeigen
 
-				+e.main-col.col-xl-6
-					.row.list-row
-						+e.in-col.col
+				+e.main-col--line
+					+e.in-row--bottom
+						+e.in-col--list
 							+e.UL.list
 								+e.LI.list-item
 									+e.A.list-link(href='#') Zahlung
@@ -66,7 +67,7 @@ mixin footer()
 									+e.A.list-link(href='#') Anwendung
 								+e.LI.list-item
 									+e.A.list-link(href='#') Ersatzteile
-						+e.in-col.col.d-none.d-sm-block
+						+e.in-col--list.d-none.d-md-block
 							+e.UL.list
 								+e.LI.list-item
 									+e.A.list-link(href='#') Zahlung
@@ -95,9 +96,9 @@ mixin footer()
 									+e.A.list-link(href='#') Anwendung
 								+e.LI.list-item
 									+e.A.list-link(href='#') Ersatzteile
-				+e.main-col.col-xl-6
-					.row
-						+e.in-col.col-sm-6
+				+e.main-col
+					+e.in-row--bottom
+						+e.in-col--img
 							+e.col-title--sm Zahlungsmöglichkeiten
 							+e.img-wrapper
 								+e.IMG.img(src='img/paypal.png' alt='')
@@ -110,7 +111,7 @@ mixin footer()
 								+e.IMG.img(src='img/dpd.png' alt='')
 								+e.IMG.img(src='img/dhl.png' alt='')
 								+e.IMG.img(src='img/gsl.png' alt='')
-						+e.in-col.col-sm-6
+						+e.in-col--add
 							+e.col-title--sm Kontatieren Sie uns
 							+e.add
 								+e.IMG.add-icon(src='img/mail.png' alt='')
@@ -128,6 +129,9 @@ mixin footer()
 							+e.add
 								+e.IMG.add-icon(src='img/favorite.png' alt='')
 								+e.text Bewertungen und Erfahrungen
+							
+
+
 	
 
 	+b.bottom-line

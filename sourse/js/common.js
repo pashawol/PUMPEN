@@ -194,7 +194,6 @@ function 	eventHandler() {
 		vertical: true,
 		verticalSwiping: true,
 		focusOnSelect: true,
-		centerMode: true,
 		asNavFor: '.s-product-builder__main-slider--js'
 	});
 	
@@ -229,7 +228,6 @@ function 	eventHandler() {
 		vertical: true,
 		verticalSwiping: true,
 		focusOnSelect: true,
-		centerMode: true,
 		asNavFor: '.s-gall__main-slider--js',
 		responsive: [
 			{

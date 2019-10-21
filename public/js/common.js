@@ -164,7 +164,6 @@ function eventHandler() {
 		vertical: true,
 		verticalSwiping: true,
 		focusOnSelect: true,
-		centerMode: true,
 		asNavFor: '.s-product-builder__main-slider--js'
 	});
 	$('.s-gall__main-slider--js').slick({
@@ -197,7 +196,6 @@ function eventHandler() {
 		vertical: true,
 		verticalSwiping: true,
 		focusOnSelect: true,
-		centerMode: true,
 		asNavFor: '.s-gall__main-slider--js',
 		responsive: [{
 			breakpoint: 1240,
