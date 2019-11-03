@@ -74,7 +74,7 @@
 						content: '';
 						width: 3000px;
 						height: 1px;
-						background-color: #333333;
+						background-color: #c6c6c6;
 						@include a-cent(x);
 						top: rem(35);
 					}
@@ -84,7 +84,7 @@
 		tbody{
 			tr{
 				@include media-breakpoint-down(md){
-					border-bottom: 1px solid #333333;
+					border-bottom: 1px solid #c6c6c6;
 				}
 			}
 		}
@@ -296,7 +296,7 @@
 				right: 0;
 				width: 100%;
 				height: 1px;
-				background-color: #333333;
+				background-color: #c6c6c6;
 			}
 		}
 	}
@@ -360,7 +360,7 @@
 				right: 0;
 				width: 100%;
 				height: 1px;
-				background-color: #333333;
+				background-color: #c6c6c6;
 
 			}
 		}
@@ -403,7 +403,7 @@
 	.s-basket{
 		&__check-block{
 			padding-top: rem(30);
-			border-top: 1px solid #333333;
+			border-top: 1px solid #c6c6c6;
 			margin-bottom: rem(90);
 		}
 		&__bottom-btn-wrap{

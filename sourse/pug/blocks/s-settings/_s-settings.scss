@@ -13,14 +13,14 @@
 			padding-bottom: rem(10);
 			font-size: rem(12);
 			text-transform: uppercase;
-			border-bottom: 1px solid #333333;
+			border-bottom: 1px solid #c6c6c6;
 		}
 	}
 	&__col{
 		&:not(:last-child){
 			&::after{
 				content: '';
-				background-color: #333333;
+				background-color: #c6c6c6;
 				width: 90%;
 				height: 1px;
 				@include a-cent(x);

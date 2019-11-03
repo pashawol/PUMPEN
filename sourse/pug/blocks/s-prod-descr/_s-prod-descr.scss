@@ -15,7 +15,7 @@
 			bottom: 0;
 			width: 100vw;
 			height: 1px;
-			background-color: #333333;
+			background-color: #c6c6c6;
 		}
 	}
 	&__btn-top{
@@ -100,7 +100,7 @@
 			content: '';
 			width: rem(2000);
 			height: 1px;
-			background-color: #333333;
+			background-color: #c6c6c6;
 			@include a-cent(x);
 			bottom: 0;
 		}
@@ -131,7 +131,7 @@
 			padding: rem(25) rem(20);
 		}
 		&:not(:last-child){
-			border-bottom: 1px solid #333333;
+			border-bottom: 1px solid #c6c6c6;
 		}
 	}
 	&__item-title{

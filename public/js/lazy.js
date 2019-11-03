@@ -7,7 +7,7 @@
 // Background image style attribute lazy loading example: <div data-bg="image.jpg">
 // delete window.IntersectionObserver; // Fallback Testing
 document.addEventListener('DOMContentLoaded', function () {
-	var rootMargin = "1500px 0px 1500px 0px";
+	var rootMargin = "500px 0px 500px 0px";
 	var lazyImages = [].slice.call(document.querySelectorAll("picture.lazy img, picture.lazy source, img.lazy"));
 	var lazyBackgrounds = [].slice.call(document.querySelectorAll('.lazy-background'));
 	var lazyBackgroundsData = [].slice.call(document.querySelectorAll('[data-bg]'));
@@ -20,12 +20,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 					if (lazyImage.tagName == 'IMG') {
 						lazyImage.src = lazyImage.dataset.src;
+						lazyImage.srcset = lazyImage.dataset.srcset;
+						lazyImage.removeAttribute("data-srcset");
+						lazyImage.removeAttribute("data-src");
 					}
 
 					if (lazyImage.tagName == 'SOURCE') {
 						lazyImage.srcset = lazyImage.dataset.srcset;
+						lazyImage.removeAttribute("data-srcset");
 					} // lazyImage.src = lazyImage.dataset.src;
-					// lazyImage.srcset = lazyImage.dataset.srcset;
 
 
 					lazyImage.classList.remove('lazy');
