@@ -1,0 +1,31 @@
+mixin order-stage(t)
+	// start order-stage
+	+b.order-stage.section#order-stage&attributes(attributes)
+		.container
+			.row
+				+e.col.col-auto
+					+e.number-wrap
+						+e.number 1
+					if t == 'personal'
+						+e.STRONG.title Persönliche Informationen
+					else
+						+e.title Persönliche Informationen
+					
+				+e.col.col-auto
+					+e.number-wrap
+						+e.number 2
+					if t == 'payment'
+						+e.STRONG.title Zahlungsmethode
+					else
+						+e.title Zahlungsmethode
+					
+				+e.col.col-auto
+					+e.number-wrap
+						+e.number 3
+					if t == 'final'
+						+e.STRONG.title Prüfen und bestellen
+					else
+						+e.title Prüfen und bestellen
+				
+
+	// end order-stage

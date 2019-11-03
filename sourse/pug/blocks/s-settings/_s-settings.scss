@@ -1,0 +1,96 @@
+.s-settings {
+	@include media-breakpoint-down(md){
+		padding: 0 0 rem(50);
+	}
+	@include media-breakpoint-up(lg){
+		padding-left: rem(30);
+		padding-bottom: rem(100);
+	}
+	&__title{
+		display: none;
+		@include media-breakpoint-up(lg){
+			display: block;
+			padding-bottom: rem(10);
+			font-size: rem(12);
+			text-transform: uppercase;
+			border-bottom: 1px solid #333333;
+		}
+	}
+	&__col{
+		&:not(:last-child){
+			&::after{
+				content: '';
+				background-color: #333333;
+				width: 90%;
+				height: 1px;
+				@include a-cent(x);
+				bottom: 0;
+				@include media-breakpoint-up(md){
+					width: 1px;
+					height: 80%;
+					@include a-cent(y);
+					right: 0;
+					left: unset;
+				}
+			}
+		}
+	}
+	&__item{
+		padding: rem(30) rem(50);
+		@include media-breakpoint-up(md){
+			padding: rem(100) 0 0;
+		}
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		&-title{
+			padding-left: rem(5);
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-bottom: rem(15);
+		}
+		&-info{
+			padding-left: rem(8);
+			&:not(:last-of-type){
+				margin-bottom: rem(5);
+			}
+			&:last-of-type{
+				margin-bottom: rem(50);
+			}
+		}
+	}
+	.row{
+		@include roww(50);
+	}
+	&__btn{
+		display: block;
+		margin-top: auto;
+		background-color: #fff;
+		color: $primary;
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

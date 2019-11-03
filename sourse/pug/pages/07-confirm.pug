@@ -1,0 +1,32 @@
+extends layout/main.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Bezahlvorgang Bestellübersicht'
+	title= title
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-page-form/_s-page-form.pug
+include ../blocks/s-page-title/_s-page-title.pug
+include ../blocks/bottom-line/_bottom-line.pug
+include ../blocks/basket-line/_basket-line.pug
+include ../blocks/order-stage/_order-stage.pug
+include ../blocks/confirm/_confirm.pug
+include ../blocks/s-basket/_s-basket.pug
+
+block pagecontent
+ 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+basket-line
+	+order-stage('final')
+	+s-page-title("Home > Warenkorb > Bestellen > Persönliche Informationen",  "Prüfen und Bestellen",  "bitte überprüfen sie  ihre angaben")
+	form
+		+confirm
+		+s-basket-final
+	+footer()
+

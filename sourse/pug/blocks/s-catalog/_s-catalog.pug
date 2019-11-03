@@ -19,6 +19,31 @@ mixin prod(sl)
 			+e.btn--add(href="#")
 				+pic("basket--white.png",'','lazy',0)
 				//- img.res-i(src="img/@2x/", alt="")
+
+
+mixin prod-2(sl)
+	+b.prod-item&attributes(attributes)
+		+e.img-wrap(href="#")
+			if sl
+				img.res-i(src="#" data-lazy="img/@2x/prod.jpg", alt="")
+			else
+				+pic("prod-2",'','lazy',0)
+		+e.caption
+			+e.title
+				a(href="#") Lorem ipsum dolor
+			.row
+				+e.price.col-sm-auto 1,99 €
+				+e.col-auto.col-sm-auto.text-gray2 inkl. 19% MwSt
+			+in-c
+				+e.SPAN.text Produkt vergleichen 
+			+stars()
+		+e.foot
+			+e.btn--more(href="#") Details ansehen
+			+e.btn--add(href="#")
+				+pic("basket--white.png",'','lazy',0)
+				//- img.res-i(src="img/@2x/", alt="")
+
+
 mixin s-catalog()
 	// start s-catalog
 	+b.s-catalog--slider.section.bg-light.pb-0&attributes(attributes)
@@ -37,6 +62,16 @@ mixin s-catalog-block
 		.row
 			- for (var x = 0; x < 6; x++)
 				+prod()(class="col-lg-4 col-6")
+		+e.btn--more(href="#") Mehr 
+	// end s-catalog
+
+mixin s-catalog-builder
+	// start s-catalog
+	+b.s-catalog.section&attributes(attributes) 
+		block
+		.row
+			- for (var x = 0; x < 8; x++)
+				+prod-2()(class="col-lg-3 col-6")
 		+e.btn--more(href="#") Mehr 
 	// end s-catalog
 

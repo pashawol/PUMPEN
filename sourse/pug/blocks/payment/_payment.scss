@@ -1,0 +1,112 @@
+.payment {
+	.row{
+		@include roww(20);
+	}
+	.form-wrap{
+		&__top-row{
+			border-bottom: 1px solid #333333;
+		}
+		&__bottom-row{
+			justify-content: space-between;
+		}
+		&__col-title{
+			padding-top: rem(35);
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-bottom: rem(10);
+		}
+		&__list-info{
+			list-style: none;
+		}
+		&__info-item{
+			line-height: $h2-font-size;
+			margin-bottom: rem(5);
+		}
+		&__btn-col{
+			padding-top: rem(50);
+			text-align: center;
+			@include media-breakpoint-up(md){
+				display: flex;
+				justify-content: flex-end;
+			}
+			@include media-breakpoint-up(lg){
+				align-items: flex-end;
+			}
+		}
+		&__btn{
+			display: inline-block;
+			width: 100%;
+			max-width: rem(130);
+			@include media-breakpoint-up(md){
+				max-width: rem(150);
+			}
+			&:not(:last-child){
+				margin-right: rem(20);
+			}
+			&--white{
+				background-color: #fff;
+				color: $primary;
+				&:hover{
+					border-color: $primary;
+					color: #fff;
+					background-color: $primary;
+				}
+			}
+		}
+	}
+	.custom-input{
+		margin-bottom: rem(35);
+		display: flex;
+		&__lab{
+			margin-right: rem(17);
+		}
+		&__radio{
+			&-wrap{
+				flex-grow: 1;
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+			}
+			&-title{
+				display: block;
+				font-size: rem(16);
+				font-weight: 700;
+				margin-bottom: rem(5);
+			}
+			&-add{
+				display: block;
+				color: $gray2;
+				font-size: rem(16);
+				font-weight: 300;
+				font-style: italic;
+			}
+		}
+		&__radio-img{
+			float: right;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

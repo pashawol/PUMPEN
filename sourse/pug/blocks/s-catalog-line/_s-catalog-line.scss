@@ -6,11 +6,62 @@
 	.container{
 		text-align: right;
 	}
+	&__main-wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	&__btn-wrap{
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(-10);
+		}
+	}
 	&__btn{
+		display: none;
+		@include media-breakpoint-up(md){
+			display: inline-block;
+		}
+		@extend .btn;
+		border: 1px solid #e7e7e7;
+		background-color: $light;
+		text-align: center;
+		color: #b9b9b9;
+		font-weight: bold;
+		width: rem(189);
+		// @extend h2;
+		&:hover,
+		&.active{
+			color: #ffffff;
+			background-color: $primary;
+			border-color: $primary;
+		}
+	}
+	&__img-btn{
 		background: none;
 		border: none;
 	}
-		 
+	&__input-wrap{
+		width: 100%;
+	}
+	&__input{
+		@include media-breakpoint-up(md){
+			display: none;
+		}
+		background-color: $primary !important;
+		color: #ffffff !important;
+		text-transform: uppercase;
+		@extend .h2;
+		font-weight: bold;
+		width: 100%;
+	}
+	&--builder{
+		@include media-breakpoint-down(sm){
+			border-top: 1px solid #333333;
+			border-bottom: none;
+			padding-bottom: 0;
+			padding-top: rem(20);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

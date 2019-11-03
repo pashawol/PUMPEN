@@ -1,0 +1,21 @@
+mixin s-docs()
+	// start s-docs
+	+b.SECTION.s-docs.section#s-docs&attributes(attributes)
+		.container
+			+e.H2.title DOKUMENTE
+			.row
+				mixin doc-i
+					+e.col.col-lg-3.col-6
+						+e.item
+							+e.img-wrap
+								img.res-i(src='img/@2x/doc.png' alt='')
+							+e.item-title Lorem ipsum dolor
+							+e.item-descr Lorem Ipsum Dolor
+							+e.A.btn--main.btn.btn-primary(href='#') Download
+				+doc-i
+				+doc-i
+				+doc-i
+				+doc-i
+				.col-12.text-center
+					+e.btn--more.btn.btn-primary(href='#') Mehr
+	// end s-docs

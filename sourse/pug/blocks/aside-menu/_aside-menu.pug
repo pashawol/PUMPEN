@@ -1,0 +1,26 @@
+mixin aside-menu()
+	// start aside-menu
+	+b.SECTION.aside-menu.section#aside-menu&attributes(attributes)
+		+e.wrapper
+			+e.H2.title Übersicht
+			+e.UL.list
+				+e.LI.list-item
+					a(href='#') Allgemein
+				+e.LI.list-item
+					a(href='#') Adressenverwaltung
+				+e.LI.list-item
+					a(href='#') Meine Bestellhistorie
+				+e.LI.list-item
+					a(href='#') Mein Merkzettel
+				+e.LI.list-item
+					a(href='#') Meine Bewertungen
+		.d-lg-none
+			+e.input-wrap
+				+e.SELECT.input.form-control
+
+						option() Allgemein
+						option() Adressenverwaltung
+						option() Meine Bestellhistorie
+						option() Mein Merkzettel
+						option() Meine Bewertungen
+	// end aside-menu

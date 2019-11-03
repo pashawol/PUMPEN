@@ -1,0 +1,66 @@
+mixin s-product-builder()
+	// start s-product-builder
+	+b.s-product-builder.section#s-product-builder&attributes(attributes)
+		.container
+			.row
+				.col-xl-9
+					+e.gal-wrap
+						+e.gal-block
+							+e.main-slider--js
+								.slide
+									+e.IMG.main-sl-img.res-i(src='img/@2x/prod-main-sl.jpg' alt='')
+								.slide
+									+e.IMG.main-sl-img.res-i(src='img/@2x/prod-main-sl.jpg' alt='')
+								.slide
+									+e.IMG.main-sl-img.res-i(src='img/@2x/prod-main-sl.jpg' alt='')
+								.slide
+									+e.IMG.main-sl-img.res-i(src='img/@2x/prod-main-sl.jpg' alt='')
+								.slide
+									+e.IMG.main-sl-img.res-i(src='img/@2x/prod-main-sl.jpg' alt='')
+								.slide
+									+e.IMG.main-sl-img.res-i(src='img/@2x/prod-main-sl.jpg' alt='')
+							+e.slider-wrap.d-none.d-lg-block
+								+e.side-slider--js
+									.slide
+										+e.IMG.side-sl-img.res-i(src='img/@2x/prod-side-sl.jpg' alt='')
+									.slide
+										+e.IMG.side-sl-img.res-i(src='img/@2x/prod-side-sl.jpg' alt='')
+									.slide
+										+e.IMG.side-sl-img.res-i(src='img/@2x/prod-side-sl.jpg' alt='')
+									.slide
+										+e.IMG.side-sl-img.res-i(src='img/@2x/prod-side-sl.jpg' alt='')
+									.slide
+										+e.IMG.side-sl-img.res-i(src='img/@2x/prod-side-sl.jpg' alt='')
+									.slide
+										+e.IMG.side-sl-img.res-i(src='img/@2x/prod-side-sl.jpg' alt='')
+				.col-xl-3
+					+e.side-wrap
+						+e.side-block.d-none.d-xl-block
+							+e.title MAGNA3 D 32-40
+							+e.art 97924829
+							+stars()
+							+e.SELECT.side-sel
+								option(value='-') Anzahl
+								option(value='0') Anzahl
+								option(value='1') Anzahl
+							+e.problem Benötigen Sie Hilfe?
+							+e.hotline Hotline:
+								a(href='tel:+491234123456789') +49 1234 123456789
+							+e.btn.btn.btn-primary Kontaktformular
+						+e.side-block
+							+e.A.side-link(href='#')
+								+e.IMG.side-link-img(src='img/comp.png' alt='')
+								|vergleichen
+							+e.A.side-link(href='#')
+								+e.IMG.side-link-img(src='img/add.png' alt='')
+								|Merken
+						+e.side-block
+							+e.side-price 1370,90 €
+							+e.side-subprice inkl. MwSt.
+							+e.side-add
+								strong Kostenlose Lieferung 
+								| ab 50 €
+							+e.side-add Lieferzeit: Lieferbar in 7 Tagen
+							+e.side-add Bestellnummer: 97924829
+							+e.btn.btn.btn-primary In den Warenkorb
+	// end s-product-builder

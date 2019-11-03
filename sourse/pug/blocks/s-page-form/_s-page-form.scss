@@ -129,3 +129,31 @@
 	@include media-breakpoint-down(xs) {}
 
 }
+
+.order-form{
+	.form-wrap__btn-col{
+		text-align: center;
+		@include media-breakpoint-up(md){
+			text-align: right;
+		}
+	}
+	.form-wrap__btn{
+		max-width: rem(130);
+		@include media-breakpoint-up(md){
+			max-width: rem(150);
+		}
+		width: 100%;
+		&:not(:last-child){
+			margin-right: rem(20);
+		}
+		&--white{
+			background-color: #fff;
+			color: $primary;
+			&:hover{
+				background-color: $primary;
+				border-color: $primary;
+				color: #fff;
+			}
+		}
+	}
+}

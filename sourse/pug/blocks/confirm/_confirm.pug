@@ -1,0 +1,38 @@
+mixin confirm()
+	// start confirm
+	+b.SECTION.confirm.section#confirm&attributes(attributes)
+		.container
+			.row
+				.col-lg-6
+					+e.list-row.row
+						.col-auto
+							+e.H2.col-title Rechnungsadresse
+							+e.UL.info-list
+								+e.LI.info-item Vor und Nachname
+								+e.LI.info-item Straße
+								+e.LI.info-item Stadt
+								+e.LI.info-item Land
+						.col-auto
+							+e.H2.col-title Versandadresse
+							+e.UL.info-list
+								+e.LI.info-item Vor und Nachname
+								+e.LI.info-item Straße
+								+e.LI.info-item Stadt
+								+e.LI.info-item Land
+				.col-12
+					.row
+						.col-lg-3.col-sm-6
+							+e.additional-row.row
+								.col-6
+									+e.add-title E-Mailadresse:
+								.col-6
+									+e.add-text Max.Mustermann@Muster.de
+								.col-6
+									+e.add-title Zahlungsart:
+								.col-6
+									+e.add-text Sofort
+								.col-6
+									+e.add-title Lieferung:
+								.col-6
+									+e.add-text Standard
+	// end confirm

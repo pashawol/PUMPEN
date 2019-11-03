@@ -1,0 +1,22 @@
+mixin s-settings()
+	// start s-settings
+	+b.s-settings.section#s-settings&attributes(attributes)
+		+e.title Was möchtest du tun?
+		.row
+			+e.col.col-md-4
+				+e.item
+					+e.item-title Allgemein
+					+e.item-info Vorname Nachname
+					+e.item-info Geburtsdatum
+					+e.btn--white.btn.btn-primary(href='#') Bearbeiten
+			+e.col.col-md-4
+				+e.item
+					+e.item-title E-mail Adresse
+					+e.item-info Max.Mustermann@Muster.de
+					+e.btn--white.btn.btn-primary(href='#') Bearbeiten
+			+e.col.col-md-4
+				+e.item
+					+e.item-title Passwort
+					+e.item-info ***************
+					+e.btn.btn.btn-primary(href='#') Bearbeiten
+	// end s-settings

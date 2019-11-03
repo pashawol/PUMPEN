@@ -1,0 +1,66 @@
+.order-stage {
+	display: none;
+	@include media-breakpoint-up(lg){
+		display: block;
+	}
+	padding: rem(30) 0;
+	.row{
+		@include roww(50);
+	}
+	&__col{
+		display: flex;
+		align-items: center;
+		&:not(:last-child){
+			&::after{
+				content: '>';
+				font-weight: 700;
+				text-transform: uppercase;
+				@include a-cent(y);
+				right: 0;
+			}
+		}
+	}
+	&__number-wrap{
+		width: rem(45);
+		height: rem(45);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: rem(10);
+		background-color: $secondary;
+	}
+	&__number{
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #fff;
+	}
+	&__title{
+		text-transform: uppercase;
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

@@ -65,3 +65,16 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
+
+.s-catalog-head--builder{
+	padding-bottom: 0;
+	@include media-breakpoint-up(md){
+		border-bottom: 1px solid #333333;
+	}
+	.s-catalog-head{
+		&__input{
+			margin-bottom: 0;
+			height: 100%;
+		}
+	}
+}

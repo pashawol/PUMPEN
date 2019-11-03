@@ -1,0 +1,5 @@
+JSCCommons-settings();
+	s-settings() {
+
+	}
+	
