@@ -7,8 +7,8 @@
 	&__group{
 		padding: rem(18) rem(20);
 		border-bottom: 1px solid $light;
+		background-color: $light;
 		&.active{
-			background-color: $light;
 		}
 		&:not(:first-child){
 			border: 2px solid #fff;

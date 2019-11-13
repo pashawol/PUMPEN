@@ -4,9 +4,10 @@ mixin s-product()
 		+e.top-wrap
 			.row
 				.col-lg-8
-					+e.img-wrapper
-						+e.IMG.img-prod(src='img/@2x/Ersatzteile.png' alt='')
-						- for (var x = 0; x < 5; x++)
+					+e.img-wrapper 
+						.zoom-img-wrapper
+							+e.IMG.img-prod.zoom-block-js(src='img/@2x/Ersatzteile.png'  alt='')
+						//- - for (var x = 0; x < 5; x++)
 							+e.mark.dropdown
 								.dropdown-toggle(role="button" data-toggle="dropdown"   aria-haspopup="true" aria-expanded="false")
 								+b.dropdown-menu
@@ -27,9 +28,9 @@ mixin s-product()
 											img(src="img/@2x/basket--white.png", alt="")
 
 						+e.img-btn-wrap
-							+e.img-btn.btn.btn-primary +
-							+e.img-btn.btn.btn-primary -
-							+e.img-btn.btn.btn-primary(href='img/@2x/Ersatzteile.png' data-fancybox="gallery")
+							+e.img-btn--plus-js.btn.btn-primary#zoom_up +
+							+e.img-btn--minus-js.btn.btn-primary#zoom_down -
+							+e.img-btn.btn.btn-primary#zoom_none
 								+icon('full')
 				.col
 					+e.main-wrap
