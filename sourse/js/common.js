@@ -2,7 +2,7 @@ const $ = jQuery;
 const btnToggle = $(".toggle-menu-mobile--js"),
 	menu = $(".menu-mobile--js")
 
-function 	eventHandler() {
+function eventHandler() {
 	// полифил для object-fit
 	objectFitImages();
 	// Picture element HTML5 shiv
@@ -91,7 +91,7 @@ function 	eventHandler() {
 		arrr2 = (' <div class="l">' + icon);
 	// // карусель
 
-	const defaultSlide = { 
+	const defaultSlide = {
 		speed: 600,
 		infinite: true,
 		loop: true,
@@ -123,46 +123,47 @@ function 	eventHandler() {
 
 	$('.s-catalog__slider--js').slick({
 		...defaultSlide,
-		
+			autoplay: true,
+			autoplaySpeed: 6000,
 		slidesToShow: 2,
 		dots: true,
 		arrows: false,
 		responsive: [
 			{
-			breakpoint: 1440,
-			settings: {
-				slidesToShow: 6,
-				arrows: false,
-				dots: false,
-			}
-		}, 
+				breakpoint: 1440,
+				settings: {
+					slidesToShow: 6,
+					arrows: false,
+					dots: false,
+				}
+			},
 			{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 4,
-				arrows: false,
-				dots: false,
-			}
-		}, 
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 4,
+					arrows: false,
+					dots: false,
+				}
+			},
 
-		{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 3,
-				arrows: false,
-			
-			}
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3,
+					arrows: false,
 
-		}, {
-			breakpoint: 576,
-			settings: {
-				slidesToShow: 2,
-				arrows: false,
-			}
+				}
+
+			}, {
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+				}
 
 
-		}],
-		
+			}],
+
 	});
 	$('.s-product-builder__main-slider--js').slick({
 		speed: 600,
@@ -177,11 +178,11 @@ function 	eventHandler() {
 		asNavFor: '.s-product-builder__side-slider--js',
 		responsive: [
 			{
-			breakpoint: 992,
-			settings: {
-				dots: false,
-			}
-		}],
+				breakpoint: 992,
+				settings: {
+					dots: false,
+				}
+			}],
 	});
 	$('.s-product-builder__side-slider--js').slick({
 		slidesToShow: 5,
@@ -196,7 +197,7 @@ function 	eventHandler() {
 		focusOnSelect: true,
 		asNavFor: '.s-product-builder__main-slider--js'
 	});
-	
+
 	$('.s-gall__main-slider--js').slick({
 		speed: 600,
 		infinite: true,
@@ -215,8 +216,8 @@ function 	eventHandler() {
 					dots: false,
 				}
 			}],
-		});
-		$('.s-gall__side-slider--js').slick({
+	});
+	$('.s-gall__side-slider--js').slick({
 		mobileFirst: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
@@ -231,41 +232,70 @@ function 	eventHandler() {
 		asNavFor: '.s-gall__main-slider--js',
 		responsive: [
 			{
-			breakpoint: 1240,
-			settings: {
-				slidesToShow: 4,
-			}
-		}],
+				breakpoint: 1240,
+				settings: {
+					slidesToShow: 4,
+				}
+			}],
 	});
-	 
-	$(".top-nav__btn-search--js").click(function(){
+
+	$(".top-nav__btn-search--js").click(function () {
 		$(".search-block").slideToggle();
 	})
 
-$(".accordion__toggle").click(function(){
-	$(this).parents().toggleClass("active")
-	$(this).toggleClass("active").next().slideToggle();
-})
+	$(".accordion__toggle").click(function () {
+		$(this).parents().toggleClass("active")
+		$(this).toggleClass("active").next().slideToggle();
+	})
 
-$(".acc-head").click(function(){
-	$(this).next('.acc-body').slideToggle();
-})
+	$(".acc-head").click(function () {
+		$(this).next('.acc-body').slideToggle();
+	})
 
 
-$(".s-prod-descr__btn--js").click(function(){
-	$(this).parents('.s-prod-descr__main-col').find('.text-hidden').slideToggle();
-})
- 
-$('.dropdown-menu').click(function(e) {
-	e.stopPropagation();
-});
-	};
-	// /form
-	if (document.readyState !== 'loading') {
-		eventHandler();
-	} else {
-		document.addEventListener('DOMContentLoaded', eventHandler);
+	$(".s-prod-descr__btn--js").click(function () {
+		$(this).parents('.s-prod-descr__main-col').find('.text-hidden').slideToggle();
+	})
+
+	$('.dropdown-menu').click(function (e) {
+		e.stopPropagation();
+	});
+
+
+	if ($("img").is(".zoom-block-js")) {
+
+		// zoom-image
+		var jcWheelZoom = JcWheelZoom.create('.zoom-block-js', {
+			prepare: function (scale, correct_x, correct_y) {
+				// do something when image prepared
+			},
+			rescale: function (scale, correct_x, correct_y, min_scale) {
+				// do something image rescaled
+			}
+		});
+		window.addEventListener('resize', function () {
+			jcWheelZoom.prepare();
+		})
+		document.getElementById('zoom_up').addEventListener('click', function () {
+			jcWheelZoom.zoomUp();
+		});
+
+		document.getElementById('zoom_down').addEventListener('click', function () {
+			jcWheelZoom.zoomDown();
+		});
+		
+		document.getElementById('zoom_none').addEventListener('click', function () {
+			jcWheelZoom.prepare();
+		});
+		
 	}
+};
+ 
+if (document.readyState !== 'loading') {
+	eventHandler();
+} else {
+	document.addEventListener('DOMContentLoaded', eventHandler);
+}
 const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	// функции для запуска lazy
@@ -274,7 +304,7 @@ const JSCCommon = {
 	// /LazyFunction
 
 	modalCall() {
- 
+
 		$(".link-modal").fancybox({
 			arrows: false,
 			infobar: false,
@@ -310,14 +340,14 @@ const JSCCommon = {
 				$("body, html").removeClass("fixed");
 			}
 		});
-		$(".sub-menu").each(function(){
-      $(this).after('<div class="toggle-l"></div>');
-    })
+		$(".sub-menu").each(function () {
+			$(this).after('<div class="toggle-l"></div>');
+		})
 
-    $( document).on('click', '.toggle-l', function(){
-        $(this).prev().slideToggle()
-        return false;
-      }) 
+		$(document).on('click', '.toggle-l', function () {
+			$(this).prev().slideToggle()
+			return false;
+		})
 	},
 	// /mobileMenu
 
@@ -353,6 +383,6 @@ const JSCCommon = {
 	// /inputMask
 
 };
- 
+
 // JSCCommon.LazyFunction();
 /***/

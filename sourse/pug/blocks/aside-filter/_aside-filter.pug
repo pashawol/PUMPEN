@@ -3,15 +3,15 @@ mixin aside-filter()
 	+b.aside-filter.section.d-none.d-lg-block
 		+e.inner
 			mixin main-item(t)
-				+e.group.accordion
-					+e.group-title.accordion__toggle= t
+				+e.group.accordion.active
+					+e.group-title.accordion__toggle.active= t
 					+e.group-block.accordion__block
 						block
 			
 			mixin item(t)
 				+e.group-sm.accordion
 					+e.group-sm-title.strong.accordion__toggle= t
-					+e.group-sm-block.accordion__block
+					+e.group-sm-block.accordion__block.accordion__block--sm
 						+item-sm("> Comfort")
 
 						+item-sm("> Alpha")

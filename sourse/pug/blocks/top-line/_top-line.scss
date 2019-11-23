@@ -28,7 +28,7 @@
       @include a-cent(y);
       width: 1px;
       height: 15px;
-      background-color: #333333;
+      background-color: #c6c6c6;
       right: rem(-10);
     }
   }
@@ -112,6 +112,8 @@
     border: 1px solid #d1d1d1;
     padding-top: .375rem;
     padding-bottom: .375rem;
+    padding-left: rem(10);
+    padding-right: rem(10);
   }
   button{
     @include bg("search.png");
