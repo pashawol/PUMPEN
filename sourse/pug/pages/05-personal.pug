@@ -23,7 +23,8 @@ block pagecontent
 		+top-nav()
 	+basket-line
 	+order-stage('personal')
-	+s-page-title("Home > Warenkorb > Bestellen > Persönliche Informationen",  "Persönliche Informationen",  "Name und Rechnungsadresse")
+	+s-page-title("Persönliche Informationen",  "Name und Rechnungsadresse")
+		+breadcrumb('Home', 'Warenkorb', 'Bestellen', 'Persönliche Informationen')
 	+s-order-form()
 	+s-order()
 	+footer()

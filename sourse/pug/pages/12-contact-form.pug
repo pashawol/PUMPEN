@@ -1,0 +1,39 @@
+extends layout/main.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Kontakt'
+	title= title
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/aside-menu/_aside-menu.pug
+include ../blocks/s-catalog-head/_s-catalog-head.pug
+include ../blocks/s-icons-block/_s-icons-block.pug
+include ../blocks/s-page-title/_s-page-title.pug
+include ../blocks/s-contact-info/_s-contact-info.pug
+include ../blocks/s-catalog-line/_s-catalog-line.pug
+include ../blocks/s-contact-form/_s-contact-form.pug
+include ../blocks/s-contact-head/_s-contact-head.pug
+include ../blocks/s-repair-stage/_s-repair-stage.pug
+include ../blocks/s-news-line/_s-news-line.pug
+include ../blocks/s-questions/_s-questions.pug
+
+block pagecontent
+ 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+s-page-title("Kontakt",  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet ")
+		+breadcrumb('Home', 'Kontakt')
+	+s-contact-head()
+	+s-contact-form()
+	//- +s-repair-head()(class='d-none d-md-block')
+	//- +s-repair-stage()
+	+s-news-line()
+	+s-questions()
+	+footer()
+

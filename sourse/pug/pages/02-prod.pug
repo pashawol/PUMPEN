@@ -15,6 +15,7 @@ include ../blocks/s-icons-block/_s-icons-block.pug
 include ../blocks/s-page-title/_s-page-title.pug
 include ../blocks/s-product/_s-product.pug
 include ../blocks/s-catalog-line/_s-catalog-line.pug
+include ../blocks/basket-side/_basket-side.pug
 
 block pagecontent
  
@@ -22,8 +23,12 @@ block pagecontent
 	+header()
 		+top-line()
 		+top-nav()
-	+s-page-title("Home >  Pumpen > Ersatzteile > PumpenBAUART > Nassläufer-Umwälzpumpe > MAGNA > MAGNA3 D  > Magna3 D 32-40 - 97924829",  "MAGNA3 D 32-40 - 97924829",  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet ")
-	+s-catalog-head 
+	+s-page-title("MAGNA3 D 32-40 - 97924829",  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet ")
+		+breadcrumb('Home', 'Pumpen', 'Ersatzteile', 'PumpenBAUART', 'Nassläufer-Umwälzpumpe', 'MAGNA', 'MAGNA3 D', 'Magna3 D 32-40 - 97924829')
+	+b.page-prod-head
+		+e.img-wrap
+			img(src='img/@2x/prod-page-i.jpg' alt='')
+	+s-catalog-head
 	.container
 
 		.row
@@ -34,4 +39,5 @@ block pagecontent
 				+s-catalog-line
 				+s-catalog-block
 	+footer()
+
 

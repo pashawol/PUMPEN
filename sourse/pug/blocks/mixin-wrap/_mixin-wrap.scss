@@ -34,4 +34,130 @@
 	}
 }
 
+.basket-side{
+	z-index: 1000;
+	transform: translateX(100%);
+	&.active{
+		transform: translateX(0);
+	}
+	@include mt;
+	padding: 0;
+	// position: absolute;
+	// z-index: 3;
+	// top: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	max-width: rem(338);
+	background-color: #fff;
+	min-height: 100vh;
+	overflow-y: auto;
+
+	&__btn{
+		display: block;
+		width: 100%;
+		&--back{
+			width: 100%;
+			display: block;
+			position: relative;
+			&::before{
+				content: '';
+				background-image: url(../img/svg/arrow.svg);
+				background-size: rem(11) rem(19);
+				width: rem(11);
+				height: rem(19);
+				z-index: 2;
+				@include a-cent(y);
+				left: rem(15);
+			}
+		}
+		&--white{
+			margin-top: rem(30);
+			margin-bottom: rem(5);
+			background-color: transparent;
+			color: $body-color;
+		}
+	}
+
+	&__product-add{
+		color: #fff;
+		background-color: #a0c79b;
+		display: flex;
+	}
+
+	&__inner{
+		position: relative;
+		height: calc(100vh - 115px);
+		overflow-y: auto;
+		padding-left: rem(10);
+		padding-right: rem(10);
+	}
+
+	&__product-check{
+		display: flex;
+		align-items: center;
+		padding: 0 rem(10);
+		background-color: #6eae6f;
+		.icon{
+			font-size: rem(19);
+		}
+	}
+
+	&__product-add-text{
+		font-size: rem(12);
+		line-height: 1.33;
+		max-width: rem(250);
+		padding: rem(15) rem(25);
+	}
+
+	&__product{
+		margin-left: rem(-10);
+		margin-right: rem(-10);
+		padding: rem(20);
+	}
+
+	&__item-head{
+		padding-bottom: rem(20);
+		margin-bottom: rem(15);
+		border-bottom: 1px solid #c6c6c6;
+		align-items: center;
+	}
+
+	&__prod-img{
+		max-width: rem(60);
+	}
+
+	&__prod-title{
+		font-size: $h2-font-size;
+		line-height: 1.39;
+		span{
+			display: block;
+			font-size: rem(22);
+			font-weight: 700;
+		}
+	}
+
+	&__btn-delete{
+		outline: none;
+		box-shadow: none !important;
+	}
+
+	.icon-close{
+		font-size: rem(18);
+	}
+
+	&__item-body{
+		justify-content: space-between;
+	}
+
+	&__item-price{
+		font-size: rem(16);
+		line-height: 1.44;
+		strong{
+			font-size: $h2-font-size;
+		}
+	}
+}
+
 

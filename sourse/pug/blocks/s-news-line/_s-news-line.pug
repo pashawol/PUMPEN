@@ -1,0 +1,18 @@
+mixin s-news-line()
+	// start s-news-line
+	+b.s-news-line.section#s-news-line&attributes(attributes)
+		.container
+			+e.title Lorem ipsum dolor sit amet, um dolaborum
+			+e.row.row
+				mixin news-i
+					.col-md-4
+						+e.item
+							+e.img-wrap
+								img(src='img/@2x/news-i.jpg' alt='')
+							+e.text-wrap
+								+e.item-title Lorem ipsum dolor sit amet
+								+e.item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+				+news-i()
+				+news-i()
+				+news-i()
+	// end s-news-line

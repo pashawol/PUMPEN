@@ -1,0 +1,18 @@
+mixin s-contact-head()
+	// start s-contact-head
+	+b.s-contact-head.section#s-contact-head&attributes(attributes)
+		.container
+			+e.btn-wrap
+				+e.btn(type="button") Kontaktformular
+				+e.btn(type="button") NEWS
+				+e.btn(type="button") FAQs
+				+e.btn(type="button") Über uns
+			.d-md-none
+				+e.input-wrap
+					+e.SELECT.input.form-control
+
+							option() Kontaktformular
+							option() NEWS
+							option() FAQs
+							option() Über uns
+	// end s-contact-head

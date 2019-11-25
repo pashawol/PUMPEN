@@ -1,0 +1,25 @@
+mixin s-questions()
+	// start s-questions
+	+b.s-questions.section#s-questions&attributes(attributes)
+		.container
+			+e.title Sie haben Fragen?
+			+e.subtitle Falls Sie zusätzliche Fragen zu diesem Bereich haben sollten,<br>dann helfen Ihnen diese häufig gestellten Fragen vielleicht weiter.
+			+e.row.row
+				mixin quest-i(t)
+					+e.col.col-lg-4.col-sm-6&attributes(attributes)
+						if t == 'sm'
+							+e.col-title Lorem ipsum dolor sit amet
+						if t == 'lg'
+							+e.col-title
+								span Lorem ipsum dolor sit amet
+						+e.col-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+				+quest-i('sm')
+				+quest-i('sm')
+				+quest-i('lg')
+				+quest-i('sm')(class='s-questions__text-disabled')
+				+quest-i('sm')(class='s-questions__text-disabled')
+				+quest-i('lg')(class='s-questions__text-disabled')
+				.col-12.d-sm-none
+					+e.btn--js.btn.btn-primary Mehr 
+
+	// end s-questions

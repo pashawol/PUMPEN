@@ -1,0 +1,74 @@
+mixin s-contact-form()
+	// start s-contact-form
+	+b.s-contact-form.section#s-contact-form&attributes(attributes)
+		.container
+			+e.wrap
+				+e.title Pumpe-Ersatzteile Deutschland
+				+e.adress MiNiM estores GmbH<br>Röntgenstraße 2<br>71229 Leonberg
+				+e.A.doc-link(href='#') PDF Anfahrtsskizze
+				+e.time Unsere Hotline ist von Montag bis Freitag von 7 – 20 Uhr und Samstags von 8 – 12 Uhr besetzt.
+				+e.contacts Telefon: 
+					a(href='tel:') 07152/20080 – 0
+					<br>E-Mail: 
+						a(href='mailto:info@pumpe-defekt.de') info@pumpe-defekt.de
+			+e.map-wrap
+				img(src='img/@2x/map-img.jpg' alt='')
+			+e.form-wrapper
+				+e.form-title Nehmen Sie mit uns kontakt auf
+				+form-wrap
+					+e.row--md.row
+						.col-lg-4.col-md-6
+							+input('','text','Firma*','firma')(required)
+						.col-lg-4.col-md-6
+							+input('','text','Kundennummer*','firma')(required)
+					+e.row--lg.row
+						.col-lg-6
+							+e.row--md.row
+								.col-md-6
+									+input('Bitte auswählen','text','Anrede *','anrede')(required)
+								.col-md-6
+									label
+										+e.SPAN.title Titel
+										+e.SELECT.input.c-select
+											option(value='-') -
+											option(value='0') 2
+											option(value='1') 3
+						.col-6.d-none.d-lg-block
+						.col-lg-6
+							+input('','text','Vorname *','vorname')(required)
+						.col-lg-6
+							+input('','text','Straße, Hausnummer*')(required)
+						.col-lg-6
+							+input('','text','Nachname *','nachname')
+						.col-lg-6
+							+e.row--sm.row
+								.col-5
+									+input('','text','PLZ*','PLZ')(required)
+								.col-7
+									+input('','text','Ort*','Ort')(required)
+						.col-lg-6
+							+input('','text','E-mail Adresse*','e-mail')(required)
+						.col-lg-6
+							+input('','text','Telefon','tel')
+						.col-lg-6
+							label
+								+e.SPAN.title Themenbereich*
+								+e.SELECT.input.c-select
+									option(value='-') -
+									option(value='0') 2
+									option(value='1') 3
+						.col-6.d-none.d-lg-block
+						.col-lg-6
+							+input('','text','Pumpenbezeichnung','Pumpenbezeichnung')
+						.col-lg-6
+							+input('','text','Produktnummer','Produktnummer')
+						+e.ta-col.col-12
+							+input('','textarea','Ihre Nachricht*','ihre nachricht')(required)
+					+e.polite-col.col-md-8.col-lg-6
+						+e.add * Pflichtfeld
+						+polite-1()
+						+polite-2()
+						+e.IMG.capcha(src='img/@2x/capcha.jpg' alt='')
+					.col-12
+						+e.btn.btn.btn-primary(type="submit") ABSENDEN
+	// end s-contact-form
