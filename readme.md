@@ -15,4 +15,4 @@ PUMPEN
 1. Contacts <https://pashawol.github.io/PUMPEN/public/10-contacts.html>
 1. Repair <https://pashawol.github.io/PUMPEN/public/11-repair.html>
 1. Contact-form <https://pashawol.github.io/PUMPEN/public/12-contact-form.html>
-1. Uber <https://pashawol.github.io/PUMPEN/public/11-uber.pug>
+1. Uber <https://pashawol.github.io/PUMPEN/public/11-uber.html>
