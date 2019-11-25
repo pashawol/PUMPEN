@@ -25,7 +25,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/180-layers.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -125,7 +125,11 @@ function eventHandler() {
 		asNavFor: '.footer__slider--js',
 		slidesToShow: 1,
 	});
-
+	$('.s-uber-banner__slider--js').slick({
+		...defaultSlide,
+		arrows: false,
+		dots: true,
+	});
 
 	$('.s-catalog__slider--js').slick({
 		...defaultSlide,

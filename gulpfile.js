@@ -18,6 +18,7 @@ global.$ = {
 	},
 	public: 'public',
 	sourse: 'sourse',
+	gcmq: require('gulp-group-css-media-queries'),
 }
 $.path.tasks.forEach(function (taskPath){
 		require(taskPath)();
