@@ -27,6 +27,74 @@
 <script>!function(e,n,A){function o(e,n){return typeof e===n}function t(){var e,n,A,t,a,i,l;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(A=0;A<n.options.aliases.length;A++)e.push(n.options.aliases[A].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],l=i.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),s.push((t?"":"no-")+l.join("-"))}}function a(e){var n=u.className,A=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+A+"no-js(\\s|$)");n=n.replace(o,"$1"+A+"js$2")}Modernizr._config.enableClasses&&(n+=" "+A+e.join(" "+A),c?u.className.baseVal=n:u.className=n)}function i(e,n){if("object"==typeof e)for(var A in e)f(e,A)&&i(A,e[A]);else{e=e.toLowerCase();var o=e.split("."),t=Modernizr[o[0]];if(2==o.length&&(t=t[o[1]]),"undefined"!=typeof t)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),a([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var s=[],r=[],l={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var A=this;setTimeout(function(){n(A[e])},0)},addTest:function(e,n,A){r.push({name:e,fn:n,options:A})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr;var f,u=n.documentElement,c="svg"===u.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;f=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,A){return e.call(n,A)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var A=this._l[e];setTimeout(function(){var e,o;for(e=0;e<A.length;e++)(o=A[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=i}),Modernizr.addAsyncTest(function(){function e(e,n,A){function o(n){var o=n&&"load"===n.type?1==t.width:!1,a="webp"===e;i(e,a&&o?new Boolean(o):o),A&&A(n)}var t=new Image;t.onerror=o,t.onload=o,t.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],A=n.shift();e(A.name,A.uri,function(A){if(A&&"load"===A.type)for(var o=0;o<n.length;o++)e(n[o].name,n[o].uri)})}),t(),a(s),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);</script>
 <!--[if lt IE 11]><p class="browsehappy">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
+			<div class="basket-side basket-side--js">
+				<div class="basket-side__btn basket-side__btn--back btn btn-primary basket-close">weiter einkaufen
+				</div>
+				<div class="basket-side__product-add">
+					<div class="basket-side__product-check">
+						<svg class="icon icon-ok ">
+							<use xlink:href="img/svg/sprite.svg#ok"></use>
+						</svg>
+					</div>
+					<div class="basket-side__product-add-text">Der Artikel wurde erfolgreich in den Warenkorb gelegt
+					</div>
+				</div>
+				<div class="basket-side__inner">
+					<div class="basket-side__product">
+						<div class="basket-side__item-head row">
+							<div class="col-auto"><img class="basket-side__prod-img res-i" src="img/@2x/basket-prod.jpg" alt="" role="presentation"/>
+							</div>
+							<div class="col">
+								<div class="basket-side__prod-title"><strong>1 x</strong>Produkt 1<span>123,00 €*</span>
+								</div>
+							</div>
+							<div class="col-auto">
+								<button class="basket-side__btn-delete btn">
+									<svg class="icon icon-close ">
+										<use xlink:href="img/svg/sprite.svg#close"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="basket-side__item-body row">
+							<div class="col-auto">
+								<div class="basket-side__item-price">Zwischensumme
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="basket-side__item-price">123,00 €
+								</div>
+							</div>
+						</div>
+						<div class="basket-side__item-body row">
+							<div class="col-auto">
+								<div class="basket-side__item-price">Versandkosten
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="basket-side__item-price">*3,90 €*
+								</div>
+							</div>
+						</div>
+						<div class="basket-side__item-body row">
+							<div class="col-auto">
+								<div class="basket-side__item-price"><strong>Gesamtsumme</strong>
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="basket-side__item-price"><strong>126,90 €*</strong>
+								</div>
+							</div>
+						</div>
+						<div class="basket-side__item-body row">
+							<div class="col-auto">
+								<div class="basket-side__item-price">*inkl MwSt.
+								</div>
+							</div>
+						</div>
+					</div><a class="basket-side__btn basket-side__btn--white btn btn-primary" href="#">Zur kasse</a><a class="basket-side__btn btn btn-primary" href="#">Warenkorb bearbeiten</a>
+				</div>
+			</div>
 			<div class="menu-mobile menu-mobile--js d-xl-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
@@ -192,7 +260,7 @@
 							</div>
 							<div class="col-auto d-none d-md-block"><a class="top-line__link top-line__link--text link-modal" href="#reg">Registrieren</a>
 							</div>
-							<div class="col-auto d-none d-md-block"><a class="top-line__link" href="#"><img class="res-i" src="img/@2x/basket.png" alt=""/></a>
+							<div class="col-auto d-none d-md-block"><a class="top-line__link basket-add" href="javascript(0)"><img class="res-i" src="img/@2x/basket.png" alt=""/></a>
 							</div>
 							<div class="col-md-auto">
 								<div class="search-block d-md-block">
@@ -365,8 +433,8 @@
 			<!-- start s-page-title-->
 			<div class="s-page-title section" id="s-page-title">
 				<div class="container">
-					<div class="s-page-title__art">Home &gt; Über uns
-					</div>
+					<nav class="breadcrumb"><a class="breadcrumb-item" href="#">Home</a><span class="breadcrumb-item active">Über uns</span>
+					</nav>
 					<div class="s-page-title__title h1">Über uns
 					</div>
 					<div class="s-page-title__subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
@@ -431,6 +499,104 @@
 				</div>
 			</section>
 			<!-- end aboutus-->
+			<!-- start s-news-line-->
+			<div class="s-news-line section" id="s-news-line">
+				<div class="container">
+					<div class="s-news-line__title">Lorem ipsum dolor sit amet, um dolaborum
+					</div>
+					<div class="s-news-line__row row">
+						<div class="col-md-4">
+							<div class="s-news-line__item">
+								<div class="s-news-line__img-wrap"><img src="img/@2x/news-i.jpg" alt=""/>
+								</div>
+								<div class="s-news-line__text-wrap">
+									<div class="s-news-line__item-title">Lorem ipsum dolor sit amet
+									</div>
+									<div class="s-news-line__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="s-news-line__item">
+								<div class="s-news-line__img-wrap"><img src="img/@2x/news-i.jpg" alt=""/>
+								</div>
+								<div class="s-news-line__text-wrap">
+									<div class="s-news-line__item-title">Lorem ipsum dolor sit amet
+									</div>
+									<div class="s-news-line__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="s-news-line__item">
+								<div class="s-news-line__img-wrap"><img src="img/@2x/news-i.jpg" alt=""/>
+								</div>
+								<div class="s-news-line__text-wrap">
+									<div class="s-news-line__item-title">Lorem ipsum dolor sit amet
+									</div>
+									<div class="s-news-line__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end s-news-line-->
+			<!-- start s-questions-->
+			<div class="s-questions section" id="s-questions">
+				<div class="container">
+					<div class="s-questions__title">Sie haben Fragen?
+					</div>
+					<div class="s-questions__subtitle">Falls Sie zusätzliche Fragen zu diesem Bereich haben sollten,<br>dann helfen Ihnen diese häufig gestellten Fragen vielleicht weiter.
+					</div>
+					<div class="s-questions__row row">
+						<div class="s-questions__col col-lg-4 col-sm-6">
+							<div class="s-questions__col-title">Lorem ipsum dolor sit amet
+							</div>
+							<div class="s-questions__col-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							</div>
+						</div>
+						<div class="s-questions__col col-lg-4 col-sm-6">
+							<div class="s-questions__col-title">Lorem ipsum dolor sit amet
+							</div>
+							<div class="s-questions__col-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							</div>
+						</div>
+						<div class="s-questions__col col-lg-4 col-sm-6">
+							<div class="s-questions__col-title"><span>Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="s-questions__col-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							</div>
+						</div>
+						<div class="s-questions__col col-lg-4 col-sm-6 s-questions__text-disabled">
+							<div class="s-questions__col-title">Lorem ipsum dolor sit amet
+							</div>
+							<div class="s-questions__col-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							</div>
+						</div>
+						<div class="s-questions__col col-lg-4 col-sm-6 s-questions__text-disabled">
+							<div class="s-questions__col-title">Lorem ipsum dolor sit amet
+							</div>
+							<div class="s-questions__col-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							</div>
+						</div>
+						<div class="s-questions__col col-lg-4 col-sm-6 s-questions__text-disabled">
+							<div class="s-questions__col-title"><span>Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="s-questions__col-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							</div>
+						</div>
+						<div class="col-12 d-sm-none">
+							<div class="s-questions__btn s-questions__btn--js btn btn-primary">Mehr 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end s-questions-->
 			<footer class="footer block-with-lazy">
 				<div class="container">
 					<div class="footer__main-row">
