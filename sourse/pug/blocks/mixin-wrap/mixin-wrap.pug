@@ -22,6 +22,51 @@ mixin icon(name,mod)
 		use(xlink:href="img/svg/sprite.svg#" + name)
 //-/ svg-sprite
 
+mixin basket-side()
+	+b.basket-side--js&attributes(attributes)
+		+e.btn--back.btn.btn-primary.basket-close weiter einkaufen
+		+e.product-add
+			+e.product-check
+				+icon('ok')
+			+e.product-add-text Der Artikel wurde erfolgreich in den Warenkorb gelegt
+		+e.inner
+			- for (var x = 0; x < 1; x++)
+				+e.product
+					+e.item-head.row
+						.col-auto
+							+e.IMG.prod-img.res-i(src='img/@2x/basket-prod.jpg' alt='')
+						.col
+							+e.prod-title
+								strong 1 x
+								| Produkt 1
+								span 123,00 €*
+						.col-auto
+							+e.BUTTON.btn-delete.btn
+								+icon('close')
+					+e.item-body.row
+						.col-auto
+							+e.item-price Zwischensumme
+						.col-auto
+							+e.item-price 123,00 €
+					+e.item-body.row
+						.col-auto
+							+e.item-price Versandkosten
+						.col-auto
+							+e.item-price *3,90 €*
+					+e.item-body.row
+						.col-auto
+							+e.item-price
+								strong Gesamtsumme
+						.col-auto
+							+e.item-price
+								strong 126,90 €*
+					+e.item-body.row
+						.col-auto
+							+e.item-price *inkl MwSt.
+			+e.btn--white.btn.btn-primary(href='#') Zur kasse
+			+e.btn.btn.btn-primary(href='#') Warenkorb bearbeiten
+					
+
 
 
 //- breadcrumb

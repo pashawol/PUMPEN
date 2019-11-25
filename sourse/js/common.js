@@ -1,6 +1,9 @@
 const $ = jQuery;
 const btnToggle = $(".toggle-menu-mobile--js"),
-	menu = $(".menu-mobile--js")
+	menu = $(".menu-mobile--js"),
+  btnOpenBasket = $(".basket-add"),
+  btnCloseBasket = $(".basket-close"),
+	basket = $(".basket-side--js")
 
 function eventHandler() {
 	// полифил для object-fit
@@ -14,6 +17,9 @@ function eventHandler() {
 	JSCCommon.tabscostume('tabs');
 
 	JSCCommon.mobileMenu();
+	
+	
+	JSCCommon.basketMenu();
 
 	JSCCommon.inputMask();
 
@@ -217,6 +223,7 @@ function eventHandler() {
 				}
 			}],
 	});
+	
 	$('.s-gall__side-slider--js').slick({
 		mobileFirst: true,
 		slidesToShow: 3,
@@ -239,6 +246,25 @@ function eventHandler() {
 			}],
 	});
 
+	$('.s-page-slider__slider--js').slick({
+		speed: 600,
+		infinite: true,
+		loop: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		// fade: true,
+		mobileFirst: true,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					dots: false,
+				}
+			}],
+	});
+
 	$(".top-nav__btn-search--js").click(function () {
 		$(".search-block").slideToggle();
 	})
@@ -255,6 +281,11 @@ function eventHandler() {
 
 	$(".s-prod-descr__btn--js").click(function () {
 		$(this).parents('.s-prod-descr__main-col').find('.text-hidden').slideToggle();
+	})
+	
+	
+	$(".s-questions__btn--js").click(function () {
+		$(this).parents('.s-questions__row').find('.s-questions__text-disabled').slideToggle();
 	})
 
 	$('.dropdown-menu').click(function (e) {
@@ -348,6 +379,37 @@ const JSCCommon = {
 			$(this).prev().slideToggle()
 			return false;
 		})
+	},
+	// /mobileMenu
+	basketMenu() {
+		// закрыть/открыть корзину
+
+		btnOpenBasket.click(function () {
+
+			// btnOpenBasket.toggleClass("on");
+			// $("body").toggleClass("fixed");
+			basket.toggleClass("active");
+			$("body, html").toggleClass("fixed-b");
+			return false;
+		});
+		btnCloseBasket.click(function () {
+
+			// btnOpenBasket.toggleClass("on");
+			// $("body").toggleClass("fixed");
+			basket.toggleClass("active");
+			$("body, html").toggleClass("fixed-b");
+			return false;
+		});
+
+		$(document).mouseup(function (e) {
+			const containerBasket = $(".basket-side--js.active");
+			if (containerBasket.has(e.target).length === 0) {
+				// btnOpenBasket.removeClass("on");
+				// $("body").toggleClass("fixed");
+				basket.removeClass("active");
+				$("body, html").removeClass("fixed-b");
+			}
+		});
 	},
 	// /mobileMenu
 

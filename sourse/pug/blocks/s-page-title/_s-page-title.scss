@@ -4,18 +4,32 @@
 	color: #ffffff;
 	text-transform: uppercase;
 
-	.container{
-		@include media-breakpoint-up(xl){
-			max-width: rem(1160);
-		}
-	}
-
-	&__art{
-		font-size: rem(10);
-		margin-bottom: rem(23);
+	.breadcrumb{
 		@include media-breakpoint-up(md){
-			font-size: rem(12);
 			margin-bottom: rem(2);
+		}
+		margin-bottom: rem(23);
+		a{
+			&:hover{
+				text-decoration: none;
+				opacity: .8;
+			}
+		}
+		.breadcrumb-item{
+			display: inline;
+			color: #fff;
+			font-size: rem(10);
+			position: relative;
+			@include media-breakpoint-up(md){
+				font-size: rem(12);
+			}
+			&:not(:last-child){
+				margin-right: rem(3);
+				&::after{
+					content: '>';
+					margin-left: rem(4);
+				}
+			}
 		}
 	}
 	

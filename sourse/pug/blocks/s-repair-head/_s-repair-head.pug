@@ -1,0 +1,14 @@
+mixin s-repair-head()
+	// start s-repair-head
+	+b.s-repair-head.section&attributes(attributes)
+		.container
+			+e.btn-wrap
+				+e.btn.active(type="button") Reparaturen
+				+e.btn(type="button") Kontakt
+			.d-md-none
+				+e.input-wrap
+					+e.SELECT.input.form-control
+
+							option()  Reparaturen
+							option() Kontakt
+	// end s-repair-head

@@ -1,0 +1,14 @@
+mixin s-page-slider()
+	// start s-page-slider
+	+b.s-page-slider#s-page-slider&attributes(attributes)
+		+e.slider--js
+			.slide
+				+e.img-wrap
+					img(src='img/@2x/slider-img.jpg' alt='#')
+			.slide
+				+e.img-wrap
+					img(src='img/@2x/slider-img.jpg' alt='#')
+			.slide
+				+e.img-wrap
+					img(src='img/@2x/slider-img.jpg' alt='#')
+	// end s-page-slider

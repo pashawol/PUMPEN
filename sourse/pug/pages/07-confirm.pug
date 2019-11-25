@@ -24,7 +24,8 @@ block pagecontent
 		+top-nav()
 	+basket-line
 	+order-stage('final')
-	+s-page-title("Home > Warenkorb > Bestellen > Persönliche Informationen",  "Prüfen und Bestellen",  "bitte überprüfen sie  ihre angaben")
+	+s-page-title("Prüfen und Bestellen",  "bitte überprüfen sie  ihre angaben")
+		+breadcrumb('Home', 'Warenkorb', 'Bestellen', 'Persönliche Informationen')
 	form
 		+confirm
 		+s-basket-final

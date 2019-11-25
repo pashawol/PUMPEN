@@ -33,3 +33,9 @@ FAQ
 
 Contacts
 11. https://pashawol.github.io/PUMPEN/public/10-contacts.html
+
+Repair
+12. https://pashawol.github.io/PUMPEN/public/11-repair.html
+
+Contact-form
+13. https://pashawol.github.io/PUMPEN/public/12-contact-form.html
