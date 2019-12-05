@@ -24,7 +24,7 @@
 		border: 1px solid #e7e7e7;
 		background-color: $light;
 		text-align: center;
-		width: rem(189);
+		min-width: rem(189);
 		font-weight: bold;
 		margin-right: rem(5);
 		&:hover,
@@ -59,7 +59,7 @@
 	&__col-title{
 		margin-bottom: rem(20);
 		@include media-breakpoint-up(lg){
-			padding-left: rem(20);
+			// padding-left: rem(20);
 			margin-bottom: rem(30);
 		}
 		font-weight: 700;
@@ -106,15 +106,16 @@
 		}
 	}
 	&__col-wrapper{
-		display: flex;
-		flex-direction: column;
-		height: 100%;
+		// display: flex;
+		// flex-direction: column;
+		// height: 100%;
+		padding-bottom: rem(20);
 	}
 	&__list{
 		@include media-breakpoint-down(md){
 			margin-bottom: 0;
 		}
-		margin-top: auto;
+		// margin-top: auto;
 		list-style: none;
 		&--dark{
 			.s-prod-descr__list-item{

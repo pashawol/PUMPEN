@@ -22,14 +22,16 @@ mixin s-catalog-head-builder()
 	+b.s-catalog-head--builder.section#s-catalog-head&attributes(attributes)
 		.container
 			+e.btn-wrap
-				+e.btn.active(type="button") NEUKAUF
+				+e.btn.active(type="button") Informationen
 				+e.btn(type="button") Ersatzteile
+				+e.btn(type="button") NEUKAUF
 			.d-md-none
 				+e.input-wrap
 					+e.SELECT.input.form-control
 
-							option()  NEUKAUF
+							option()  Informationen
 							option() Ersatzteile
+							option()  NEUKAUF
 						 
 	// end s-catalog-head
 
