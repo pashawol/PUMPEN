@@ -2,10 +2,10 @@ mixin s-catalog-head()
 	// start s-catalog-head
 	+b.s-catalog-head.section#s-catalog-head&attributes(attributes)
 		.container
-			+e.btn-wrap
-				+e.btn.active(type="button") Ersatzteile
-				+e.btn(type="button") Pumpen
-				+e.btn(type="button") zubehör
+			+e.btn-wrap.tabs__caption
+				+e.btn.tabs__btn.active(type="button") Ersatzteile
+				+e.btn.tabs__btn(type="button") Pumpen
+				+e.btn.tabs__btn(type="button") zubehör
 			.d-md-none
 				+e.input-wrap
 					+e.SELECT.input.form-control
@@ -21,10 +21,11 @@ mixin s-catalog-head-builder()
 	// start s-catalog-head
 	+b.s-catalog-head--builder.section#s-catalog-head&attributes(attributes)
 		.container
-			+e.btn-wrap
-				+e.btn.active(type="button") Informationen
-				+e.btn(type="button") Ersatzteile
-				+e.btn(type="button") NEUKAUF
+ 
+			+e.btn-wrap.tabs__caption
+				+e.btn.tabs__btn.active(type="button") Informationen
+				+e.btn.tabs__btn(type="button") Ersatzteile
+				+e.btn.tabs__btn(type="button") NEUKAUF
 			.d-md-none
 				+e.input-wrap
 					+e.SELECT.input.form-control

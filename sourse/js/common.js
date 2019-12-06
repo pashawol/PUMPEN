@@ -423,8 +423,10 @@ const JSCCommon = {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
+				.eq($(this).index()).fadeIn(function(){
+					$(this).find('.slick-slider').slick('refresh');
+				}).addClass('active');
+			
 		});
 	},
 	// /табы  . 

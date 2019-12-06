@@ -27,8 +27,10 @@ block pagecontent
 		+top-nav()
 	+s-page-title("MAGNA3 D 32-40 - 97924829",  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet ")
 		+breadcrumb('Home', 'Pumpen', 'Ersatzteile', 'PumpenBAUART', 'Nassläufer-Umwälzpumpe', 'MAGNA', 'MAGNA3 D', 'Magna3 D 32-40 - 97924829')
-	+s-catalog-head-builder
-	+s-product-builder
+	.tabs
+		+s-catalog-head-builder
+		.tabs__wrap
+			+s-product-builder
 	+s-prod-descr()
 	+s-gall()
 	+s-docs()
