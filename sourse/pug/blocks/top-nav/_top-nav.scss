@@ -49,7 +49,11 @@
 		display: block;
 		text-align: center;
 		text-decoration: none !important;
-		
+		border-bottom: 3px solid transparent;
+		&.active{
+			border-bottom: 3px solid $primary;
+
+		}
 	}
 	&__item:hover &__link{
 		color: #6e6e6e;

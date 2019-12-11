@@ -254,12 +254,17 @@ function eventHandler() {
 	if ($("img").is(".zoom-block-js")) {
 		// zoom-image
 		var jcWheelZoom = JcWheelZoom.create('.zoom-block-js', {
-			prepare: function prepare(scale, correct_x, correct_y) {// do something when image prepared
+			prepare: function prepare(scale, correct_x, correct_y) {
+				// do something when image prepared
+				console.log(1);
 			},
 			rescale: function rescale(scale, correct_x, correct_y, min_scale) {// do something image rescaled
 			}
 		});
 		window.addEventListener('resize', function () {
+			jcWheelZoom.prepare();
+		});
+		$(".tabs__btn").click(function () {
 			jcWheelZoom.prepare();
 		});
 		document.getElementById('zoom_up').addEventListener('click', function () {

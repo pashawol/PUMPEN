@@ -59,7 +59,7 @@
 	&__col-title{
 		margin-bottom: rem(20);
 		@include media-breakpoint-up(lg){
-			// padding-left: rem(20);
+			padding-left: rem(20);
 			margin-bottom: rem(30);
 		}
 		font-weight: 700;
