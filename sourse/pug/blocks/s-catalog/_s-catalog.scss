@@ -91,7 +91,7 @@
 		@extend .h2;
 		font-weight: bold;
 		text-transform: uppercase;
-		margin-bottom: rem(18);
+		margin-bottom: 1rem;
 		min-width: rem(130);
 		a{
 
@@ -99,13 +99,15 @@
 			text-decoration:  none !important;
 		}
 	}
+	.prod-art,
+	.custom-input,
 	&__price{
-		
-		margin-bottom: rem(5);
+		margin-bottom: 1rem;
+		// margin-bottom: rem(5);
 	}
 
 	.custom-input{
-		margin-bottom: rem(30);
+		// margin-bottom: rem(30);
 		color: $gray2;
  
 		&__lab{

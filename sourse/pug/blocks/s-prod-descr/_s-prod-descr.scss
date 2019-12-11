@@ -96,6 +96,11 @@
 	&__main-col{
 		padding-top: rem(35);
 		padding-bottom: rem(35);
+		&:first-child{
+			.s-prod-descr__col-title{
+				padding-left: 0;
+			}
+		}
 		&::after{
 			content: '';
 			width: rem(2000);
