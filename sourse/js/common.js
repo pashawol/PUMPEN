@@ -297,37 +297,37 @@ function eventHandler() {
 	});
 
 
-	if ($("img").is(".zoom-block-js")) {
+	// if ($("img").is(".zoom-block-js")) {
 
-		// zoom-image
-		var jcWheelZoom = JcWheelZoom.create('.zoom-block-js', {
-			prepare: function (scale, correct_x, correct_y) {
-				// do something when image prepared
-				console.log(1);
-			},
-			rescale: function (scale, correct_x, correct_y, min_scale) {
-				// do something image rescaled
-			}
-		});
-		window.addEventListener('resize', function () {
-			jcWheelZoom.prepare();
-		})
-		$(".tabs__btn").click(function(){
-			jcWheelZoom.prepare();
-		})
-		document.getElementById('zoom_up').addEventListener('click', function () {
-			jcWheelZoom.zoomUp();
-		});
+	// 	// zoom-image
+	// 	var jcWheelZoom = JcWheelZoom.create('.zoom-block-js', {
+	// 		prepare: function (scale, correct_x, correct_y) {
+	// 			// do something when image prepared
+	// 			console.log(1);
+	// 		},
+	// 		rescale: function (scale, correct_x, correct_y, min_scale) {
+	// 			// do something image rescaled
+	// 		}
+	// 	});
+	// 	window.addEventListener('resize', function () {
+	// 		jcWheelZoom.prepare();
+	// 	})
+	// 	$(".tabs__btn").click(function(){
+	// 		jcWheelZoom.prepare();
+	// 	})
+	// 	document.getElementById('zoom_up').addEventListener('click', function () {
+	// 		jcWheelZoom.zoomUp();
+	// 	});
 
-		document.getElementById('zoom_down').addEventListener('click', function () {
-			jcWheelZoom.zoomDown();
-		});
+	// 	document.getElementById('zoom_down').addEventListener('click', function () {
+	// 		jcWheelZoom.zoomDown();
+	// 	});
 		
-		document.getElementById('zoom_none').addEventListener('click', function () {
-			jcWheelZoom.prepare();
-		});
+	// 	document.getElementById('zoom_none').addEventListener('click', function () {
+	// 		jcWheelZoom.prepare();
+	// 	});
 		
-	}
+	// }
 
 
 	if (window.matchMedia("(min-width: 1200px)").matches) {

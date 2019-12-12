@@ -10,10 +10,14 @@ mixin s-prod-descr()
 	+b.SECTION.s-prod-descr.section#s-prod-descr&attributes(attributes)
 		+e.btn-wrap.tabs__nav.d-none.d-lg-block
 			.container
-				+e.btn-top(href="#block-1") Beschreibung
-				+e.btn-top(href="#block-2") Technische Daten
-				+e.btn-top(href="#block-3") Technische Zeichnung
-				+e.btn-top(href="#block-4") DOKUMENTE 
+				span
+					+e.btn-top(href="#block-1") Beschreibung
+				span
+					+e.btn-top(href="#block-2") Technische Daten
+				span
+					+e.btn-top(href="#block-3") Technische Zeichnung
+				span
+					+e.btn-top(href="#block-4") DOKUMENTE 
 		.container
 			mixin cont()
 				#block-1
