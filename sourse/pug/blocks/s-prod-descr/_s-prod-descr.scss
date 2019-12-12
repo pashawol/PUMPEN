@@ -179,3 +179,7 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
+
+.tabs__nav{
+	z-index: 20;
+}

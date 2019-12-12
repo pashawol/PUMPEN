@@ -328,6 +328,101 @@ function eventHandler() {
 		});
 		
 	}
+
+
+	if (window.matchMedia("(min-width: 1200px)").matches) {
+
+		$(".tabs__nav").stick_in_parent({
+			// offset_top: $(".tabs__nav").height() + 30,
+			inner_scrolling: true,
+			parent: 'body',
+			// // recalc_every: 1,
+			//  recalc_every: true,
+		});
+
+		
+		// Cache selectors
+		var lastId,
+		topMenu = $(" .tabs__nav"),
+				topMenuHeight = 20,
+				// topMenuHeight = topMenu.outerHeight()+15,
+				// All list items
+				menuItems = topMenu.find("a"),
+				// Anchors corresponding to menu items
+				scrollItems = menuItems.map(function(){
+					var item = $($(this).attr("href"));
+					if (item.length) { return item; }
+				});
+
+		// Bind click handler to menu items
+		// so we can get a fancy scroll animation
+		menuItems.click(function(e){
+			var href = $(this).attr("href"),
+					offsetTop = href === "#" ? 0 : $(href).offset().top + 1;
+			$('html, body').stop().animate({ 
+					scrollTop: offsetTop
+			}, 1100);
+			e.preventDefault();
+			lastId = $(this).parent();
+			
+		});
+		function getFirst(){
+			menuItems
+					.removeClass("active").parent()
+					.first().find('a').addClass("active");
+		}
+		getFirst();
+		// Bind to scroll
+		$(window).scroll(function(){
+			// Get container scroll position
+			var fromTop = window.matchMedia("(min-width: 1200px)").matches 
+									? ($(this).scrollTop()+topMenuHeight) 
+									:( $(this).scrollTop()+topMenuHeight + 67 );
+			
+			// Get id of current scroll item
+			var cur = scrollItems.map(function(){
+				if ($(this).offset().top < fromTop)
+					return this;
+			});
+			// Get the id of the current element
+			cur = cur[cur.length-1];
+			var id = cur && cur.length ? cur[0].id : "";
+			// if()
+			// console.log(cur)
+		
+			var menuItemPos = $(".tabs__nav").position(); 
+			let body= $('body').height();
+			let win = $(this).height();
+			let  firstLi =  menuItems.first();
+
+
+			// console.log($(this).scrollTop());
+			// console.log(body );
+			// console.log( win);
+			// console.log(body - win);
+			if ((body - win) <= fromTop ) {
+				lastId = id;
+				// Set/remove active class
+				menuItems
+					.removeClass("active").parent()
+					.last().find('a').addClass("active");
+				}
+			else if (fromTop < win) {
+				getFirst();
+			}
+			else{
+				if (lastId !== id) {
+					
+					lastId = id;
+					// Set/remove active class
+					menuItems
+					.removeClass("active").parent()
+					.end().filter("[href='#"+id+"']").addClass("active");
+				}       
+			}
+		});
+
+		};
 };
  
 if (document.readyState !== 'loading') {
@@ -453,6 +548,8 @@ const JSCCommon = {
 		$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
 	}
 	// /inputMask
+
+
 
 };
 
