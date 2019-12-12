@@ -15,9 +15,9 @@ mixin s-prod-descr()
 				span
 					+e.btn-top(href="#block-2") Technische Daten
 				span
-					+e.btn-top(href="#block-3") Technische Zeichnung
+					+e.btn-top(href="#s-gall") Technische Zeichnung
 				span
-					+e.btn-top(href="#block-4") DOKUMENTE 
+					+e.btn-top(href="#s-docs") DOKUMENTE 
 		.container
 			mixin cont()
 				#block-1
@@ -55,7 +55,7 @@ mixin s-prod-descr()
 									+descr-i('Pumpengehäuse:','Grauguß ')
 									+descr-i('Pumpengehäuse:','EN-GJL-150 ')
 									+descr-i('Pumpengehäuse: ','ASTM A48-150B ')
-									+descr-i('Laufrad:','PES mit 30 %  Glasfaserantei ') 
+									+descr-i('Laufrad:','PES mit 30 %  Glasfaserantei ')  
 							+e.col-wrapper
 								+e.H2.col-title  Sonstiges:
 								+e.UL.list--dark
@@ -63,44 +63,34 @@ mixin s-prod-descr()
 									+descr-i('Nettogewicht: ','max. 8 m')
 									+descr-i('Bruttogewicht: ','max. 10 Bar')
 									+descr-i('Versandvolumen: ','20°C')
-									+descr-i('Verkaufsregion: ','10')
+									+descr-i('Verkaufsregion: ','10') 
+						+e.main-col.col-lg-6
+							+e.col-wrapper
+								+e.H2.col-title TECHNISCHE DATEN
+								+e.UL.list--dark
+									+descr-i("Maximale Förderhöhe: ","40 dm") 
+									+descr-i("Temperaturklasse: ","110") 
+									+descr-i("Prüfkennzeichen auf dem  Typenschild:","CE, VDE") 
+									+descr-i("Modell:","E")  
+									
+							+e.col-wrapper
+								+e.H2.col-title Elektrische Daten: 
+								+e.UL.list--dark
+									+descr-i("Leistungsaufnahme P1: ","3 .. 18 W") 
+									+descr-i("Netzfrequenz:","50 Hz") 
+									+descr-i("Nennspannung:","1 x 230 V") 
+									+descr-i("Maximale Stromaufnahme:","0.04 .. 0.18 A")   
+									+descr-i("Schutzart (IEC 34-5):","X4D") 
+									+descr-i("Isolationsklasse (IEC 85):","F") 
+									+descr-i("Motorschutz:","keine") 
+									+descr-i("Temperaturschutz:","ELEC")  
+
+							+e.col-wrapper
+								+e.H2.col-title Art der Steuerung::
+								+e.UL.list--dark
+									+descr-i("Automatische Nachtabsenkung:","Automatische Nachtabsenkung integriert") 
+									+descr-i("Position Klemmenkasten: ","6H")  
 			+cont()
-				//- +cont()
-				//- +cont()
-				//- +cont()
-
-
-
-
-					
-					
-					
-				+e.main-col.col-lg-6
-					+e.col-wrapper
-						+e.H2.col-title TECHNISCHE DATEN
-						+e.UL.list--dark
-							+descr-i("Maximale Förderhöhe: ","40 dm") 
-							+descr-i("Temperaturklasse: ","110") 
-							+descr-i("Prüfkennzeichen auf dem  Typenschild:","CE, VDE") 
-							+descr-i("Modell:","E")  
-							
-					+e.col-wrapper
-						+e.H2.col-title Elektrische Daten: 
-						+e.UL.list--dark
-							+descr-i("Leistungsaufnahme P1: ","3 .. 18 W") 
-							+descr-i("Netzfrequenz:","50 Hz") 
-							+descr-i("Nennspannung:","1 x 230 V") 
-							+descr-i("Maximale Stromaufnahme:","0.04 .. 0.18 A")   
-							+descr-i("Schutzart (IEC 34-5):","X4D") 
-							+descr-i("Isolationsklasse (IEC 85):","F") 
-							+descr-i("Motorschutz:","keine") 
-							+descr-i("Temperaturschutz:","ELEC")  
-
-					+e.col-wrapper
-						+e.H2.col-title Art der Steuerung::
-						+e.UL.list--dark
-							+descr-i("Automatische Nachtabsenkung:","Automatische Nachtabsenkung integriert") 
-							+descr-i("Position Klemmenkasten: ","6H")  
 
 			
 	// end s-prod-descr
