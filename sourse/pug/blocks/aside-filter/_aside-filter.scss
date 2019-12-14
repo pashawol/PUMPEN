@@ -4,23 +4,30 @@
 
 	
 	}
+	.menu-wrap{
+		margin-bottom: rem(40);
+	}
+			.menu-wrap &__group{
+				
+			}
+			.filter-wrap &__group{
+
+				&.active{
+					margin-top: rem(-2);
+					background-color: #fff;
+					border: 1px solid #b6b6b6;
+				}
+			}
 	&__group{
 		padding: rem(18) rem(20);
 		border-bottom: 1px solid $light;
 		background-color: $light;
+		margin-bottom: rem(10);
 		&.active{
 		}
 		&:not(:first-child){
-			border: 2px solid #fff;
+			// border: 2px solid #fff;
 			border-bottom: 1px solid $light;
-			&.active{
-				margin-top: rem(-2);
-				background-color: #fff;
-				border: 1px solid #b6b6b6;
-			}
-		}
-		&:first-child{
-			margin-bottom: rem(20);
 		}
 		&-title{
 			@extend .h2;
@@ -39,8 +46,8 @@
 			&.active{
 				&::before{
 					
-					top: rem(-4);
 					transform: rotateX(0);
+					top: rem(-4);
 				}
 		}
 		}

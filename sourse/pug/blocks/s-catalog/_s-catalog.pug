@@ -1,10 +1,15 @@
-mixin prod(sl)
+mixin prod(sl,t)
 	+b.prod-item&attributes(attributes)
 			a.prod-item__img-wrap(href='http://pumpe-ersatzteile.de/pumpenbauart/umwaelzpumpen/ups-serie-200-unger.-nasslaeufer-umwaelzpumpen/ups-b/5276/ups-32-120-f-b', title='UPS 32-120 F B')
 				img.s-product__img-prod(src='http://pumpe-ersatzteile.de/media/image/0c/cb/55/product-productnumber-96401844MoRmcfSJKUdUQ.jpg', alt='', itemprop='image', role='presentation')
 			.prod-item__caption
 				.prod-item__title.other-prod__art
-					a.product--title(href='http://pumpe-ersatzteile.de/pumpenbauart/umwaelzpumpen/ups-serie-200-unger.-nasslaeufer-umwaelzpumpen/ups-b/5276/ups-32-120-f-b', title='UPS 32-120 F B')  UPS 32-120 F B 
+					a.product--title(href='http://pumpe-ersatzteile.de/pumpenbauart/umwaelzpumpen/ups-serie-200-unger.-nasslaeufer-umwaelzpumpen/ups-b/5276/ups-32-120-f-b', title='UPS 32-120 F B')
+						if !t
+							|   UPS 32-120 F B 
+						else
+							= t
+
 				.row
 					.prod-item__price.col-sm-auto.other-prod-price  2.693,23 € 
 					.prod-item__col-auto.col-sm-auto.text-gray2  inkl. 19% MwSt 
@@ -67,8 +72,11 @@ mixin s-catalog-block
 	+b.s-catalog.section&attributes(attributes) 
 		block
 		.row
-			- for (var x = 0; x < 6; x++)
-				+prod()(class="col-lg-4 col-6")
+			 
+			+prod('','dasdasdsadv adad s sdasd sdasdasd')(class="col-lg-4 col-6")
+			+prod()(class="col-lg-4 col-6")
+			+prod()(class="col-lg-4 col-6")
+			+prod()(class="col-lg-4 col-6")
 		+e.btn--more(href="#") Mehr 
 	// end s-catalog
 

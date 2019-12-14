@@ -274,8 +274,8 @@ function eventHandler() {
 	})
 
 	$(".accordion__toggle").click(function () {
-		$(this).parents().toggleClass("active")
-		$(this).toggleClass("active").next().slideToggle();
+		$(this).parent().toggleClass("active").siblings().removeClass("active").find('.accordion__toggle').removeClass("active").next().slideUp();
+		$(this).toggleClass("active").next().slideToggle(); 
 	})
 
 	$(".acc-head").click(function () {
@@ -423,6 +423,9 @@ function eventHandler() {
 		});
 
 		};
+
+
+
 };
  
 if (document.readyState !== 'loading') {

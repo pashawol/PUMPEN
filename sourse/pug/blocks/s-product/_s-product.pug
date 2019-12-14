@@ -94,6 +94,26 @@ mixin s-product()
 					+table-i
 					+table-i
 		+pugin()(class='prod-pug')
+		.listing--bottom-paging
+			.listing--paging.panel--paging
+				a.paging--link.is--active(title='Produktfamilien') 1
+				a.paging--link.paging--next(href='/produktfamilien/?p=2', title='Nächste Seite', data-action-link='true') 2
+					i.icon--arrow-right
+				a.paging--link.paging--next(href='/produktfamilien/?p=2153', title='Letzte Seite', data-action-link='true')
+					3
+				span.paging--display
+					| von 
+					strong 2153
+				form.action--per-page.action--content.block(method='get', data-action-form='true')
+					input(type='hidden', name='p', value='1')
+					label.per-page--label.action--label(for='n') Artikel pro Seite:
+					.per-page--select.select-field
+						select#n.per-page--field.action--field(name='n', data-auto-submit='true')
+							option(value='12', selected='selected') 12
+							option(value='24') 24
+							option(value='36') 36
+							option(value='48') 48
+
 		+b.bot-btn.d-none.d-md-block
 			+e.A.btn.btn.btn-primary(href='#') Einzelteilekit
 			+e.A.btn.btn.btn-gray(href='#') Einzelteilekit

@@ -1,10 +1,35 @@
+.listing--paging,
 .pagination-wrapper ul,
 .pagination {
   display: flex;
   @include list-unstyled();
   @include border-radius();
-  justify-content: flex-end;
+  margin-bottom: rem(20);
+  // justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  .action--per-page{
+    margin-top: 10px;
+    width: initial;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    select{
+      @extend .form-control;
+      @extend .form-control-sm;
+      margin-left: 10px;
+    }
+    .per-page--label{
+      margin-bottom: 0;
+    }
+  }
 }
+.paging--display{
+  // margin-left: auto;
+  display: block;
+  margin-left: 15px;
+}
+.panel--paging .paging--link,
 .pagination-wrapper li .page-numbers,
 .page-link {
   position: relative;
@@ -19,6 +44,8 @@
   border: none;
   width: rem(40);
   height: rem(40);
+  border-radius: 0;
+  background-image: none !important;
 
 
   &:hover {
@@ -32,6 +59,24 @@
     z-index: 2;
     outline: $pagination-focus-outline;
     box-shadow: $pagination-focus-box-shadow;
+  }
+}
+ 
+.panel--paging .paging--link.is--active, .panel--paging .paging--link.is--active:hover {
+  z-index: 2;
+    color: $pagination-hover-color;
+    text-decoration: none;
+    background-color: $pagination-hover-bg;
+}
+
+.panel--paging .paging--link.is--active{
+  z-index: 1;
+  color: $pagination-active-color;
+  background-color: $pagination-active-bg;
+  border-color: $pagination-active-border-color;
+  &:hover{
+    background-color: $pagination-active-bg;
+    color: $pagination-active-color;
   }
 }
 .pagination-wrapper li,

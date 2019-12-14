@@ -171,10 +171,10 @@
 		padding-bottom: 0.5rem;
 	}
 	a{
-		@include media-breakpoint-up(xl) {
+		// @include media-breakpoint-up(xl) {
 
-			font-size: $h2-font-size;
-		}
+		// 	font-size: $h2-font-size;
+		// }
 		font-weight: normal;
 		@extend .text-body;
 	}
@@ -182,13 +182,18 @@
 		// columns: 4;
 		// vertical-align: top;
 		// display: flex;
-		@extend .row;
-		align-items: flex-start !important;
+		// @extend .row;
+		// align-items: flex-start !important;
+		display: block;
+		@include media-breakpoint-up(xl) {
 
+			columns: 4;
+		}
 
 	}
 	&__item{
-		@extend .col-xl-3;
+		// @extend .col-xl-3;
+		width: 100%;
 	}
 }
 // мобильное меню

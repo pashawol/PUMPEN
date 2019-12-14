@@ -86,18 +86,33 @@
 		}
 		margin-bottom: rem(25);
 	}
+	&__caption{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	.custom-input{
+		width: 100%;
+	}
+
 	&__price,
 	&__title{
 		@extend .h2;
 		font-weight: bold;
 		text-transform: uppercase;
-		margin-bottom: 1rem;
+		// margin-bottom: 1rem;
+		padding-bottom: 1rem;
+		margin-bottom: 0;
 		min-width: rem(130);
 		a{
 
 			color: $body-color !important;
 			text-decoration:  none !important;
 		}
+	}
+	&__title{
+		margin-bottom: auto;
+		min-height: 3em;
 	}
 	.prod-art,
 	.custom-input,
@@ -173,6 +188,9 @@
 	.star-block{
 		padding-bottom: rem(22);
 	}
+	.prod-descr{
+		margin-bottom: 1rem;
+	}
 }
 
 .star-block{
@@ -191,4 +209,5 @@
 	.prod-item__img-wrap{
 		@include block(255,201);
 	}
+
 }

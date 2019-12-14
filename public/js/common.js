@@ -235,7 +235,7 @@ function eventHandler() {
 		$(".search-block").slideToggle();
 	});
 	$(".accordion__toggle").click(function () {
-		$(this).parents().toggleClass("active");
+		$(this).parent().toggleClass("active").siblings().removeClass("active").find('.accordion__toggle').removeClass("active").next().slideUp();
 		$(this).toggleClass("active").next().slideToggle();
 	});
 	$(".acc-head").click(function () {
