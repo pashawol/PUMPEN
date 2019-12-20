@@ -173,6 +173,7 @@
 	text-align: left;
 
 	// display: none;
+
 	ul {
 		list-style-type: none;
 	}
@@ -218,6 +219,7 @@
 
 		.row {
 			align-items: center;
+			flex-wrap: nowrap;
 		}
 
 		.col {
@@ -237,6 +239,7 @@
 
 	&__title {
 		margin-bottom: rem(10);
+		font-size: 1rem;
 	}
 
 	&__text {
