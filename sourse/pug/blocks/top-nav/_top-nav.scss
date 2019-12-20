@@ -1,15 +1,16 @@
 .top-nav {
 	position: relative;
- 
+
 	top: 100%;
 	// @include clearfix;ss
-	z-index: 20; 
-	@include mt; 
+	z-index: 20;
+	@include mt;
 	top: 0;
 	left: 0;
 	width: 100%;
 	background-color: #ffffff;
-	.row{
+
+	.row {
 		align-items: center;
 	}
 
@@ -32,34 +33,39 @@
 	}
 
 	&__item {
-		 
+
 		list-style-type: none;
-		&:hover{
-			.sub-menu{
+
+		&:hover {
+			.sub-menu {
 				display: block;
 			}
 		}
 	}
-	&__link{
+
+	&__link {
 		font-weight: 700;
 		line-height: 1.2;
 		text-transform: uppercase;
-		color: $body-color ;
+		color: $body-color;
 		padding: rem(50) rem(12) rem(36);
 		display: block;
 		text-align: center;
 		text-decoration: none !important;
 		border-bottom: 3px solid transparent;
-		&.active{
+
+		&.active {
 			border-bottom: 3px solid $primary;
 
 		}
 	}
-	&__item:hover &__link{
+
+	&__item:hover &__link {
 		color: #6e6e6e;
 		background-color: $light;
 	}
-	&__tel{
+
+	&__tel {
 		// display: block;
 		margin-top: rem(10);
 		padding-left: rem(45);
@@ -67,45 +73,50 @@
 		margin-bottom: rem(20);
 		position: relative;
 		text-decoration: none !important;
-		&::before{
+
+		&::before {
 			content: url("../img/@2x/tel.png");
 			position: absolute;
 			left: 0;
 			@include a-cent(y);
 			margin-top: rem(10);
 		}
-		&-label{
+
+		&-label {
 			display: block;
-			color: $gray2 	!important;
+			color: $gray2 !important;
 		}
-		&-number{ 
+
+		&-number {
 			display: block;
 			font-weight: bold;
 		}
 	}
 
-	&__logo{
+	&__logo {
 		display: inline-block;
 		margin-top: rem(20);
 		margin-bottom: rem(20);
 	}
 
-	&__btn-search{
+	&__btn-search {
 		@include bg("search.png");
-    background-color: #ffffff;
-    background-position: center center;
-    background-repeat: no-repeat;
-		width: rem(35); 
+		background-color: #ffffff;
+		background-position: center center;
+		background-repeat: no-repeat;
+		width: rem(35);
 		border: none;
 		margin-left: -1px;
 		width: 22px;
 		height: 21px;
 		padding: 0;
 	}
-	&__basket{
+
+	&__basket {
 		display: inline-block;
 		margin-bottom: rem(10);
 	}
+
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -141,10 +152,11 @@
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+
 	position: relative;
 }
 
-.sub-menu{
+.sub-menu {
 	@include media-breakpoint-up(xl) {
 
 		position: absolute;
@@ -156,13 +168,16 @@
 		background-color: $light;
 		padding-top: rem(50);
 	}
+
 	// padding-top: rem(20);
 	text-align: left;
-	display: none;
-	ul{
+
+	// display: none;
+	ul {
 		list-style-type: none;
 	}
-	&__title{
+
+	&__title {
 		// @extend .h2;
 		font-size: $h2-font-size;
 		font-weight: bold;
@@ -170,7 +185,8 @@
 		text-transform: uppercase;
 		padding-bottom: 0.5rem;
 	}
-	a{
+
+	a {
 		// @include media-breakpoint-up(xl) {
 
 		// 	font-size: $h2-font-size;
@@ -178,24 +194,57 @@
 		font-weight: normal;
 		@extend .text-body;
 	}
-	&__nav{
+
+	&__nav {
 		// columns: 4;
 		// vertical-align: top;
 		// display: flex;
 		// @extend .row;
 		// align-items: flex-start !important;
 		display: block;
+
 		@include media-breakpoint-up(xl) {
 
-			columns: 4;
+			columns: 3;
 		}
 
 	}
-	&__item{
+
+	li {
 		// @extend .col-xl-3;
 		width: 100%;
+		display: inline-block;
+		margin-bottom: rem(40);
+
+		.row {
+			align-items: center;
+		}
+
+		.col {
+			// display: flex;
+			// flex-direction: column;
+		}
+	}
+
+	&__img-wrap {
+		width: rem(143);
+		text-align: center;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		margin-bottom: rem(10);
+	}
+
+	&__text {
+		text-transform: uppercase;
+		margin-bottom: rem(20);
 	}
 }
+
 // мобильное меню
 
 // мобильное меню
@@ -335,11 +384,12 @@ $h: em(2);
 
 			padding: 10px;
 			display: block;
- 
+
 		}
 
 	}
-	.toggle-l{
+
+	.toggle-l {
 		position: absolute;
 		right: 0;
 		top: -1px;
@@ -352,7 +402,8 @@ $h: em(2);
 		background-position: center center;
 		background-size: 20px;
 	}
-	.sub-menu__item{
+
+	.sub-menu__item {
 		padding-top: rem(10);
 	}
 }

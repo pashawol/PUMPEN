@@ -184,7 +184,36 @@ mixin mnu()
 //- /menu
 
 
-
+mixin mnu-new()
+	//- - var nav= {"Продукция ":"#","Услуги  ":"#","Подбор септика   ":"#","Акции ":"#"," О компании  ":"#"," Доставка и оплата ":"#"," Клиентам  ":"#"," Наши работы   ":"#","Контакты ":"#"}
+	+e.UL.nav
+		+e.LI.item
+			+e.A.link(href="#") Lorem ipsum 
+			+b.sub-menu
+				.container
+					ul.sub-menu__nav
+						mixin menu(i,t,p,f)
+							li
+								a.row(href="#")
+									.col-auto
+										+e.DIV.img-wrap
+											img(src=`img/@2x/menu-${i}.png`, alt="")
+									.col
+										+e.DIV.title= t
+										+e.DIV.text= p
+										+e.DIV.foot mehr anzeigen 
+						+menu("1","Umwälzpumpen","COMFORT, ALPHA > Geregelte Nassläufer-Umwälzpumpen,","mehr anzeigen") 
+						+menu("2","Mehrstufige Blockpumpen","CM, CME","mehr anzeigen")
+						+menu("3","Tauchmotor-Abwasserpumpen","DP > Grauguss-Drainagepumpe, DWK, EF ","mehr anzeigen") 
+						+menu("4","Endsuction long coupled single stage","NK, NKE > Normpumpen mit freiem Wellenende nach EN 733","") 
+						+menu("5","Endsuction machine tool pumps","MTB, MTBE","") 
+						+menu("6","Unterwasserpumpen für Grundwasserförderungen","SQFlex > Unterwassermotorpumpe / Solar-Wind","") 
+						+menu("7","Einstufige Blockpumpen","JP > Jetpumpe, selbstansaugend, NB, NBE, NBG, NBGE","") 
+						+menu("8","Druckmodule","BM > Druckmantelpumpen","") 
+						+menu("9","","Eintauchpumpen","MT-Pumpen für die Behältermontage")
+		- for (var x = 0; x < 4; x++)
+			+e.LI.item: +e.A.link(href="#") Lorem ipsum 
+//- /menu
 
 mixin pic( i, bg, lazy="lazy", media='576px')
 	- const smpath2 = "2x"
