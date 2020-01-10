@@ -201,7 +201,6 @@ mixin mnu-new()
 									.col
 										+e.DIV.title= t
 										+e.DIV.text= p
-										+e.DIV.foot mehr anzeigen 
 						+menu("1","Umwälzpumpen","COMFORT, ALPHA > Geregelte Nassläufer-Umwälzpumpen,","mehr anzeigen") 
 						+menu("2","Mehrstufige Blockpumpen","CM, CME","mehr anzeigen")
 						+menu("3","Tauchmotor-Abwasserpumpen","DP > Grauguss-Drainagepumpe, DWK, EF ","mehr anzeigen") 
@@ -211,6 +210,8 @@ mixin mnu-new()
 						+menu("7","Einstufige Blockpumpen","JP > Jetpumpe, selbstansaugend, NB, NBE, NBG, NBGE","") 
 						+menu("8","Druckmodule","BM > Druckmantelpumpen","") 
 						+menu("9","","Eintauchpumpen","MT-Pumpen für die Behältermontage")
+					+e.arrow-top
+						+icon("arrow-down")
 		- for (var x = 0; x < 4; x++)
 			+e.LI.item: +e.A.link(href="#") Lorem ipsum 
 //- /menu

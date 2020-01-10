@@ -1,0 +1,26 @@
+mixin s-anwendungen-body()
+	// start s-anwendungen-body
+	+b.SECTION.s-anwendungen-body.section#s-anwendungen-body&attributes(attributes)
+		.container 
+			.row
+				mixin item(i,t)
+					.col-lg-4.col-md-6
+						+e.item
+							+e.img-wrap.bg-wrap(href="#")
+								img.res-i.object-fit-js(src=`img/@2x/cart-${i}.jpg`, alt="")
+							+e.title
+								a(href="#")= t
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+				+item("1","Heizung")
+				+item("2","Klimaanlagen")
+				+item("3","Druckerhöhung")
+				+item("4","Grundwasserversorgung")
+				+item("5","Hauswasserversorgung und  Regenwassernutzung")
+				+item("6","Schmutzwasser")
+				+item("7","Industrielle Anwendungen")
+				+item("8","Dosierung / Desinfektion / MSR")
+				+item("9","Solarbetriebene Pumpenlösungen")
+				+item("10","Trinkwasserverteilung")
+				+item("11","Motoren")
+				+item("12","Service & Solutions") 
+	// end s-anwendungen-body
