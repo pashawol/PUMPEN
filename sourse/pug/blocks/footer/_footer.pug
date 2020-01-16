@@ -1,134 +1,69 @@
 mixin footer()
-	+b.FOOTER.footer.block-with-lazy
+	mixin mnu(t,...items)
+		+e.in-col--list
+			+e.col-title--sm= t
+			+e.UL.list
+				each item in items
+					+e.LI.list-item
+						+e.A.list-link(href='#')= item
+	+b.FOOTER.footer.block-with-lazy.d-none.d-md-block
 		.container
 			+e.main-row
-				+e.main-col--line
-					+e.col-title Aktuelle Kundenbewertungen
-					+e.in-row--rew
-						+e.in-col--rew
-							+e.rew-title Lorem ipsum
-								+stars
-							+e.rew-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-							+e.rew-date Datum
-						+e.in-col--rew
-							+e.rew-title Lorem ipsum
-								+stars
-							+e.rew-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-							+e.rew-date Datum
-
-
-				+e.main-col.d-none.d-lg-block
-					+e.col-title Aktuelle Support-Anfragen
-					+e.slider-wrapper
-						+e.slider--js
-							+e.slide
-								+e.slide-title Lorem ipsum
-								+e.slide-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-							+e.slide
-								+e.slide-title Lorem ip
-								+e.slide-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-						+e.slider-date--js
-							+e.slide-date Datum
-							+e.slide-date Da
-						+e.col-btn-wrap
-							+e.slider-btn-wrapper
-								+e.slider-prev.btn
-								+e.slider-next.btn
-								+e.A.btn.btn.btn-primary(href='#') Support Antwort anzeigen
-
-				+e.main-col--line
-					+e.in-row--bottom
-						+e.in-col--list
-							+e.UL.list
-								+e.LI.list-item
-									+e.A.list-link(href='#') Zahlung
-								+e.LI.list-item
-									+e.A.list-link(href='#') Versand
-								+e.LI.list-item
-									+e.A.list-link(href='#') Satenschutzerklärung
-								+e.LI.list-item
-									+e.A.list-link(href='#') Austauschartikel
-								+e.LI.list-item
-									+e.A.list-link(href='#') FAQ
-								+e.LI.list-item
-									+e.A.list-link(href='#') Über uns
-								+e.LI.list-item
-									+e.A.list-link(href='#') Impressum
-								+e.LI.list-item
-									+e.A.list-link(href='#') Widerruf
-								+e.LI.list-item
-									+e.A.list-link(href='#') Kontakt
-							+e.UL.list
-								+e.LI.list-item
-									+e.A.list-link(href='#') Katalog
-								+e.LI.list-item
-									+e.A.list-link(href='#') Pumpenbauart
-								+e.LI.list-item
-									+e.A.list-link(href='#') Anwendung
-								+e.LI.list-item
-									+e.A.list-link(href='#') Ersatzteile
-						+e.in-col--list.d-none.d-md-block
-							+e.UL.list
-								+e.LI.list-item
-									+e.A.list-link(href='#') Zahlung
-								+e.LI.list-item
-									+e.A.list-link(href='#') Versand
-								+e.LI.list-item
-									+e.A.list-link(href='#') Satenschutzerklärung
-								+e.LI.list-item
-									+e.A.list-link(href='#') Austauschartikel
-								+e.LI.list-item
-									+e.A.list-link(href='#') FAQ
-								+e.LI.list-item
-									+e.A.list-link(href='#') Über uns
-								+e.LI.list-item
-									+e.A.list-link(href='#') Impressum
-								+e.LI.list-item
-									+e.A.list-link(href='#') Widerruf
-								+e.LI.list-item
-									+e.A.list-link(href='#') Kontakt
-							+e.UL.list
-								+e.LI.list-item
-									+e.A.list-link(href='#') Katalog
-								+e.LI.list-item
-									+e.A.list-link(href='#') Pumpenbauart
-								+e.LI.list-item
-									+e.A.list-link(href='#') Anwendung
-								+e.LI.list-item
-									+e.A.list-link(href='#') Ersatzteile
 				+e.main-col
-					+e.in-row--bottom
-						+e.in-col--img
-							+e.col-title--sm Zahlungsmöglichkeiten
+					+e.col-title Service Hotline
+					.pt-0.h2.strong
+						a(href="tel:+4974719331970").text-body.strong.tdn +49 7471 - 9331970
+					.row
+						.col-lg-6.col-md-7
+							p Sie haben persöliche Fragen zu einem unserer Produkte ? Rufen Sie uns an,wir beraten SIe gern!
+				+e.main-col 
+					.row
+						.col-lg-6
+							+e.col-title Bezahlarten
 							+e.img-wrapper
 								+e.IMG.img(src='img/paypal.png' alt='')
 								+e.IMG.img(src='img/visa.png' alt='')
 								+e.IMG.img(src='img/maes.png' alt='')
 								+e.IMG.img(src='img/vor.png' alt='')
 								+e.IMG.img(src='img/sof.png' alt='')
-							+e.col-title--sm Lieferung
+						.col-lg-6
+							+e.col-title Versand
 							+e.img-wrapper
-								+e.IMG.img(src='img/dpd.png' alt='')
+								//- +e.IMG.img(src='img/dpd.png' alt='')
 								+e.IMG.img(src='img/dhl.png' alt='')
-								+e.IMG.img(src='img/gsl.png' alt='')
+								+e.IMG.img(src='img/@2x/Ebene_2267.png' alt='')
+
+				+e.main-col--line
+					+e.in-row--bottom 
 						+e.in-col--add
-							+e.col-title--sm Kontatieren Sie uns
-							+e.add
-								+e.IMG.add-icon(src='img/mail.png' alt='')
+							+e.col-title--sm Kontakt
+							+e.add 
 								+e.text E-Mail Support:
 								+e.A.add-link(href='mailto:info@grundfos-pumpen.de') info@grundfos-pumpen.de
-							+e.add
-								+e.IMG.add-icon(src='img/time.png' alt='')
+							+e.add 
 								+e.text Öffnungszeiten:
 								+e.add-work-time
-									span MO–FR
-									span 08:00–22:00
-								+e.add-work-time
-									span SA–SO
-									span 08:00 – 16:00
-							+e.add
-								+e.IMG.add-icon(src='img/favorite.png' alt='')
-								+e.text Bewertungen und Erfahrungen
+									span MO–SA
+									span 08:00–22:00  Uhr
+							+e.text.smallest Anrufe aus dem dt.Festnetz zum Ortstarif, Presse aus dem Mobilfunknetz ggf.  abweichend  (abhängig vom Provider).
+						
+						+mnu("Hilfe","Häufige Fragen","Bestellung","Versand & Lieferung","Rückgabe & Umtausch")
+				+e.main-col--line
+					+e.in-row
+						+mnu("Service","Reparatur","Newsletter")
+						+mnu("Über Pumpe-Ersatzteile","Das Unternehmen","Impressum","Datenschutz","AGBs & Wiederrufsrecht","Karriere")
+				+e.main-col--line
+					+e.in-row
+						+mnu("TOP Ersatzteil","Dichtungen ","Schrauben","Gehäuse ","Motoren")
+						+mnu("Top Pumpenbauarten","ALPHA ","MAGNA 3")
+				
+				+e.main-col--line
+					+e.in-row
+						+mnu("Anwendungen","Heizungen","Solar","Abwasser")
+						+mnu("Lorum ipsum","Lorum Ipsum","Lorum Ipsum","Lorum Ipsum")
+ 
+			.text-center.py-2 © 2020 Pumpe-Ersatzteile
+						
 							
 
 
