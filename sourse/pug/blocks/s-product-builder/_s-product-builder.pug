@@ -44,31 +44,25 @@ mixin s-product-builder()
 								+e.side-wrap
 									+e.side-block.d-none.d-xl-block
 										+e.title MAGNA3 D 32-40
-										+e.art 97924829
-										+stars()
-										+e.SELECT.side-sel
-											option(value='-') Anzahl
-											option(value='0') Anzahl
-											option(value='1') Anzahl
-										+e.problem Benötigen Sie Hilfe?
-										+e.hotline Hotline:
-											a(href='tel:+491234123456789') +49 1234 123456789
-										+e.btn.btn.btn-primary Kontaktformular
-									+e.side-block
-										+e.A.side-link(href='#')
-											+e.IMG.side-link-img(src='img/comp.png' alt='')
-											|vergleichen
-										+e.A.side-link(href='#')
-											+e.IMG.side-link-img(src='img/add.png' alt='')
-											|Merken
+										+e.art  97924829
+										//- +stars()
+									+e.SELECT.side-sel
+										option(value='-') Anzahl
+										option(value='0') Anzahl
+										option(value='1') Anzahl
+									 
+									//- +e.side-block
+									//- 	+e.A.side-link(href='#')
+									//- 		+e.IMG.side-link-img(src='img/comp.png' alt='')
+									//- 		|vergleichen
+									//- 	+e.A.side-link(href='#')
+									//- 		+e.IMG.side-link-img(src='img/add.png' alt='')
+									//- 		|Merken
 									+e.side-block
 										+e.side-price 1370,90 €
 										+e.side-subprice inkl. MwSt.
 										+e.side-add
-											strong Kostenlose Lieferung 
-											| ab 50 €
-										+e.side-add Lieferzeit: Lieferbar in 7 Tagen
-										+e.side-add Bestellnummer: 97924829
+											strong Kostenlose Lieferung  
 									+e.btn.btn.btn-primary In den Warenkorb
 		+item()(class="active")
 		+item()

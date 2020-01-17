@@ -1,4 +1,4 @@
-mixin prod(sl,t)
+mixin prod(sl,t,p )
 	+b.prod-item&attributes(attributes)
 			a.prod-item__img-wrap(href='http://pumpe-ersatzteile.de/pumpenbauart/umwaelzpumpen/ups-serie-200-unger.-nasslaeufer-umwaelzpumpen/ups-b/5276/ups-32-120-f-b', title='UPS 32-120 F B')
 				img.s-product__img-prod(src='http://pumpe-ersatzteile.de/media/image/0c/cb/55/product-productnumber-96401844MoRmcfSJKUdUQ.jpg', alt='', itemprop='image', role='presentation')
@@ -9,17 +9,20 @@ mixin prod(sl,t)
 							|   UPS 32-120 F B 
 						else
 							= t
-
+				.prod-art.text-gray2 Art.-Nr. 96401844 
 				.row
 					.prod-item__price.col-sm-auto.other-prod-price  2.693,23 € 
 					.prod-item__col-auto.col-sm-auto.text-gray2  inkl. 19% MwSt 
-				label.custom-input
-					input.custom-input__input(type='checkbox', name='checkbox')
-					span.custom-input__lab
-					span.custom-input__text Produkt vergleichen 
+				//- label.custom-input
+				//- 	input.custom-input__input(type='checkbox', name='checkbox')
+				//- 	span.custom-input__lab
+				//- 	span.custom-input__text Produkt vergleichen 
 				.row
-					.prod-descr.prod-item__col-auto.col-sm-12.text-gray2  Umwälzpumpe mit 1-phasigem Naßläufermotor als... 
-					.prod-art.prod-item__col-auto.col-sm-12  Art.-Nr. 96401844 
+					if p
+						.prod-descr.prod-item__col-auto.col-sm-12.text-gray2= p
+					else
+						.prod-descr.prod-item__col-auto.col-sm-12.text-gray2  Umwälzpumpe mit 1-phasigem Naßläufermotor als... 
+					
 			.prod-item__foot
 				a.prod-item__btn.prod-item__btn--more(href='http://pumpe-ersatzteile.de/pumpenbauart/umwaelzpumpen/ups-serie-200-unger.-nasslaeufer-umwaelzpumpen/ups-b/5276/ups-32-120-f-b', title='UPS 32-120 F B')  Details ansehen
 				form.buybox--form.other-prod__sel-wrap.d-flex(name='sAddToBasketSW96401844', method='post', action='http://pumpe-ersatzteile.de/checkout/addArticle', data-add-article='true', data-eventname='submit', data-showmodal='false', data-addarticleurl='http://pumpe-ersatzteile.de/checkout/ajaxAddArticleCart')
@@ -74,7 +77,7 @@ mixin s-catalog-block
 		.row
 			 
 			+prod('','dasdasdsadv adad s sdasd sdasdasd')(class="col-lg-4 col-6")
-			+prod()(class="col-lg-4 col-6")
+			+prod('','dasdasdsadv adad s sdasd sdasdasd',' sdasdsadasd sd;ajsd;sajd  w aewaea weaeaweawe waeawewaesadasds jsdasdasdjsad;sajdasdsadj')(class="col-lg-4 col-6")
 			+prod()(class="col-lg-4 col-6")
 			+prod()(class="col-lg-4 col-6")
 		+e.btn--more(href="#") Mehr 
@@ -86,7 +89,7 @@ mixin s-catalog-builder
 		block
 		.row
 			- for (var x = 0; x < 8; x++)
-				+prod-2()(class="col-lg-3 col-6")
+				+prod()(class="col-lg-3 col-6")
 		+e.btn--more(href="#") Mehr 
 	// end s-catalog
 
