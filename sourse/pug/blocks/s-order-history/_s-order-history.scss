@@ -27,27 +27,38 @@
 			font-weight: 400;
 			text-transform: capitalize;
 		}
+		.btn {
+			background-color: $primary;
+			position: relative;
+			width: rem(40);
+			height: rem(40);
+			// display: block;
+			cursor: pointer;
+
+			&::after, &::before {
+				content: '';
+				position: absolute;
+				width: rem(24);
+				height: rem(2);
+				top: 50%;
+				left: 16%;
+				background-color: #fff;
+			}
+			&::before {
+				transform: rotate(90deg);
+			}
+		}
 		td {
 			&:nth-last-child(1){
 				text-align: right;
-				background-color: $primary;
-				position: relative;
-				width: rem(40);
-				height: rem(40);
-				// display: block;
-				cursor: pointer;
-
-				&::after, &::before {
-					content: '';
-					position: absolute;
-					width: rem(24);
-					height: rem(2);
-					top: 50%;
-					left: 16%;
-					background-color: #fff;
+				@include media-breakpoint-down(sm){
+					padding-right: rem(20);
 				}
-				&::before {
-					transform: rotate(90deg);
+			}
+
+			@include media-breakpoint-down(sm) {
+				&:nth-child(-n+3) {
+					display: block;
 				}
 			}
 		}
@@ -76,25 +87,43 @@
 		p {
 			margin-bottom: 0;
 		}
+		img {
+			min-width: rem(50);
+		}
+		table {
+			// min-width: rem(340);
+			overflow-x: scroll;
+		}
 		td {
 			&:nth-child(1) {
 				width: 12%;
 			}
 			&:nth-child(2) {
-				padding-left: rem(20);
+				padding-left: rem(5);
+				@include media-breakpoint-up(md){
+					padding-left: rem(20);
+				}
 				width: 40%;
 			}
 			&:nth-child(3) {
-				width: 26%;
 				text-align: center;
+				width: 5%;
+				
+				@include media-breakpoint-up(sm){
+					
+					width: 26%;
+				}
 			}
 			&:nth-child(4) {
 				@extend h2;
 				text-align: right;
 				font-weight: 700;
-				padding-right: rem(20);
+				@include media-breakpoint-up(sm) {
+					padding-right: rem(20);
+
+				}
 				@include media-breakpoint-down(sm) {
-					display: block;
+					width: 10%;
 				}
 			}
 		}

@@ -344,7 +344,10 @@ function eventHandler() {
 
 	; //selectize
 
-	$('.select-js').selectize({});
+	$('.select-js').selectize({
+		create: true,
+		sortField: 'text'
+	});
 }
 
 ;

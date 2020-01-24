@@ -1,5 +1,6 @@
 .s-jobs {
-	padding: rem(20);
+	padding-top: rem(20);
+	padding-bottom: rem(20);
 	@include media-breakpoint-up(md){
 		padding-top: rem(40);
 		padding-bottom: rem(80);
@@ -11,7 +12,10 @@
 				@include block(1180,400);
 			}
 			overflow: hidden;
-			margin-bottom: rem(40);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(40);
+			}
 
 			&::before {
 				content: '';
@@ -37,7 +41,10 @@
 		&__in-item {
 			max-width: rem(840);
 			margin: 0 auto;
+			padding: rem(12) rem(10) 0;
+			@include media-breakpoint-up (md){
 			padding: rem(12) rem(30) 0;
+			}
 			border: 1px solid $primary;
 			margin-bottom: rem(18);
 		}
@@ -62,7 +69,10 @@
 		.after-acc {
 			margin: 0 auto;
 			max-width: rem(840);
-			margin-top: rem(38);
+			margin-top: rem(25);
+			@include media-breakpoint-up(md){
+				margin-top: rem(38);
+			}
 			p {
 				line-height: 1.20;
 

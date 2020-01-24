@@ -74,7 +74,7 @@
 				}
 			}
 			&__quantity {
-
+				// padding-right: rem(40);
 				margin-bottom: rem(10);
 				font-weight: 700;
 				font-size: rem(12);
@@ -86,13 +86,15 @@
 
 				}
 				.selectize-input {
+					padding-right: rem(45);
 					@include media-breakpoint-up(lg){
 					padding-top: rem(9);
 					padding-bottom: rem(9);
 				}
 				}
 				.selectize-input > * {
-					padding-right: rem(40);
+					padding-right: rem(5);
+					overflow: visible !important;
 					@include ellips;
 
 				}
