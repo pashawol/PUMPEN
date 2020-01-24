@@ -1,0 +1,82 @@
+mixin s-order-history()
+	// start s-order-history
+	+b.SECTION.s-order-history.section#s-order-history&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Meine Bestellhistorie
+			mixin order-date()
+				+e.main-head
+					+e.date.acc-head
+						table
+							tr
+								td Bestelldatum <span>TT.MM.JJJJ</span>
+								td Bestellnummer: <span>XXXXXXXX</span>
+								td Lieferung an: <span>Name Nachname</span>
+								td
+					.acc-body
+						+e.order-item
+							table
+								tr
+									td 
+										.img-wrap
+											img(src="img/@2x/basket-i.jpg" alt="")
+									td 
+										h2 Lorem ipsum dolor sit amet 
+										p Artikelnummer: 1.645-500.0
+										a(href="#") Lieferbar in 2-4 Tagen
+									td 1
+									td 1000,00 €
+						+e.order-item
+							table
+								tr
+									td 
+										.img-wrap
+											img(src="img/@2x/basket-i.jpg" alt="")
+									td 
+										h2 Lorem ipsum dolor sit amet 
+										p Artikelnummer: 1.645-500.0
+										a(href="#") Lieferbar in 2-4 Tagen
+									td 1
+									td 1000,00 €
+						+e.order-item
+							table
+								tr
+									td 
+										.img-wrap
+											img(src="img/@2x/basket-i.jpg" alt="")
+									td 
+										h2 Lorem ipsum dolor sit amet 
+										p Artikelnummer: 1.645-500.0
+										a(href="#") Lieferbar in 2-4 Tagen
+									td 1
+									td 1000,00 €
+						+e.order-item
+							table
+								tr
+									td 
+										.img-wrap
+											img(src="img/@2x/basket-i.jpg" alt="")
+									td 
+										h2 Lorem ipsum dolor sit amet 
+										p Artikelnummer: 1.645-500.0
+										a(href="#") Lieferbar in 2-4 Tagen
+									td 1
+									td 1000,00 €
+						+e.total
+							.row.align-items-center
+								.col-9.text-center
+									p Summe 
+										span MwSt. (19%)  
+								+e.price.col-3.text-right 5950,00 € 
+									span 950,00 €
+							.row
+								.col.text-right
+									button.return.btn Retoure
+			+order-date
+			+order-date
+			+order-date
+			+order-date
+
+
+
+	// end s-order-history

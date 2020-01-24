@@ -1,0 +1,60 @@
+mixin s-return()
+	// start s-return
+	+b.s-return#s-return&attributes(attributes)
+		.container
+			.row.justify-content-center
+				.col-lg-2.col-md-3.col-6
+					+e.step
+						.img-wrap
+							img.res-i(src="img/@2x/return-1.png" alt="")
+						p 1. Artikel Auswählen
+				.col-lg-2.col-md-3.col-6
+					+e.step
+						.img-wrap
+							img.res-i(src="img/@2x/return-2.png" alt="")
+						p 2. Anzahl und Grund nennen
+				.col-lg-2.col-md-3.col-6
+					+e.step
+						.img-wrap
+							img.res-i(src="img/@2x/return-3.png" alt="")
+						p 3. Retourschein Drucken
+				.col-lg-2.col-md-3.col-6
+					+e.step
+						.img-wrap
+							img.res-i(src="img/@2x/return-4.png" alt="")
+						p 4. Ab in die Post
+			+e.order-date.row
+				.col.align-self-center
+					+e.date Bestelldatum <span> TT.MM.JJJJ </span> <p>Bestellnummer: <span>XXXXXXXX</span></p>
+				.col-auto.text-right.align-self-center
+					button.btn
+			mixin item()
+				+b.return-item.row
+					+e.left-item.col-lg-5.col
+						.img-wrap
+							img.res-i(src="img/@2x/basket-i.jpg" alt="")
+						+e.text
+							h2 Lorem ipsum dolor sit amet 
+							p Artikelnummer: 1.645-500.0
+					.col-4 
+						+e.number Anzahl 
+							span 1
+					.col-lg-3
+						+e.quantity 
+							select.select-js
+								option(value="Stückzahl 1") Stückzahl
+								option(value="Stückzahl 2") Stückzahl
+								option(value="Stückzahl 3") Stückzahl
+						+e.quantity 
+							select.select-js
+								option(value="Bitte Grund auswählen 1") Bitte Grund auswählen
+								option(value="Bitte Grund auswählen 2") Bitte Grund auswählen
+								option(value="Bitte Grund auswählen 3") Bitte Grund auswählen
+			+item()
+			+item()
+			+item()
+			+item()
+			.row
+				.col.text-right
+					button.btn.send-back Zurückschicken
+	// end s-return

@@ -1,0 +1,214 @@
+.s-return {
+	padding-top: rem(40);
+	padding-bottom: rem(40);
+	@include media-breakpoint-up(md){
+		padding-top: rem(120);
+		padding-bottom: rem(87);
+	}
+		&__step {
+			text-align: center;
+			margin-bottom: rem(17);
+			// display: flex;
+			// flex-wrap: wrap;
+			// flex-direction: column;
+			// align-content: flex-start;
+			// justify-content: center;
+			// height: rem(200);
+			.img-wrap {
+				height: rem(94);
+				text-align: center;
+				margin-bottom: rem(40);
+			}
+
+			p {
+				// padding-top: rem(40);
+				text-align: center;
+				display: inline-block;
+				text-transform: uppercase;
+				font-weight: 700;
+				margin-bottom: 0;
+			}
+		}
+		.btn {
+			background-color: $primary;
+		}
+		&__order-date {
+			@include roww(0);
+			margin-top: rem(24);
+
+			background-color: $light;
+			.btn {
+				width: rem(40);
+				height: rem(40);
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					width: rem(24);
+					height: 2px;
+					top: 50%;
+					left: 15%;
+					background-color: #fff;
+				}
+			}
+
+		}
+
+		.return-item {
+			padding-top: rem(30);
+			padding-bottom: rem(0);
+			@include media-breakpoint-up(sm){
+			padding-top: rem(40);
+			padding-bottom: rem(10);
+			}
+
+			@include media-breakpoint-up(md) {
+				padding-left: rem(20);
+			}
+			&__left-item {
+				display: flex;
+				.img-wrap {
+					@include media-breakpoint-down(md){
+						margin-bottom: rem(20);
+					}
+				}
+			}
+			&__quantity {
+
+				margin-bottom: rem(10);
+				font-weight: 700;
+				font-size: rem(12);
+				.selectize-input,  .selectize-dropdown {
+					background-color: $light;
+					border: none;
+					border-radius: 0;
+					box-shadow: none;
+
+				}
+				.selectize-input {
+					@include media-breakpoint-up(lg){
+					padding-top: rem(9);
+					padding-bottom: rem(9);
+				}
+				}
+				.selectize-input > * {
+					padding-right: rem(40);
+					@include ellips;
+
+				}
+				.selectize-input, .dropdown-active {
+					&::before {
+						content: '';
+						top: 0;
+						left: auto !important;
+						right: 0 !important;
+						height: 100%;
+						width: rem(40);
+						position: absolute;
+						background-color: $primary;
+						height: 100%;
+					}
+					&::after {
+						top: 50%;
+						// transform: translate-y();
+						// transform: translateY(-50%);
+						margin-top: rem(-9) !important;
+						right: rem(15);
+						border-width: 0;
+						left: auto !important;
+						right: rem(15) !important;
+						border-style: unset !important;
+						border-color: unset !important;
+						border-right: solid 2px #fff !important;
+						border-bottom: solid 2px #fff !important;
+						transform: rotate(45deg);
+						height: rem(13);
+						width: rem(13);
+					}
+				}
+			}
+			&__number {
+				@include media-breakpoint-up(md){
+					padding-top: rem(16);
+				}
+				text-transform: uppercase;
+				text-align: center;
+				font-size: rem(12);
+				span {
+					display: block;
+					padding-top: rem(13);
+					// text-align: center;
+				}
+			}
+			&__text {
+				padding-left: rem(10);
+				@include media-breakpoint-up(md) {
+				padding-left: rem(32);
+				padding-top: rem(15);
+				}
+				h2 {
+					font-weight: 700;
+					text-transform: uppercase;
+				}
+			}
+		}
+		&__date  {
+			padding-left: rem(10);
+			@include media-breakpoint-up(sm) {
+			padding-left: rem(32);
+			}
+			@include media-breakpoint-down(md){
+				padding-top: rem(10);
+			}
+			font-weight: 700;
+			text-transform: uppercase;
+			p {
+				display: inline-block;
+				margin-bottom: rem(10);
+				@include media-breakpoint-up(md){
+					display: inline;
+
+				}
+			}
+			span {
+				padding-left: rem(10);
+				padding-right: rem(20);
+				@include media-breakpoint-up(md) {
+					padding-right: rem(40);
+				}
+				font-weight: 400;
+			}
+		}
+		.send-back {
+			color: #fff;
+			width: rem(235);
+			margin-top: rem(10);
+			@include media-breakpoint-up(sm){
+				margin-top: rem(40);
+			}
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

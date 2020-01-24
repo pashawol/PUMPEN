@@ -17,3 +17,8 @@ PUMPEN
 1. Contact-form <https://pashawol.github.io/PUMPEN/public/12-contact-form.html>
 1. Uber <https://pashawol.github.io/PUMPEN/public/11-uber.html>
 1. 13-anwendungen.html <https://pashawol.github.io/PUMPEN/public/13-anwendungen.html>
+1. 14-Bestellhistorie <https://pashawol.github.io/PUMPEN/public/14-order-history.html>
+1. 15-Retoure  <https://pashawol.github.io/PUMPEN/public/15-return.html>
+1. Jobs <https://pashawol.github.io/PUMPEN/public/14-jobs.html>
+
+

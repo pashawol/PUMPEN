@@ -1,0 +1,27 @@
+mixin s-jobs()
+	// start s-jobs
+	+b.s-jobs#s-jobs&attributes(attributes)
+		.container
+			.img-wrap
+				img.res-i(src="img/@2x/head-jobs.jpg")
+			mixin in-faq(t)
+				+e.in-item
+					+e.in-head.acc-head
+						+e.in-title.text-center=t
+					.acc-body
+						+e.in-text 
+							p 
+								strong Bewirb dich jetzt!
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+							p 
+								strong MiNiM estores GmbH <br> Röntgenstraße 2 <br> 71229 Leonberg
+							p Bewerbung an: <br> Geschäftsführer: Michael Sautter
+							p Kontakt: <br> Telefon: 07152/20080 – 0<br> E-Mail: bewerbung@pumpe-ersatzteile.de <br> Web: www.pumpe-ersatzteile.de
+			+in-faq('- HEAD OF WEB DeVELOPMENT (*) -')
+			+in-faq('- Webdesigner fulltime (*) -')
+			+in-faq('- Content MANAGER (*) -')
+			.after-acc
+				p Ist für Dich keine passende Stelle dabei, freuen wir uns trotzdem über Deine aussagekräftige Online-Bewerbung mit Deiner Gehaltsvorstellung und Angabe des frühestmöglichen Eintrittstermins unter /stellenangebote/. Wir sind ein schnell wachsendes Unternehmen. Es ergeben sich immer wieder neue offene Stellen bei Pumpe-Ersatzteile.
+				p Unsere Datenschutzhinweise für Bewerberinnen und Bewerber findest du auf unserer Datenschutzerklärung.
+
+	// end s-jobs

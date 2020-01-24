@@ -25,25 +25,9 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/180-layers.png);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/15.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
-
-
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function () {
-
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
 
 	// /закрыть/открыть мобильное меню
 
@@ -424,6 +408,9 @@ function eventHandler() {
 
 		};
 
+	//selectize
+	$('.select-js').selectize({
+	});
 
 
 };
