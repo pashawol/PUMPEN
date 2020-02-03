@@ -20,5 +20,6 @@ PUMPEN
 1. 14-Bestellhistorie <https://pashawol.github.io/PUMPEN/public/14-order-history.html>
 1. 15-Retoure  <https://pashawol.github.io/PUMPEN/public/15-return.html>
 1. Jobs <https://pashawol.github.io/PUMPEN/public/16-jobs.html>
+1. VERSAND <https://pashawol.github.io/PUMPEN/public/17-shiping-time.html>
 
 

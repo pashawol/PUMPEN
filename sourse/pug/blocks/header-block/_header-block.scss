@@ -1,7 +1,96 @@
 .header-block {
 	display: block;
+	position: relative;
+	.header-bg {
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: $secondary;
+			top: 0;
+			left: 0;
+			// z-index: 0;
+			opacity: 0.3;
+			position: absolute;
+		}
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		&__content {
+			@include media-breakpoint-up(xl){
+				margin-left: rem(-80); // весьма спорное решение
+			}
+			margin-top: rem(180);
+			.prod {
+				display: none;
+			}
+		}
+		&__call {
+			margin: 0 auto;
+			max-width: rem(500);
+			margin-top: rem(23);
+			display: block;
+			background-color: transparent;
+		}
+		&__telephone {
+			position: relative;
+			min-height: rem(95);
+			box-shadow: -46px 1px 73px 17px rgba(0, 0, 0, 0.36);
+			background-color: $secondary;
+			margin-bottom: rem(32);
+			font-size: rem(15);
+			text-transform: uppercase;
+			font-weight: 700;
+			line-height: 1.21;
+			padding: rem(20);
+			z-index: -1; // дал из-за того что тень налазит на текст, но при этом перестает работать ссылка, разобратся
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: -25%;
+				right: 10%;
+				@include media-breakpoint-up(xl){
+					bottom: -29%;
+					right: 10%;
+				}
+				@include triangle(46px 28px, $secondary, up-right);
+			}
+			a {
+				display: block;
+				font-size: rem(27);
+				margin-top: rem(7);
+				letter-spacing: rem(2);
+				color: #ffffff;
+				&:hover {
+					color: $secondary;
+					cursor: pointer;
+				}
+			}
+		}
+		&__call-type {
+			width: rem(200);
+			display: flex;
+			margin: 0 auto;
+			margin-bottom: rem(40);
+			justify-content: space-between;
+			img {
+				height: 100%;
+				margin-bottom: 0;
+			}
+		}
+		h1 {
+			font-size: rem(54);
+		}
+	}
+	&__call {
+		display: none;
+	}
 	&__col{
-		background-color: $primary;
+		@include media-breakpoint-down(md){
+			background-color: $primary;
+		}
 		text-align: center;
 		padding-top: rem(50);
 		padding-bottom: rem(45);
@@ -36,13 +125,13 @@
 	h1{
 		@include rfs(rem(35));
 		font-weight: 900; 
-		color: $secondary; 
+		color: #fff; 
 		line-height:1;
 		text-transform: uppercase;
 	}
 	&__sub-title{
 		@extend .h2;
-		font-weight: 900;
+		font-weight: 700;
 		line-height: 1;
 		text-transform: uppercase;
 		color: #ffffff;

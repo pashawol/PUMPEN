@@ -1,13 +1,22 @@
 mixin header-block()
 	// start header-block
 	+b.header-block#header-block
+		+pic("header-baner", 'bg', 'lazy')(class="picture-bg header-bg")
 		.container
 			.row
 				+e.col.col-xxl-8.col-lg-6
 					+e.content
-						+pic("Rechteck_6")
+						+pic('pumpe')(class="prod")
 						h1  PUMPEN & ERSATZTEIle
 						+e.sub-title schneller und einfacher Service für Unternehmen
+						+e.call
+							+e.telephone wir sind telefonisch von 08.00 - 17.00 Uhr zu erreichen
+								a(href="#tel:+497471-9331970") Tel. +49 7471-933197-0
+								//- +pic("call-bg.png", 'bg')(class="picture-bg")
+							+e.call-type
+								img(src="img/@2x/message.png" alt="")
+								img(src="img/@2x/tel-time.png" alt="")
+								img(src="img/@2x/mail.png" alt="")
 						+e.btn(href="#") MEHR ERFAHREN
 				+e.col-right.col-xxl-4.col-lg-6
 					+form-wrap
