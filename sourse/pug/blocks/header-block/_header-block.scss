@@ -49,10 +49,10 @@
 			&::before {
 				content: '';
 				position: absolute;
-				bottom: -25%;
+				bottom: -22%;
 				right: 10%;
 				@include media-breakpoint-up(xl){
-					bottom: -29%;
+					bottom: -24%;
 					right: 10%;
 				}
 				@include triangle(46px 28px, $secondary, up-right);
@@ -82,6 +82,7 @@
 		}
 		h1 {
 			font-size: rem(54);
+			color: #fff;
 		}
 	}
 	&__call {
@@ -125,7 +126,7 @@
 	h1{
 		@include rfs(rem(35));
 		font-weight: 900; 
-		color: #fff; 
+		color: $secondary; 
 		line-height:1;
 		text-transform: uppercase;
 	}
