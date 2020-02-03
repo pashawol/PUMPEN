@@ -131,7 +131,10 @@
 		text-transform: uppercase;
 	}
 	&__sub-title{
-		@extend .h2;
+		font-size: rem(12);
+		@include media-breakpoint-up(lg){
+			font-size: rem(18);
+		}
 		font-weight: 700;
 		line-height: 1;
 		text-transform: uppercase;
