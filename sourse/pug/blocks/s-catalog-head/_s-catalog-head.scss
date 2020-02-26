@@ -21,8 +21,9 @@
 	}
 	&__btn{
 		@extend .btn;
-		border: 1px solid #e7e7e7;
-		background-color: $light;
+		border: 2px solid #00ace6;
+		background-color: transparent;
+		color: #00ace6;
 		text-align: center;
 		display: block;
 		width: calc(100% / 3 - 4px);
