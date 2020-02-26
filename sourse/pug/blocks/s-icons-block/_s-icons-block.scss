@@ -28,9 +28,9 @@
 			margin-bottom: rem(17);
 			justify-content: center;
 
-			&:not(:last-child) {
-				border-right: 1px solid #c2c2c2;
-			}
+			// &:not(:last-child) {
+			// 	border-right: 1px solid #c2c2c2;
+			// }
 		}
 		picture {
 			@include media-breakpoint-up(sm) {
