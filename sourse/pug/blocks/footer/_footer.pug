@@ -10,12 +10,22 @@ mixin footer()
 		.container
 			+e.main-row
 				+e.main-col
-					+e.col-title Service Hotline
-					.pt-0.h2.strong
-						a(href="tel:+4974719331970").text-body.strong.tdn +49 7471 - 9331970
 					.row
-						.col-lg-6.col-md-7
-							p Sie haben persöliche Fragen zu einem unserer Produkte ? Rufen Sie uns an,wir beraten SIe gern!
+						.col-lg-6
+							+e.col-title Service Hotline
+							.pt-0.h2.strong
+								a(href="tel:+4974719331970").text-body.strong.tdn +49 7471 - 9331970
+							.row
+								.col-lg-6.col-md-7
+									p Sie haben persöliche Fragen zu einem unserer Produkte ? Rufen Sie uns an,wir beraten SIe gern!
+						.col-lg-6
+							+e.col-title SPRACHEN
+							+e.img-wrapper
+								+e.A.de(href="#")
+									+e.IMG.img(src='img/@2x/de.png' alt='')
+								+e.A.en(href="#")
+									+e.IMG.img(src='img/@2x/en.png' alt='')
+
 				+e.main-col 
 					.row
 						.col-lg-6
@@ -72,7 +82,7 @@ mixin footer()
 	+b.bottom-line
 		.container
 			+e.logo(href="#")
-				img.res-i(src="img/@2x/logo-f.png", alt="")
+				img.res-i(src="img/@2x/logo.png", alt="")
 			+e.text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
 								
 								

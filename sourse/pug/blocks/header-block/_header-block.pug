@@ -1,22 +1,23 @@
 mixin header-block()
 	// start header-block
 	+b.header-block#header-block
-		+pic("header-banner", 'bg', 'lazy')(class="picture-bg header-bg")
 		.container
 			.row
 				+e.col.col-xxl-8.col-lg-6
+					+pic("header-banner", 'bg', 'lazy', '0')(class="picture-bg header-block__bg")
 					+e.content
-						+pic('pumpe')(class="prod")
-						h1  PUMPEN & ERSATZTEIle
-						+e.sub-title schneller und einfacher Service für Unternehmen
-						+e.call
-							+e.telephone wir sind telefonisch von 08.00 - 17.00 Uhr zu erreichen
-								a(href="#tel:+497471-9331970") Tel. +49 7471-933197-0
-								//- +pic("call-bg.png", 'bg')(class="picture-bg")
-							//- +e.call-type
-							//- 	img(src="img/@2x/message.png" alt="")
-							//- 	img(src="img/@2x/tel-time.png" alt="")
-							//- 	img(src="img/@2x/mail.png" alt="")
+						+e.content-middle
+							//- +pic('pumpe')(class="prod")
+							h1  PUMPEN & ERSATTEILE
+							+e.sub-title SCHNELLER UND EINFACHER SERVICE FÜR UNTERNEHMEN
+							+e.call
+								+e.telephone wir sind telefonisch von 08.00 - 17.00 Uhr zu erreichen
+									p Tel. #[a(href="#tel:+497471-9331970")  +49 7471-933197-0]
+									//- +pic("call-bg.png", 'bg')(class="picture-bg")
+								//- +e.call-type
+								//- 	img(src="img/@2x/message.png" alt="")
+								//- 	img(src="img/@2x/tel-time.png" alt="")
+								//- 	img(src="img/@2x/mail.png" alt="")
 						+e.btn(href="#") MEHR ERFAHREN
 				+e.col-right.col-xxl-4.col-lg-6
 					+form-wrap
@@ -31,3 +32,36 @@ mixin header-block()
 						+select("TYP",'Produktbezeichnung','Produktbezeichnung') 
 						+e.btn.btn.btn-outline-white(type="submit") MEINE PUMPE FINDEN
 	// end header-block
+
+mixin header-block-login()
+	// start header-block
+	+b.header-block--login#header-block
+		+pic("header-banner", 'bg', 'lazy')(class="picture-bg header-bg")
+		.container
+			.row
+				+e.col.col-lg-6.d-none.d-lg-block
+					+e.IMG.sticker(src="img/@2x/login-sticker.png" alt="")
+				//- 	+e.content
+				//- 		+e.content-middle
+				//- 			+pic('pumpe')(class="prod")
+				//- 			h1  PUMPEN & ERSATZTEIle
+				//- 			+e.sub-title schneller und einfacher Service für Unternehmen
+				//- 			+e.call
+				//- 				+e.telephone wir sind telefonisch von 08.00 - 17.00 Uhr zu erreichen
+				//- 					p Tel. #[a(href="#tel:+497471-9331970")  +49 7471-933197-0]
+				//- 					//- +pic("call-bg.png", 'bg')(class="picture-bg")
+				//- 				//- +e.call-type
+				//- 				//- 	img(src="img/@2x/message.png" alt="")
+				//- 				//- 	img(src="img/@2x/tel-time.png" alt="")
+				//- 				//- 	img(src="img/@2x/mail.png" alt="")
+				//- 		+e.btn(href="#") MEHR ERFAHREN
+				+e.col-right.col-lg-6
+					+b.text-login
+						+e.title PUMPENTECHNIK XXL
+						+e.subtitle PUMPEN UND ERSATZTEILE FÜR ALLE GRUNDFOS PUMPEN
+						+e.description Willkommen auf Pumpentechnik XXL, Ihr schneller und einfacher Service für Unternehmen rund um Ihre Grundlos Pumpen
+						+e.btn-wrap.text-center
+							+e.A.btn.btn.btn-outline-white(href="#") JETZT REGISTRIEREN
+						+e.tel TEL. #[a(href="tel:+49 7471-933197-0") +49 7471-933197-0]
+						p Sie haben Fragen zu unserem Service? 
+						p Rufen Sie uns an, wir sind #[span Mo – Sa von 08:00 – 22:00 Uhr] für Sie erreichbar

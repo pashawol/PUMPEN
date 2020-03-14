@@ -35,3 +35,45 @@ mixin top-nav()
 						span
 
 	// end top-nav
+
+mixin mob-mnu-login()
+
+	+b.menu-mobile--js.d-xl-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+		
+			+mnu()
+			.text-right
+	//  мобильное меню логина
+mixin top-nav-login() 
+	// start top-nav-login
+	+b.top-nav--login.block-with-lazy
+		//- +basket-side()
+		.container
+			.row
+				.col-xl-auto.col
+					+e.logo(href="#")
+						img.res-i(src="img/@2x/logo.png", alt="")
+				.pos-s.col.d-none.d-xl-block
+					+e.UL.nav
+						+e.LI.item
+							+e.A.link(href="#") KONTAKT
+						+e.LI.item
+							+e.A.link(href="#") ÜBER UNS
+						+e.LI.item
+							+e.A.link(href="#") SERVICE
+					//- +mnu-new()
+				//- .col-auto.d-md-none
+				//- 	+e.btn-search--js(type="button")
+				
+				//- .col-auto.d-md-none
+				//- 	+e.basket(href="#")
+				//- 		img.res-i(src="img/@2x/basket-gray.png", alt="")
+				.col-auto
+					+e.A.login(href="") LOGIN
+				.col-auto.d-xl-none
+					+b.toggle-menu-mobile--js
+						span
+
+	// end top-nav-login
