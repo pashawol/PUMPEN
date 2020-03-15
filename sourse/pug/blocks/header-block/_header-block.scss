@@ -124,8 +124,14 @@
 			margin-top: rem(122);
 		}
 		@include media-breakpoint-only(xxl) {
+			margin-top: rem(140);
+		}
+		@include media-breakpoint-up(xxl) {
 			margin-top: rem(105);
 		}
+		// @include media-breakpoint-up(xxl) {
+		// 	margin-top: rem(105);
+		// }
 		margin-left: auto;
 		margin-right: auto;
 	}
