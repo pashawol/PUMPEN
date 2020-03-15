@@ -36,10 +36,10 @@ mixin header-block()
 mixin header-block-login()
 	// start header-block
 	+b.header-block--login#header-block
-		+pic("header-banner", 'bg', 'lazy')(class="picture-bg header-bg")
 		.container
 			.row
-				+e.col.col-lg-6.d-none.d-lg-block
+				+e.col.col-xxl-8.col-lg-6
+					+pic("header-banner", 'bg', 'lazy', '0')(class="picture-bg header-block__bg")
 					+e.IMG.sticker(src="img/@2x/login-sticker.png" alt="")
 				//- 	+e.content
 				//- 		+e.content-middle
@@ -55,7 +55,7 @@ mixin header-block-login()
 				//- 				//- 	img(src="img/@2x/tel-time.png" alt="")
 				//- 				//- 	img(src="img/@2x/mail.png" alt="")
 				//- 		+e.btn(href="#") MEHR ERFAHREN
-				+e.col-right.col-lg-6
+				+e.col-right.col-xxl-4.col-lg-6
 					+b.text-login
 						+e.title PUMPENTECHNIK XXL
 						+e.subtitle PUMPEN UND ERSATZTEILE FÜR ALLE GRUNDFOS PUMPEN

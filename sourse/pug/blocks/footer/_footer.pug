@@ -16,8 +16,8 @@ mixin footer()
 							.pt-0.h2.strong
 								a(href="tel:+4974719331970").text-body.strong.tdn +49 7471 - 9331970
 							.row
-								.col-lg-6.col-md-7
-									p Sie haben persöliche Fragen zu einem unserer Produkte ? Rufen Sie uns an,wir beraten SIe gern!
+								.col
+									+e.questions Sie haben persöliche Fragen zu einem unserer Produkte ? Rufen Sie uns an,wir beraten SIe gern!
 						.col-lg-6
 							+e.col-title SPRACHEN
 							+e.img-wrapper
@@ -32,10 +32,10 @@ mixin footer()
 							+e.col-title Bezahlarten
 							+e.img-wrapper
 								+e.IMG.img(src='img/paypal.png' alt='')
-								+e.IMG.img(src='img/visa.png' alt='')
-								+e.IMG.img(src='img/maes.png' alt='')
-								+e.IMG.img(src='img/vor.png' alt='')
 								+e.IMG.img(src='img/sof.png' alt='')
+								+e.IMG.img(src='img/maes.png' alt='')
+								+e.IMG.img(src='img/visa.png' alt='')
+								+e.IMG.img(src='img/rechnung.png' alt='')
 						.col-lg-6
 							+e.col-title Versand
 							+e.img-wrapper
@@ -71,8 +71,7 @@ mixin footer()
 					+e.in-row
 						+mnu("Anwendungen","Heizungen","Solar","Abwasser")
 						+mnu("Lorum ipsum","Lorum Ipsum","Lorum Ipsum","Lorum Ipsum")
- 
-			//- .text-center.py-2 © 2020 Pumpe-Ersatzteile
+			.text-center.py-2 © 2020 Pumpe-Ersatzteile
 						
 							
 

@@ -27,7 +27,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/index-new.png);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/login.png);"></div>'); // /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
