@@ -25,7 +25,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/login.png);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/login.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -439,7 +439,7 @@ const JSCCommon = {
 		});
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
-		})
+		});
 	},
 	// /magnificPopupCall
 	mobileMenu() {
@@ -473,7 +473,7 @@ const JSCCommon = {
 		$(document).on('click', '.toggle-l', function () {
 			$(this).prev().slideToggle()
 			return false;
-		})
+		});
 	},
 	// /mobileMenu
 	basketMenu() {
