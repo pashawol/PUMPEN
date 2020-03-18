@@ -468,7 +468,7 @@ const JSCCommon = {
 		});
 		$(".sub-menu").each(function () {
 			$(this).after('<div class="toggle-l"></div>');
-		})
+		});
 
 		$(document).on('click', '.toggle-l', function () {
 			$(this).prev().slideToggle()
