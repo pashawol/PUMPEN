@@ -5,6 +5,129 @@ const btnToggle = $(".toggle-menu-mobile--js"),
   btnCloseBasket = $(".basket-close"),
 	basket = $(".basket-side--js")
 
+const JSCCommon = {
+		// часть вызов скриптов здесь, для использования при AJAX
+		// функции для запуска lazy
+	
+	
+		// /LazyFunction
+	
+		modalCall() {
+	
+			$(".link-modal").fancybox({
+				arrows: false,
+				infobar: false,
+				touch: false,
+				// type : 'inline',
+			});
+			$(".modal-close-js").click(function () {
+				$.fancybox.close();
+			});
+		},
+		// /magnificPopupCall
+		mobileMenu() {
+			// закрыть/открыть мобильное меню
+	
+			btnToggle.click(function () {
+	
+				btnToggle.toggleClass("on");
+				// $("body").toggleClass("fixed");
+				menu.toggleClass("active");
+				$("body, html").toggleClass("fixed");
+				return false;
+			});
+			// $('.menu-mobile--js ul li a').on('click', function () {
+			// 	$(".menu-mobile--js .toggle-mnu").click();
+			// });
+	
+			$(document).mouseup(function (e) {
+				const container = $(".menu-mobile--js.active");
+				if (container.has(e.target).length === 0) {
+					btnToggle.removeClass("on");
+					// $("body").toggleClass("fixed");
+					menu.removeClass("active");
+					$("body, html").removeClass("fixed");
+				}
+			});
+			$(".sub-menu").each(function () {
+				$(this).after('<div class="toggle-l"></div>');
+			});
+	
+			$(document).on('click', '.toggle-l', function () {
+				$(this).prev().slideToggle()
+				return false;
+			});
+		},
+		// /mobileMenu
+		basketMenu() {
+			// закрыть/открыть корзину
+	
+			btnOpenBasket.click(function () {
+	
+				// btnOpenBasket.toggleClass("on");
+				// $("body").toggleClass("fixed");
+				basket.toggleClass("active");
+				$("body, html").toggleClass("fixed-b");
+				return false;
+			});
+			btnCloseBasket.click(function () {
+	
+				// btnOpenBasket.toggleClass("on");
+				// $("body").toggleClass("fixed");
+				basket.toggleClass("active");
+				$("body, html").toggleClass("fixed-b");
+				return false;
+			});
+	
+			$(document).mouseup(function (e) {
+				const containerBasket = $(".basket-side--js.active");
+				if (containerBasket.has(e.target).length === 0) {
+					// btnOpenBasket.removeClass("on");
+					// $("body").toggleClass("fixed");
+					basket.removeClass("active");
+					$("body, html").removeClass("fixed-b");
+				}
+			});
+		},
+		// /mobileMenu
+	
+		// табы  . 
+		tabscostume(tab) {
+			$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+				$(this)
+					.addClass('active').siblings().removeClass('active')
+					.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+					.eq($(this).index()).fadeIn(function(){
+						$(this).find('.slick-slider').slick('refresh');
+					}).addClass('active');
+				
+			});
+		},
+		// /табы  . 
+	
+	
+		// /nlineSVG
+		// CustomInputFileCustomInputFile() {
+		// 	const file = $(".add-file input[type=file]");
+		// 	file.change(function () {
+		// 		const filename = $(this).val().replace(/.*\\/, "");
+		// 		const name = $(".add-file__filename  ");
+		// 		name.text(filename);
+	
+		// 	});
+		// },
+	
+		// /CustomYoutubeBlock
+		inputMask() {
+			// mask for input
+			$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
+		}
+		// /inputMask
+	
+	
+	
+};
+
 function eventHandler() {
 	// полифил для object-fit
 	objectFitImages();
@@ -422,128 +545,7 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-const JSCCommon = {
-	// часть вызов скриптов здесь, для использования при AJAX
-	// функции для запуска lazy
 
-
-	// /LazyFunction
-
-	modalCall() {
-
-		$(".link-modal").fancybox({
-			arrows: false,
-			infobar: false,
-			touch: false,
-			// type : 'inline',
-		});
-		$(".modal-close-js").click(function () {
-			$.fancybox.close();
-		});
-	},
-	// /magnificPopupCall
-	mobileMenu() {
-		// закрыть/открыть мобильное меню
-
-		btnToggle.click(function () {
-
-			btnToggle.toggleClass("on");
-			// $("body").toggleClass("fixed");
-			menu.toggleClass("active");
-			$("body, html").toggleClass("fixed");
-			return false;
-		});
-		// $('.menu-mobile--js ul li a').on('click', function () {
-		// 	$(".menu-mobile--js .toggle-mnu").click();
-		// });
-
-		$(document).mouseup(function (e) {
-			const container = $(".menu-mobile--js.active");
-			if (container.has(e.target).length === 0) {
-				btnToggle.removeClass("on");
-				// $("body").toggleClass("fixed");
-				menu.removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-		});
-		$(".sub-menu").each(function () {
-			$(this).after('<div class="toggle-l"></div>');
-		});
-
-		$(document).on('click', '.toggle-l', function () {
-			$(this).prev().slideToggle()
-			return false;
-		});
-	},
-	// /mobileMenu
-	basketMenu() {
-		// закрыть/открыть корзину
-
-		btnOpenBasket.click(function () {
-
-			// btnOpenBasket.toggleClass("on");
-			// $("body").toggleClass("fixed");
-			basket.toggleClass("active");
-			$("body, html").toggleClass("fixed-b");
-			return false;
-		});
-		btnCloseBasket.click(function () {
-
-			// btnOpenBasket.toggleClass("on");
-			// $("body").toggleClass("fixed");
-			basket.toggleClass("active");
-			$("body, html").toggleClass("fixed-b");
-			return false;
-		});
-
-		$(document).mouseup(function (e) {
-			const containerBasket = $(".basket-side--js.active");
-			if (containerBasket.has(e.target).length === 0) {
-				// btnOpenBasket.removeClass("on");
-				// $("body").toggleClass("fixed");
-				basket.removeClass("active");
-				$("body, html").removeClass("fixed-b");
-			}
-		});
-	},
-	// /mobileMenu
-
-	// табы  . 
-	tabscostume(tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn(function(){
-					$(this).find('.slick-slider').slick('refresh');
-				}).addClass('active');
-			
-		});
-	},
-	// /табы  . 
-
-
-	// /nlineSVG
-	// CustomInputFileCustomInputFile() {
-	// 	const file = $(".add-file input[type=file]");
-	// 	file.change(function () {
-	// 		const filename = $(this).val().replace(/.*\\/, "");
-	// 		const name = $(".add-file__filename  ");
-	// 		name.text(filename);
-
-	// 	});
-	// },
-
-	// /CustomYoutubeBlock
-	inputMask() {
-		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
-	}
-	// /inputMask
-
-
-
-};
 
 // JSCCommon.LazyFunction();
 /***/
